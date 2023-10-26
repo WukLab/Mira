@@ -4,7 +4,7 @@ This repo contains source code for paper Mira: A Program-Behavior-Guided Far Mem
 
 ## 🚧 UNDER CONSTRUCTION 🚧
 
-This repo is still under construction as we are moving our runtime from `runtime/libcommon` to `runtime/libcommon2`. Please check back later for completed features and documnets. 
+This repo is still under construction as we are moving our runtime from `runtime/libcommon` to `runtime/libcommon2`. Please check back later for completed features and documents. 
 
 ## System Setup
 
