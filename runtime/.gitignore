@@ -1,0 +1,10 @@
+.*.swp
+**/build/
+**/.vscode
+cache_opts/cache_test
+cache_opts/remote_test
+**/log.*
+**/spec2006-bzip2/enwik9*
+**/data/*
+**/*.dat
+!429.mcf.origin/data/*

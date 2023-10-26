@@ -1,0 +1,192 @@
+print_number_vendor_ids_and_unique()
+Number of vendor_ids in the train dataset: 107957636
+Number of unique vendor_ids in the train dataset:2
+
+print_passage_counts_by_vendor_id(vendor_id), vendor_id = 1
+passage_count= 0, cnt = 33573
+passage_count= 1, cnt = 41414289
+passage_count= 2, cnt = 6942985
+passage_count= 3, cnt = 1706822
+passage_count= 4, cnt = 867946
+passage_count= 5, cnt = 26814
+passage_count= 6, cnt = 11350
+passage_count= 7, cnt = 52
+passage_count= 8, cnt = 11
+passage_count= 9, cnt = 42
+
+print_passage_counts_by_vendor_id(vendor_id), vendor_id = 2
+passage_count= 0, cnt = 1686
+passage_count= 1, cnt = 35183659
+passage_count= 2, cnt = 8446365
+passage_count= 3, cnt = 2700322
+passage_count= 4, cnt = 1217548
+passage_count= 5, cnt = 5773467
+passage_count= 6, cnt = 3630269
+passage_count= 7, cnt = 150
+passage_count= 8, cnt = 173
+passage_count= 9, cnt = 113
+
+calculate_trip_duration()
+duration size: 107957636
+Mean duration = 946 seconds
+Min duration = 0 seconds
+Max duration = 32394938 seconds
+
+calculate_distribution_store_and_fwd_flag()
+size 107217347
+0.993143
+{1, }
+
+calculate_haversine_distance_column()
+Number of rows that have haversine_distance > 100 KM = 421489
+
+analyze_trip_timestamp()
+2016-6-30 23:59:59
+2015-1-1 0:0:0
+pickup_day size: 107957636
+pickup_month size: 107957636
+Print top 10 rows.
+{
+"INDEX":{"N":10,"T":"ulong","D":[0,1,2,3,4,5,6,7,8,9]},
+"payment_type":{"N":10,"T":"int","D":[2,1,1,2,2,2,2,2,2,2]},
+"pickup_latitude":{"N":10,"T":"double","D":[40.7347,40.7299,40.6796,40.719,40.7813,40.743,40.72,40.7446,40.791,40.7239]},
+"dropoff_longitude":{"N":10,"T":"double","D":[-73.9818,-73.9445,-73.9503,-73.9622,-73.9773,-73.9135,-73.9664,-73.992,-73.9208,-73.9958]},
+"extra":{"N":10,"T":"double","D":[0.5,0.5,0.5,0,0,0.5,0.5,0.5,0.5,0.5]},
+"dropoff_latitude":{"N":10,"T":"double","D":[40.7324,40.7167,40.7889,40.6573,40.7585,40.7631,40.7899,40.7539,40.8656,40.6884]},
+"store_and_fwd_flag":{"N":10,"T":"char","D":[N,N,N,N,N,N,N,N,N,N]},
+"haversine_distance":{"N":10,"T":"double","D":[0.762426,3.39518,12.4985,7.34413,2.89825,6.0406,8.11306,1.48495,8.57966,3.95255]},
+"pickup_longitude":{"N":10,"T":"double","D":[-73.9904,-73.9808,-73.9846,-73.9935,-73.9606,-73.9801,-73.9941,-73.9794,-73.9472,-73.9983]},
+"fare_amount":{"N":10,"T":"double","D":[7.5,18,33,16.5,8,19,26,9,18,11.5]},
+"VendorID":{"N":10,"T":"int","D":[2,2,2,2,2,2,2,1,1,2]},
+"pickup_day":{"N":10,"T":"char","D":[,,,,,,,,,]},
+"pickup_month":{"N":10,"T":"char","D":[,,,,,,,,,]},
+"pickup_hour":{"N":10,"T":"char","D":[,,,,,,,,,]},
+"improvement_surcharge":{"N":10,"T":"double","D":[0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3]},
+"tip_amount":{"N":10,"T":"double","D":[0,0,0,0,0,0,0,0,0,0]},
+"mta_tax":{"N":10,"T":"double","D":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]},
+"total_amount":{"N":10,"T":"double","D":[8.8,19.3,34.3,17.3,8.8,20.3,27.3,10.3,19.3,12.8]},
+"tolls_amount":{"N":10,"T":"double","D":[0,0,0,0,0,0,0,0,0,0]},
+"trip_distance":{"N":10,"T":"double","D":[1.1,4.9,10.54,4.75,1.76,5.52,7.45,1.2,6,3.21]},
+"tpep_pickup_datetime":{"N":10,"T":"Time","D":[2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:0:1,2016-1-1 0:0:2,2016-1-1 0:0:2]},
+"RatecodeID":{"N":10,"T":"int","D":[1,1,1,1,1,1,1,1,1,1]},
+"tpep_dropoff_datetime":{"N":10,"T":"Time","D":[2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:0:0,2016-1-1 0:18:30,2016-1-1 0:26:45,2016-1-1 0:11:55,2016-1-1 0:11:14,2016-1-1 0:11:8]},
+"passenger_count":{"N":10,"T":"int","D":[2,5,1,1,3,2,2,1,1,1]}
+}
+
+pickup_hour = 0, cnt = 3968244
+pickup_hour = 1, cnt = 2884165
+pickup_hour = 2, cnt = 2112983
+pickup_hour = 3, cnt = 1580727
+pickup_hour = 4, cnt = 1185446
+pickup_hour = 5, cnt = 1113386
+pickup_hour = 6, cnt = 2413150
+pickup_hour = 7, cnt = 4071093
+pickup_hour = 8, cnt = 4948069
+pickup_hour = 9, cnt = 5014123
+pickup_hour = 10, cnt = 4874142
+pickup_hour = 11, cnt = 5070200
+pickup_hour = 12, cnt = 5332655
+pickup_hour = 13, cnt = 5309441
+pickup_hour = 14, cnt = 5516813
+pickup_hour = 15, cnt = 5322217
+pickup_hour = 16, cnt = 4727171
+pickup_hour = 17, cnt = 5589281
+pickup_hour = 18, cnt = 6652073
+pickup_hour = 19, cnt = 6718564
+pickup_hour = 20, cnt = 6285898
+pickup_hour = 21, cnt = 6194571
+pickup_hour = 22, cnt = 5949224
+pickup_hour = 23, cnt = 5124000
+
+pickup_day = 1, cnt = 3412228
+pickup_day = 2, cnt = 3349234
+pickup_day = 3, cnt = 3523200
+pickup_day = 4, cnt = 3528102
+pickup_day = 5, cnt = 3570907
+pickup_day = 6, cnt = 3664805
+pickup_day = 7, cnt = 3725605
+pickup_day = 8, cnt = 3576571
+pickup_day = 9, cnt = 3579411
+pickup_day = 10, cnt = 3675301
+pickup_day = 11, cnt = 3621441
+pickup_day = 12, cnt = 3685104
+pickup_day = 13, cnt = 3755116
+pickup_day = 14, cnt = 3836353
+pickup_day = 15, cnt = 3688731
+pickup_day = 16, cnt = 3670147
+pickup_day = 17, cnt = 3631153
+pickup_day = 18, cnt = 3613035
+pickup_day = 19, cnt = 3634579
+pickup_day = 20, cnt = 3705605
+pickup_day = 21, cnt = 3661758
+pickup_day = 22, cnt = 3544948
+pickup_day = 23, cnt = 3279162
+pickup_day = 24, cnt = 3405313
+pickup_day = 25, cnt = 3482147
+pickup_day = 26, cnt = 3390791
+pickup_day = 27, cnt = 3332369
+pickup_day = 28, cnt = 3564599
+pickup_day = 29, cnt = 3068361
+pickup_day = 30, cnt = 2735195
+pickup_day = 31, cnt = 2046365
+
+pickup_month = 1, cnt = 23655844
+pickup_month = 2, cnt = 23832570
+pickup_month = 3, cnt = 25562561
+pickup_month = 4, cnt = 11934338
+pickup_month = 5, cnt = 11836853
+pickup_month = 6, cnt = 11135470
+
+analyze_trip_durations_of_timestamps() on key = pickup_day
+ksize 107957636
+1 625
+2 641
+3 656
+4 652
+5 644
+6 659
+7 635
+8 633
+9 643
+10 645
+11 652
+12 667
+13 660
+14 649
+15 636
+16 643
+17 648
+18 644
+19 652
+20 654
+21 650
+22 647
+23 656
+24 651
+25 667
+26 682
+27 658
+28 648
+29 663
+30 654
+31 645
+
+analyze_trip_durations_of_timestamps() on key = pickup_month
+ksize 107957636
+1 610
+2 640
+3 654
+4 674
+5 687
+6 693
+
+Step 1: 2233390 us
+Step 2: 5127103 us
+Step 3: 5910505 us
+Step 4: 9429992 us
+Step 5: 8838081 us
+Step 6: 7231223 us
+Step 7: 16341269 us
+Step 8: 8837523 us
+Step 9: 8986398 us
+Total: 72935487 us

@@ -1,0 +1,1 @@
+export PATH=/data/compiler/build/bin:$PATH

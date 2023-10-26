@@ -1,0 +1,2485 @@
+clang version 16.0.0 (https://github.com/llvm/llvm-project.git cbc378ecb87e3f31dd5aff91f2a621d500640412)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /users/Zijian/Disagg-mlir/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/9
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ignoring nonexistent directory "/users/Zijian/Disagg-mlir/build/lib/clang/16.0.0/include"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"
+ignoring duplicate directory "/usr/local/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /users/Zijian/Disagg-mlir/llvm-project/build/lib/clang/16.0.0/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Emitting fn: main
+FunctionDecl 0x8ac9420 <SSSP.c:48:1, line:66:1> line:48:5 main 'int (int, const char **)'
+|-ParmVarDecl 0x8ac9210 <col:10, col:14> col:14 argc 'int'
+|-ParmVarDecl 0x8ac9300 <col:20, col:37> col:32 used argv 'const char **':'const char **'
+`-CompoundStmt 0x8aca670 <line:49:1, line:66:1>
+  |-DeclStmt 0x8ac9578 <line:50:3, col:18>
+  | `-VarDecl 0x8ac94f0 <col:3, col:17> col:7 used total_v 'int' cinit
+  |   `-IntegerLiteral 0x8ac9558 <col:17> 'int' 0
+  |-DeclStmt 0x8ac9730 <line:51:3, col:37>
+  | `-VarDecl 0x8ac95a8 <col:3, col:36> col:7 used redundant_data 'int' cinit
+  |   `-CallExpr 0x8ac96f0 <col:24, col:36> 'int'
+  |     |-ImplicitCastExpr 0x8ac96d8 <col:24> 'int (*)(const char *)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8ac9610 <col:24> 'int (const char *)' Function 0x8a3ba98 'atoi' 'int (const char *)'
+  |     `-ImplicitCastExpr 0x8ac9718 <col:29, col:35> 'const char *' <LValueToRValue>
+  |       `-ArraySubscriptExpr 0x8ac9688 <col:29, col:35> 'const char *' lvalue
+  |         |-ImplicitCastExpr 0x8ac9670 <col:29> 'const char **':'const char **' <LValueToRValue>
+  |         | `-DeclRefExpr 0x8ac9630 <col:29> 'const char **':'const char **' lvalue ParmVar 0x8ac9300 'argv' 'const char **':'const char **'
+  |         `-IntegerLiteral 0x8ac9650 <col:34> 'int' 2
+  |-DeclStmt 0x8ac98b8 <line:52:3, col:32>
+  | `-VarDecl 0x8ac9760 <col:3, col:31> col:7 used need_fake 'int' cinit
+  |   `-CallExpr 0x8ac9878 <col:19, col:31> 'int'
+  |     |-ImplicitCastExpr 0x8ac9860 <col:19> 'int (*)(const char *)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8ac97c8 <col:19> 'int (const char *)' Function 0x8a3ba98 'atoi' 'int (const char *)'
+  |     `-ImplicitCastExpr 0x8ac98a0 <col:24, col:30> 'const char *' <LValueToRValue>
+  |       `-ArraySubscriptExpr 0x8ac9840 <col:24, col:30> 'const char *' lvalue
+  |         |-ImplicitCastExpr 0x8ac9828 <col:24> 'const char **':'const char **' <LValueToRValue>
+  |         | `-DeclRefExpr 0x8ac97e8 <col:24> 'const char **':'const char **' lvalue ParmVar 0x8ac9300 'argv' 'const char **':'const char **'
+  |         `-IntegerLiteral 0x8ac9808 <col:29> 'int' 3
+  |-DeclStmt 0x8ac9b88 <line:54:3, col:70>
+  | `-VarDecl 0x8ac98e8 <col:3, col:69> col:10 used g 'Graph *' cinit
+  |   `-CallExpr 0x8ac9ad0 <col:14, col:69> 'struct Graph *'
+  |     |-ImplicitCastExpr 0x8ac9ab8 <col:14> 'struct Graph *(*)(uint8_t, uint8_t, const char *, int *)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8ac9950 <col:14> 'struct Graph *(uint8_t, uint8_t, const char *, int *)' Function 0x8ab8790 'init_graph' 'struct Graph *(uint8_t, uint8_t, const char *, int *)'
+  |     |-ImplicitCastExpr 0x8ac9b28 <col:25> 'uint8_t':'unsigned char' <IntegralCast>
+  |     | `-ImplicitCastExpr 0x8ac9b10 <col:25> 'int' <LValueToRValue>
+  |     |   `-DeclRefExpr 0x8ac9970 <col:25> 'int' lvalue Var 0x8ac95a8 'redundant_data' 'int'
+  |     |-ImplicitCastExpr 0x8ac9b58 <col:41> 'uint8_t':'unsigned char' <IntegralCast>
+  |     | `-ImplicitCastExpr 0x8ac9b40 <col:41> 'int' <LValueToRValue>
+  |     |   `-DeclRefExpr 0x8ac9990 <col:41> 'int' lvalue Var 0x8ac9760 'need_fake' 'int'
+  |     |-ImplicitCastExpr 0x8ac9b70 <col:52, col:58> 'const char *' <LValueToRValue>
+  |     | `-ArraySubscriptExpr 0x8ac9a08 <col:52, col:58> 'const char *' lvalue
+  |     |   |-ImplicitCastExpr 0x8ac99f0 <col:52> 'const char **':'const char **' <LValueToRValue>
+  |     |   | `-DeclRefExpr 0x8ac99b0 <col:52> 'const char **':'const char **' lvalue ParmVar 0x8ac9300 'argv' 'const char **':'const char **'
+  |     |   `-IntegerLiteral 0x8ac99d0 <col:57> 'int' 1
+  |     `-UnaryOperator 0x8ac9a48 <col:61, col:62> 'int *' prefix '&' cannot overflow
+  |       `-DeclRefExpr 0x8ac9a28 <col:62> 'int' lvalue Var 0x8ac94f0 'total_v' 'int'
+  |-DeclStmt 0x8ac9e18 <line:55:3, col:54>
+  | `-VarDecl 0x8ac9bb8 <col:3, col:53> col:11 used solution 'double *' cinit
+  |   `-ImplicitCastExpr 0x8ac9e00 <col:22, col:53> 'double *' <BitCast>
+  |     `-CallExpr 0x8ac9dd8 <col:22, col:53> 'void *'
+  |       |-ImplicitCastExpr 0x8ac9dc0 <col:22> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+  |       | `-DeclRefExpr 0x8ac9c20 <col:22> 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+  |       `-BinaryOperator 0x8ac9da0 <col:29, col:52> 'unsigned long' '*'
+  |         |-UnaryExprOrTypeTraitExpr 0x8ac9cb0 <col:29, col:45> 'unsigned long' sizeof
+  |         | `-ParenExpr 0x8ac9c90 <col:35, col:45> 'double' lvalue
+  |         |   `-UnaryOperator 0x8ac9c78 <col:36, col:37> 'double' lvalue prefix '*' cannot overflow
+  |         |     `-ImplicitCastExpr 0x8ac9c60 <col:37> 'double *' <LValueToRValue>
+  |         |       `-DeclRefExpr 0x8ac9c40 <col:37> 'double *' lvalue Var 0x8ac9bb8 'solution' 'double *' non_odr_use_unevaluated
+  |         `-ImplicitCastExpr 0x8ac9d88 <col:49, col:52> 'unsigned long' <IntegralCast>
+  |           `-ImplicitCastExpr 0x8ac9d70 <col:49, col:52> 'int' <LValueToRValue>
+  |             `-MemberExpr 0x8ac9d40 <col:49, col:52> 'int' lvalue ->V 0x8ab7608
+  |               `-ImplicitCastExpr 0x8ac9cf0 <col:49> 'Graph *' <LValueToRValue>
+  |                 `-DeclRefExpr 0x8ac9cd0 <col:49> 'Graph *' lvalue Var 0x8ac98e8 'g' 'Graph *'
+  |-CallExpr 0x8ac9f20 <line:56:3, col:26> 'void'
+  | |-ImplicitCastExpr 0x8ac9f08 <col:3> 'void (*)(Graph *, int, double *)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x8ac9e30 <col:3> 'void (Graph *, int, double *)' Function 0x8ac23c8 'dijkstra' 'void (Graph *, int, double *)'
+  | |-ImplicitCastExpr 0x8ac9f58 <col:12> 'Graph *' <LValueToRValue>
+  | | `-DeclRefExpr 0x8ac9e50 <col:12> 'Graph *' lvalue Var 0x8ac98e8 'g' 'Graph *'
+  | |-IntegerLiteral 0x8ac9e70 <col:15> 'int' 0
+  | `-ImplicitCastExpr 0x8ac9f70 <col:18> 'double *' <LValueToRValue>
+  |   `-DeclRefExpr 0x8ac9e90 <col:18> 'double *' lvalue Var 0x8ac9bb8 'solution' 'double *'
+  |-DeclStmt 0x8aca188 <line:58:3, col:41>
+  | `-VarDecl 0x8ac9fa0 <col:3, col:40> col:9 used out 'FILE *' cinit
+  |   `-CallExpr 0x8aca0f8 <col:15, col:40> 'FILE *'
+  |     |-ImplicitCastExpr 0x8aca0e0 <col:15> 'FILE *(*)(const char *, const char *)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8aca008 <col:15> 'FILE *(const char *, const char *)' Function 0x8a1a678 'fopen' 'FILE *(const char *, const char *)'
+  |     |-ImplicitCastExpr 0x8aca140 <col:21> 'const char *' <NoOp>
+  |     | `-ImplicitCastExpr 0x8aca128 <col:21> 'char *' <ArrayToPointerDecay>
+  |     |   `-StringLiteral 0x8aca068 <col:21> 'char[13]' lvalue "solution.txt"
+  |     `-ImplicitCastExpr 0x8aca170 <col:37> 'const char *' <NoOp>
+  |       `-ImplicitCastExpr 0x8aca158 <col:37> 'char *' <ArrayToPointerDecay>
+  |         `-StringLiteral 0x8aca090 <col:37> 'char[2]' lvalue "w"
+  |-ForStmt 0x8aca570 <line:59:3, line:63:3>
+  | |-DeclStmt 0x8aca240 <line:59:8, col:17>
+  | | `-VarDecl 0x8aca1b8 <col:8, col:16> col:12 used i 'int' cinit
+  | |   `-IntegerLiteral 0x8aca220 <col:16> 'int' 0
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x8aca2c8 <col:19, col:23> 'int' '<'
+  | | |-ImplicitCastExpr 0x8aca298 <col:19> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x8aca258 <col:19> 'int' lvalue Var 0x8aca1b8 'i' 'int'
+  | | `-ImplicitCastExpr 0x8aca2b0 <col:23> 'int' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8aca278 <col:23> 'int' lvalue Var 0x8ac94f0 'total_v' 'int'
+  | |-UnaryOperator 0x8aca308 <col:32, col:35> 'int' prefix '++'
+  | | `-DeclRefExpr 0x8aca2e8 <col:35> 'int' lvalue Var 0x8aca1b8 'i' 'int'
+  | `-CompoundStmt 0x8aca558 <line:60:3, line:63:3>
+  |   `-CallExpr 0x8aca4c0 <line:62:5, col:38> 'int'
+  |     |-ImplicitCastExpr 0x8aca4a8 <col:5> 'int (*)(FILE *, const char *, ...)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8aca320 <col:5> 'int (FILE *, const char *, ...)' Function 0x8a1d4a8 'fprintf' 'int (FILE *, const char *, ...)'
+  |     |-ImplicitCastExpr 0x8aca4f8 <col:13> 'FILE *' <LValueToRValue>
+  |     | `-DeclRefExpr 0x8aca340 <col:13> 'FILE *' lvalue Var 0x8ac9fa0 'out' 'FILE *'
+  |     |-ImplicitCastExpr 0x8aca528 <col:18> 'const char *' <NoOp>
+  |     | `-ImplicitCastExpr 0x8aca510 <col:18> 'char *' <ArrayToPointerDecay>
+  |     |   `-StringLiteral 0x8aca398 <col:18> 'char[5]' lvalue "%lf\n"
+  |     `-ImplicitCastExpr 0x8aca540 <col:27, col:37> 'double' <LValueToRValue>
+  |       `-ArraySubscriptExpr 0x8aca428 <col:27, col:37> 'double' lvalue
+  |         |-ImplicitCastExpr 0x8aca3f8 <col:27> 'double *' <LValueToRValue>
+  |         | `-DeclRefExpr 0x8aca3b8 <col:27> 'double *' lvalue Var 0x8ac9bb8 'solution' 'double *'
+  |         `-ImplicitCastExpr 0x8aca410 <col:36> 'int' <LValueToRValue>
+  |           `-DeclRefExpr 0x8aca3d8 <col:36> 'int' lvalue Var 0x8aca1b8 'i' 'int'
+  |-CallExpr 0x8aca600 <line:64:3, col:13> 'int'
+  | |-ImplicitCastExpr 0x8aca5e8 <col:3> 'int (*)(FILE *)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x8aca5a8 <col:3> 'int (FILE *)' Function 0x8a186c0 'fclose' 'int (FILE *)'
+  | `-ImplicitCastExpr 0x8aca628 <col:10> 'FILE *' <LValueToRValue>
+  |   `-DeclRefExpr 0x8aca5c8 <col:10> 'FILE *' lvalue Var 0x8ac9fa0 'out' 'FILE *'
+  `-ReturnStmt 0x8aca660 <line:65:3, col:10>
+    `-IntegerLiteral 0x8aca640 <col:10> 'int' 0
+CompoundStmt 0x8aca670
+|-DeclStmt 0x8ac9578
+| `-VarDecl 0x8ac94f0  used total_v 'int' cinit
+|   `-IntegerLiteral 0x8ac9558 'int' 0
+|-DeclStmt 0x8ac9730
+| `-VarDecl 0x8ac95a8  used redundant_data 'int' cinit
+|   `-CallExpr 0x8ac96f0 'int'
+|     |-ImplicitCastExpr 0x8ac96d8 'int (*)(const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8ac9610 'int (const char *)' Function 0x8a3ba98 'atoi' 'int (const char *)'
+|     `-ImplicitCastExpr 0x8ac9718 'const char *' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x8ac9688 'const char *' lvalue
+|         |-ImplicitCastExpr 0x8ac9670 'const char **':'const char **' <LValueToRValue>
+|         | `-DeclRefExpr 0x8ac9630 'const char **':'const char **' lvalue ParmVar 0x8ac9300 'argv' 'const char **':'const char **'
+|         `-IntegerLiteral 0x8ac9650 'int' 2
+|-DeclStmt 0x8ac98b8
+| `-VarDecl 0x8ac9760  used need_fake 'int' cinit
+|   `-CallExpr 0x8ac9878 'int'
+|     |-ImplicitCastExpr 0x8ac9860 'int (*)(const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8ac97c8 'int (const char *)' Function 0x8a3ba98 'atoi' 'int (const char *)'
+|     `-ImplicitCastExpr 0x8ac98a0 'const char *' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x8ac9840 'const char *' lvalue
+|         |-ImplicitCastExpr 0x8ac9828 'const char **':'const char **' <LValueToRValue>
+|         | `-DeclRefExpr 0x8ac97e8 'const char **':'const char **' lvalue ParmVar 0x8ac9300 'argv' 'const char **':'const char **'
+|         `-IntegerLiteral 0x8ac9808 'int' 3
+|-DeclStmt 0x8ac9b88
+| `-VarDecl 0x8ac98e8  used g 'Graph *' cinit
+|   `-CallExpr 0x8ac9ad0 'struct Graph *'
+|     |-ImplicitCastExpr 0x8ac9ab8 'struct Graph *(*)(uint8_t, uint8_t, const char *, int *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8ac9950 'struct Graph *(uint8_t, uint8_t, const char *, int *)' Function 0x8ab8790 'init_graph' 'struct Graph *(uint8_t, uint8_t, const char *, int *)'
+|     |-ImplicitCastExpr 0x8ac9b28 'uint8_t':'unsigned char' <IntegralCast>
+|     | `-ImplicitCastExpr 0x8ac9b10 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x8ac9970 'int' lvalue Var 0x8ac95a8 'redundant_data' 'int'
+|     |-ImplicitCastExpr 0x8ac9b58 'uint8_t':'unsigned char' <IntegralCast>
+|     | `-ImplicitCastExpr 0x8ac9b40 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x8ac9990 'int' lvalue Var 0x8ac9760 'need_fake' 'int'
+|     |-ImplicitCastExpr 0x8ac9b70 'const char *' <LValueToRValue>
+|     | `-ArraySubscriptExpr 0x8ac9a08 'const char *' lvalue
+|     |   |-ImplicitCastExpr 0x8ac99f0 'const char **':'const char **' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x8ac99b0 'const char **':'const char **' lvalue ParmVar 0x8ac9300 'argv' 'const char **':'const char **'
+|     |   `-IntegerLiteral 0x8ac99d0 'int' 1
+|     `-UnaryOperator 0x8ac9a48 'int *' prefix '&' cannot overflow
+|       `-DeclRefExpr 0x8ac9a28 'int' lvalue Var 0x8ac94f0 'total_v' 'int'
+|-DeclStmt 0x8ac9e18
+| `-VarDecl 0x8ac9bb8  used solution 'double *' cinit
+|   `-ImplicitCastExpr 0x8ac9e00 'double *' <BitCast>
+|     `-CallExpr 0x8ac9dd8 'void *'
+|       |-ImplicitCastExpr 0x8ac9dc0 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x8ac9c20 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+|       `-BinaryOperator 0x8ac9da0 'unsigned long' '*'
+|         |-UnaryExprOrTypeTraitExpr 0x8ac9cb0 'unsigned long' sizeof
+|         | `-ParenExpr 0x8ac9c90 'double' lvalue
+|         |   `-UnaryOperator 0x8ac9c78 'double' lvalue prefix '*' cannot overflow
+|         |     `-ImplicitCastExpr 0x8ac9c60 'double *' <LValueToRValue>
+|         |       `-DeclRefExpr 0x8ac9c40 'double *' lvalue Var 0x8ac9bb8 'solution' 'double *' non_odr_use_unevaluated
+|         `-ImplicitCastExpr 0x8ac9d88 'unsigned long' <IntegralCast>
+|           `-ImplicitCastExpr 0x8ac9d70 'int' <LValueToRValue>
+|             `-MemberExpr 0x8ac9d40 'int' lvalue ->V 0x8ab7608
+|               `-ImplicitCastExpr 0x8ac9cf0 'Graph *' <LValueToRValue>
+|                 `-DeclRefExpr 0x8ac9cd0 'Graph *' lvalue Var 0x8ac98e8 'g' 'Graph *'
+|-CallExpr 0x8ac9f20 'void'
+| |-ImplicitCastExpr 0x8ac9f08 'void (*)(Graph *, int, double *)' <FunctionToPointerDecay>
+| | `-DeclRefExpr 0x8ac9e30 'void (Graph *, int, double *)' Function 0x8ac23c8 'dijkstra' 'void (Graph *, int, double *)'
+| |-ImplicitCastExpr 0x8ac9f58 'Graph *' <LValueToRValue>
+| | `-DeclRefExpr 0x8ac9e50 'Graph *' lvalue Var 0x8ac98e8 'g' 'Graph *'
+| |-IntegerLiteral 0x8ac9e70 'int' 0
+| `-ImplicitCastExpr 0x8ac9f70 'double *' <LValueToRValue>
+|   `-DeclRefExpr 0x8ac9e90 'double *' lvalue Var 0x8ac9bb8 'solution' 'double *'
+|-DeclStmt 0x8aca188
+| `-VarDecl 0x8ac9fa0  used out 'FILE *' cinit
+|   `-CallExpr 0x8aca0f8 'FILE *'
+|     |-ImplicitCastExpr 0x8aca0e0 'FILE *(*)(const char *, const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8aca008 'FILE *(const char *, const char *)' Function 0x8a1a678 'fopen' 'FILE *(const char *, const char *)'
+|     |-ImplicitCastExpr 0x8aca140 'const char *' <NoOp>
+|     | `-ImplicitCastExpr 0x8aca128 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x8aca068 'char[13]' lvalue "solution.txt"
+|     `-ImplicitCastExpr 0x8aca170 'const char *' <NoOp>
+|       `-ImplicitCastExpr 0x8aca158 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x8aca090 'char[2]' lvalue "w"
+|-ForStmt 0x8aca570
+| |-DeclStmt 0x8aca240
+| | `-VarDecl 0x8aca1b8  used i 'int' cinit
+| |   `-IntegerLiteral 0x8aca220 'int' 0
+| |-<<<NULL>>>
+| |-BinaryOperator 0x8aca2c8 'int' '<'
+| | |-ImplicitCastExpr 0x8aca298 'int' <LValueToRValue>
+| | | `-DeclRefExpr 0x8aca258 'int' lvalue Var 0x8aca1b8 'i' 'int'
+| | `-ImplicitCastExpr 0x8aca2b0 'int' <LValueToRValue>
+| |   `-DeclRefExpr 0x8aca278 'int' lvalue Var 0x8ac94f0 'total_v' 'int'
+| |-UnaryOperator 0x8aca308 'int' prefix '++'
+| | `-DeclRefExpr 0x8aca2e8 'int' lvalue Var 0x8aca1b8 'i' 'int'
+| `-CompoundStmt 0x8aca558
+|   `-CallExpr 0x8aca4c0 'int'
+|     |-ImplicitCastExpr 0x8aca4a8 'int (*)(FILE *, const char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8aca320 'int (FILE *, const char *, ...)' Function 0x8a1d4a8 'fprintf' 'int (FILE *, const char *, ...)'
+|     |-ImplicitCastExpr 0x8aca4f8 'FILE *' <LValueToRValue>
+|     | `-DeclRefExpr 0x8aca340 'FILE *' lvalue Var 0x8ac9fa0 'out' 'FILE *'
+|     |-ImplicitCastExpr 0x8aca528 'const char *' <NoOp>
+|     | `-ImplicitCastExpr 0x8aca510 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x8aca398 'char[5]' lvalue "%lf\n"
+|     `-ImplicitCastExpr 0x8aca540 'double' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x8aca428 'double' lvalue
+|         |-ImplicitCastExpr 0x8aca3f8 'double *' <LValueToRValue>
+|         | `-DeclRefExpr 0x8aca3b8 'double *' lvalue Var 0x8ac9bb8 'solution' 'double *'
+|         `-ImplicitCastExpr 0x8aca410 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x8aca3d8 'int' lvalue Var 0x8aca1b8 'i' 'int'
+|-CallExpr 0x8aca600 'int'
+| |-ImplicitCastExpr 0x8aca5e8 'int (*)(FILE *)' <FunctionToPointerDecay>
+| | `-DeclRefExpr 0x8aca5a8 'int (FILE *)' Function 0x8a186c0 'fclose' 'int (FILE *)'
+| `-ImplicitCastExpr 0x8aca628 'FILE *' <LValueToRValue>
+|   `-DeclRefExpr 0x8aca5c8 'FILE *' lvalue Var 0x8ac9fa0 'out' 'FILE *'
+`-ReturnStmt 0x8aca660
+  `-IntegerLiteral 0x8aca640 'int' 0
+Emitting fn: init_graph
+FunctionDecl 0x8ab8790 <./util.h:41:1, line:98:1> line:41:15 used init_graph 'struct Graph *(uint8_t, uint8_t, const char *, int *)'
+|-ParmVarDecl 0x8ab84c0 <col:26, col:34> col:34 used redundant 'uint8_t':'unsigned char'
+|-ParmVarDecl 0x8ab8538 <col:45, col:53> col:53 used need_fake 'uint8_t':'unsigned char'
+|-ParmVarDecl 0x8ab85b8 <col:64, col:76> col:76 used fpath 'const char *'
+|-ParmVarDecl 0x8ab8638 <col:83, col:88> col:88 used total_v 'int *'
+`-CompoundStmt 0x8abc110 <line:42:1, line:98:1>
+  |-DeclStmt 0x8ab8a20 <line:43:3, col:39>
+  | `-VarDecl 0x8ab8880 <col:3, col:38> col:17 used g 'struct Graph *' cinit
+  |   `-ImplicitCastExpr 0x8ab8a08 <col:21, col:38> 'struct Graph *' <BitCast>
+  |     `-CallExpr 0x8ab89e0 <col:21, col:38> 'void *'
+  |       |-ImplicitCastExpr 0x8ab89c8 <col:21> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+  |       | `-DeclRefExpr 0x8ab88e8 <col:21> 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+  |       `-UnaryExprOrTypeTraitExpr 0x8ab8978 <col:28, col:37> 'unsigned long' sizeof
+  |         `-ParenExpr 0x8ab8958 <col:34, col:37> 'struct Graph':'struct Graph' lvalue
+  |           `-UnaryOperator 0x8ab8940 <col:35, col:36> 'struct Graph':'struct Graph' lvalue prefix '*' cannot overflow
+  |             `-ImplicitCastExpr 0x8ab8928 <col:36> 'struct Graph *' <LValueToRValue>
+  |               `-DeclRefExpr 0x8ab8908 <col:36> 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *' non_odr_use_unevaluated
+  |-BinaryOperator 0x8ab8bb0 <line:44:3, col:47> 'struct AdjList *' '='
+  | |-MemberExpr 0x8ab8a70 <col:3, col:6> 'struct AdjList *' lvalue ->l 0x8ab75a0
+  | | `-ImplicitCastExpr 0x8ab8a58 <col:3> 'struct Graph *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8ab8a38 <col:3> 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+  | `-ImplicitCastExpr 0x8ab8b98 <col:10, col:47> 'struct AdjList *' <BitCast>
+  |   `-CallExpr 0x8ab8b70 <col:10, col:47> 'void *'
+  |     |-ImplicitCastExpr 0x8ab8b58 <col:10> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8ab8aa0 <col:10> 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+  |     `-BinaryOperator 0x8ab8b38 <col:17, line:8:15> 'unsigned long' '*'
+  |       |-UnaryExprOrTypeTraitExpr 0x8ab8ae0 <line:44:17, col:38> 'unsigned long' sizeof 'struct AdjList':'struct AdjList'
+  |       `-ImplicitCastExpr 0x8ab8b20 <line:8:15> 'unsigned long' <IntegralCast>
+  |         `-IntegerLiteral 0x8ab8b00 <col:15> 'int' 2000000
+  |-ForStmt 0x8ab8e98 <line:46:3, line:49:3>
+  | |-DeclStmt 0x8ab8c70 <line:46:8, col:17>
+  | | `-VarDecl 0x8ab8be8 <col:8, col:16> col:12 used i 'int' cinit
+  | |   `-IntegerLiteral 0x8ab8c50 <col:16> 'int' 0
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x8ab8ce0 <col:19, line:8:15> 'int' '<'
+  | | |-ImplicitCastExpr 0x8ab8cc8 <line:46:19> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x8ab8c88 <col:19> 'int' lvalue Var 0x8ab8be8 'i' 'int'
+  | | `-IntegerLiteral 0x8ab8ca8 <line:8:15> 'int' 2000000
+  | |-UnaryOperator 0x8ab8d20 <line:46:30, col:33> 'int' prefix '++'
+  | | `-DeclRefExpr 0x8ab8d00 <col:33> 'int' lvalue Var 0x8ab8be8 'i' 'int'
+  | `-CompoundStmt 0x8ab8e80 <line:47:3, line:49:3>
+  |   `-BinaryOperator 0x8ab8e60 <line:48:5, col:22> 'int' '='
+  |     |-MemberExpr 0x8ab8e10 <col:5, col:13> 'int' lvalue .length 0x8ab7330
+  |     | `-ArraySubscriptExpr 0x8ab8df0 <col:5, col:11> 'struct AdjList':'struct AdjList' lvalue
+  |     |   |-ImplicitCastExpr 0x8ab8dc0 <col:5, col:8> 'struct AdjList *' <LValueToRValue>
+  |     |   | `-MemberExpr 0x8ab8d70 <col:5, col:8> 'struct AdjList *' lvalue ->l 0x8ab75a0
+  |     |   |   `-ImplicitCastExpr 0x8ab8d58 <col:5> 'struct Graph *' <LValueToRValue>
+  |     |   |     `-DeclRefExpr 0x8ab8d38 <col:5> 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+  |     |   `-ImplicitCastExpr 0x8ab8dd8 <col:10> 'int' <LValueToRValue>
+  |     |     `-DeclRefExpr 0x8ab8da0 <col:10> 'int' lvalue Var 0x8ab8be8 'i' 'int'
+  |     `-IntegerLiteral 0x8ab8e40 <col:22> 'int' 0
+  |-DeclStmt 0x8aba128 <line:51:3, col:33>
+  | `-VarDecl 0x8ab8ee8 <col:3, col:32> col:9 used fptr 'FILE *' cinit
+  |   `-CallExpr 0x8ab9090 <col:16, col:32> 'FILE *'
+  |     |-ImplicitCastExpr 0x8ab9078 <col:16> 'FILE *(*)(const char *, const char *)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8ab8f50 <col:16> 'FILE *(const char *, const char *)' Function 0x8a1a678 'fopen' 'FILE *(const char *, const char *)'
+  |     |-ImplicitCastExpr 0x8aba0e0 <col:22> 'const char *' <LValueToRValue>
+  |     | `-DeclRefExpr 0x8ab8f70 <col:22> 'const char *' lvalue ParmVar 0x8ab85b8 'fpath' 'const char *'
+  |     `-ImplicitCastExpr 0x8aba110 <col:29> 'const char *' <NoOp>
+  |       `-ImplicitCastExpr 0x8aba0f8 <col:29> 'char *' <ArrayToPointerDecay>
+  |         `-StringLiteral 0x8ab8fc8 <col:29> 'char[2]' lvalue "r"
+  |-IfStmt 0x8aba420 <line:53:3, line:57:3>
+  | |-BinaryOperator 0x8aba210 <line:53:7, /users/Zijian/Disagg-mlir/llvm-project/build/lib/clang/16.0.0/include/stddef.h:89:25> 'int' '=='
+  | | |-ImplicitCastExpr 0x8aba1e0 <./util.h:53:7> 'FILE *' <LValueToRValue>
+  | | | `-DeclRefExpr 0x8aba140 <col:7> 'FILE *' lvalue Var 0x8ab8ee8 'fptr' 'FILE *'
+  | | `-ImplicitCastExpr 0x8aba1f8 </users/Zijian/Disagg-mlir/llvm-project/build/lib/clang/16.0.0/include/stddef.h:89:16, col:25> 'FILE *' <BitCast>
+  | |   `-ParenExpr 0x8aba1c0 <col:16, col:25> 'void *'
+  | |     `-CStyleCastExpr 0x8aba198 <col:17, col:24> 'void *' <NullToPointer>
+  | |       `-IntegerLiteral 0x8aba160 <col:24> 'int' 0
+  | `-CompoundStmt 0x8aba400 <./util.h:54:3, line:57:3>
+  |   |-CallExpr 0x8aba308 <line:55:5, col:44> 'int'
+  |   | |-ImplicitCastExpr 0x8aba2f0 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+  |   | | `-DeclRefExpr 0x8aba230 <col:5> 'int (const char *, ...)' Function 0x8a1d8f0 'printf' 'int (const char *, ...)'
+  |   | |-ImplicitCastExpr 0x8aba350 <col:12> 'const char *' <NoOp>
+  |   | | `-ImplicitCastExpr 0x8aba338 <col:12> 'char *' <ArrayToPointerDecay>
+  |   | |   `-StringLiteral 0x8aba288 <col:12> 'char[23]' lvalue "Couldn't open file %s\n"
+  |   | `-ImplicitCastExpr 0x8aba368 <col:39> 'const char *' <LValueToRValue>
+  |   |   `-DeclRefExpr 0x8aba2b8 <col:39> 'const char *' lvalue ParmVar 0x8ab85b8 'fpath' 'const char *'
+  |   `-CallExpr 0x8aba3d8 <line:56:5, col:11> 'void'
+  |     |-ImplicitCastExpr 0x8aba3c0 <col:5> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8aba380 <col:5> 'void (int) __attribute__((noreturn))' Function 0x8a7abf8 'exit' 'void (int) __attribute__((noreturn))'
+  |     `-IntegerLiteral 0x8aba3a0 <col:10> 'int' 1
+  |-DeclStmt 0x8aba668 <line:58:3, col:29>
+  | |-VarDecl 0x8aba458 <col:3, col:7> col:7 used eid 'int'
+  | |-VarDecl 0x8aba4d8 <col:3, col:12> col:12 used sid 'int'
+  | |-VarDecl 0x8aba558 <col:3, col:17> col:17 used tid 'int'
+  | `-VarDecl 0x8aba5d8 <col:3, col:22> col:22 used vid_max 'int'
+  |-BinaryOperator 0x8aba740 <line:59:3, col:21> 'int' '='
+  | |-DeclRefExpr 0x8aba680 <col:3> 'int' lvalue Var 0x8aba458 'eid' 'int'
+  | `-BinaryOperator 0x8aba720 <col:9, col:21> 'int' '='
+  |   |-DeclRefExpr 0x8aba6a0 <col:9> 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+  |   `-BinaryOperator 0x8aba700 <col:15, col:21> 'int' '='
+  |     |-DeclRefExpr 0x8aba6c0 <col:15> 'int' lvalue Var 0x8aba558 'tid' 'int'
+  |     `-IntegerLiteral 0x8aba6e0 <col:21> 'int' 0
+  |-DeclStmt 0x8aba818 <line:60:3, col:20>
+  | `-VarDecl 0x8aba778 <col:3, col:19> col:7 used prev_sid 'int' cinit
+  |   `-UnaryOperator 0x8aba800 <col:18, col:19> 'int' prefix '-'
+  |     `-IntegerLiteral 0x8aba7e0 <col:19> 'int' 1
+  |-DeclStmt 0x8aba8d0 <line:61:3, col:16>
+  | `-VarDecl 0x8aba848 <col:3, col:15> col:7 used inter 'int' cinit
+  |   `-IntegerLiteral 0x8aba8b0 <col:15> 'int' 0
+  |-BinaryOperator 0x8aba940 <line:62:3, col:14> 'int' '='
+  | |-DeclRefExpr 0x8aba8e8 <col:3> 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+  | `-UnaryOperator 0x8aba928 <col:13, col:14> 'int' prefix '-'
+  |   `-IntegerLiteral 0x8aba908 <col:14> 'int' 1
+  |-DeclStmt 0x8aba9e0 <line:63:3, col:11>
+  | `-VarDecl 0x8aba978 <col:3, col:10> col:10 used w 'double'
+  |-WhileStmt 0x8abbdc0 <line:65:3, line:92:3>
+  | |-IntegerLiteral 0x8aba9f8 <line:65:9> 'int' 1
+  | `-CompoundStmt 0x8abbda0 <line:66:3, line:92:3>
+  |   |-IfStmt 0x8abb4f8 <line:67:5, line:79:5> has_else
+  |   | |-UnaryOperator 0x8abaa50 <line:67:9, col:10> 'int' prefix '!' cannot overflow
+  |   | | `-ImplicitCastExpr 0x8abaa38 <col:10> 'uint8_t':'unsigned char' <LValueToRValue>
+  |   | |   `-DeclRefExpr 0x8abaa18 <col:10> 'uint8_t':'unsigned char' lvalue ParmVar 0x8ab8538 'need_fake' 'uint8_t':'unsigned char'
+  |   | |-CompoundStmt 0x8abaf00 <line:68:5, line:71:5>
+  |   | | `-IfStmt 0x8abaee0 <line:70:7, col:72>
+  |   | |   |-BinaryOperator 0x8abaeb8 <col:11, /usr/include/stdio.h:104:16> 'int' '=='
+  |   | |   | |-CallExpr 0x8abac90 <./util.h:70:11, col:62> 'int'
+  |   | |   | | |-ImplicitCastExpr 0x8abac78 <col:11> 'int (*)(FILE *restrict, const char *restrict, ...)' <FunctionToPointerDecay>
+  |   | |   | | | `-DeclRefExpr 0x8abaa68 <col:11> 'int (FILE *restrict, const char *restrict, ...)' Function 0x8a22730 'fscanf' 'int (FILE *restrict, const char *restrict, ...)'
+  |   | |   | | |-ImplicitCastExpr 0x8abace0 <col:18> 'FILE *' <LValueToRValue>
+  |   | |   | | | `-DeclRefExpr 0x8abaa88 <col:18> 'FILE *' lvalue Var 0x8ab8ee8 'fptr' 'FILE *'
+  |   | |   | | |-ImplicitCastExpr 0x8abad10 <col:24> 'const char *' <NoOp>
+  |   | |   | | | `-ImplicitCastExpr 0x8abacf8 <col:24> 'char *' <ArrayToPointerDecay>
+  |   | |   | | |   `-StringLiteral 0x8abaae8 <col:24> 'char[14]' lvalue "%d %d %d %lf\n"
+  |   | |   | | |-UnaryOperator 0x8abab30 <col:42, col:43> 'int *' prefix '&' cannot overflow
+  |   | |   | | | `-DeclRefExpr 0x8abab10 <col:43> 'int' lvalue Var 0x8aba458 'eid' 'int'
+  |   | |   | | |-UnaryOperator 0x8abab68 <col:48, col:49> 'int *' prefix '&' cannot overflow
+  |   | |   | | | `-DeclRefExpr 0x8abab48 <col:49> 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+  |   | |   | | |-UnaryOperator 0x8ababa0 <col:54, col:55> 'int *' prefix '&' cannot overflow
+  |   | |   | | | `-DeclRefExpr 0x8abab80 <col:55> 'int' lvalue Var 0x8aba558 'tid' 'int'
+  |   | |   | | `-UnaryOperator 0x8ababd8 <col:60, col:61> 'double *' prefix '&' cannot overflow
+  |   | |   | |   `-DeclRefExpr 0x8ababb8 <col:61> 'double' lvalue Var 0x8aba978 'w' 'double'
+  |   | |   | `-ParenExpr 0x8abae98 </usr/include/stdio.h:104:13, col:16> 'int'
+  |   | |   |   `-UnaryOperator 0x8abae80 <col:14, col:15> 'int' prefix '-'
+  |   | |   |     `-IntegerLiteral 0x8abae60 <col:15> 'int' 1
+  |   | |   `-BreakStmt 0x8abaed8 <./util.h:70:72>
+  |   | `-CompoundStmt 0x8abb4c8 <line:73:5, line:79:5>
+  |   |   |-IfStmt 0x8abb188 <line:75:7, col:55>
+  |   |   | |-BinaryOperator 0x8abb160 <col:11, /usr/include/stdio.h:104:16> 'int' '=='
+  |   |   | | |-CallExpr 0x8abb070 <./util.h:75:11, col:45> 'int'
+  |   |   | | | |-ImplicitCastExpr 0x8abb058 <col:11> 'int (*)(FILE *restrict, const char *restrict, ...)' <FunctionToPointerDecay>
+  |   |   | | | | `-DeclRefExpr 0x8abaf18 <col:11> 'int (FILE *restrict, const char *restrict, ...)' Function 0x8a22730 'fscanf' 'int (FILE *restrict, const char *restrict, ...)'
+  |   |   | | | |-ImplicitCastExpr 0x8abb0b0 <col:18> 'FILE *' <LValueToRValue>
+  |   |   | | | | `-DeclRefExpr 0x8abaf38 <col:18> 'FILE *' lvalue Var 0x8ab8ee8 'fptr' 'FILE *'
+  |   |   | | | |-ImplicitCastExpr 0x8abb0f0 <col:24> 'const char *' <NoOp>
+  |   |   | | | | `-ImplicitCastExpr 0x8abb0c8 <col:24> 'char *' <ArrayToPointerDecay>
+  |   |   | | | |   `-StringLiteral 0x8abaf98 <col:24> 'char[7]' lvalue "%d %d\n"
+  |   |   | | | |-UnaryOperator 0x8abafd8 <col:35, col:36> 'int *' prefix '&' cannot overflow
+  |   |   | | | | `-DeclRefExpr 0x8abafb8 <col:36> 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+  |   |   | | | `-UnaryOperator 0x8abb010 <col:41, col:42> 'int *' prefix '&' cannot overflow
+  |   |   | | |   `-DeclRefExpr 0x8abaff0 <col:42> 'int' lvalue Var 0x8aba558 'tid' 'int'
+  |   |   | | `-ParenExpr 0x8abb140 </usr/include/stdio.h:104:13, col:16> 'int'
+  |   |   | |   `-UnaryOperator 0x8abb128 <col:14, col:15> 'int' prefix '-'
+  |   |   | |     `-IntegerLiteral 0x8abb108 <col:15> 'int' 1
+  |   |   | `-BreakStmt 0x8abb180 <./util.h:75:55>
+  |   |   |-UnaryOperator 0x8abb1c8 <line:76:7, col:11> 'int' postfix '++'
+  |   |   | `-DeclRefExpr 0x8abb1a8 <col:7> 'int' lvalue Var 0x8aba458 'eid' 'int'
+  |   |   |-BinaryOperator 0x8abb378 <line:77:7, col:47> 'int' '='
+  |   |   | |-DeclRefExpr 0x8abb1e0 <col:7> 'int' lvalue Var 0x8aba848 'inter' 'int'
+  |   |   | `-ConditionalOperator 0x8abb348 <col:15, col:47> 'int'
+  |   |   |   |-ParenExpr 0x8abb290 <col:15, col:31> 'int'
+  |   |   |   | `-BinaryOperator 0x8abb270 <col:16, col:28> 'int' '=='
+  |   |   |   |   |-ImplicitCastExpr 0x8abb240 <col:16> 'int' <LValueToRValue>
+  |   |   |   |   | `-DeclRefExpr 0x8abb200 <col:16> 'int' lvalue Var 0x8aba778 'prev_sid' 'int'
+  |   |   |   |   `-ImplicitCastExpr 0x8abb258 <col:28> 'int' <LValueToRValue>
+  |   |   |   |     `-DeclRefExpr 0x8abb220 <col:28> 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+  |   |   |   |-BinaryOperator 0x8abb308 <col:35, col:43> 'int' '+'
+  |   |   |   | |-ImplicitCastExpr 0x8abb2f0 <col:35> 'int' <LValueToRValue>
+  |   |   |   | | `-DeclRefExpr 0x8abb2b0 <col:35> 'int' lvalue Var 0x8aba848 'inter' 'int'
+  |   |   |   | `-IntegerLiteral 0x8abb2d0 <col:43> 'int' 1
+  |   |   |   `-IntegerLiteral 0x8abb328 <col:47> 'int' 0
+  |   |   `-BinaryOperator 0x8abb4a8 <line:78:7, col:31> 'double' '='
+  |   |     |-DeclRefExpr 0x8abb398 <col:7> 'double' lvalue Var 0x8aba978 'w' 'double'
+  |   |     `-BinaryOperator 0x8abb488 <col:11, col:31> 'double' '/'
+  |   |       |-ImplicitCastExpr 0x8abb470 <col:11, col:19> 'double' <IntegralToFloating>
+  |   |       | `-ParenExpr 0x8abb3f0 <col:11, col:19> 'int'
+  |   |       |   `-UnaryOperator 0x8abb3d8 <col:12, col:14> 'int' prefix '++'
+  |   |       |     `-DeclRefExpr 0x8abb3b8 <col:14> 'int' lvalue Var 0x8aba848 'inter' 'int'
+  |   |       `-CStyleCastExpr 0x8abb448 <col:23, col:31> 'double' <IntegralToFloating>
+  |   |         `-IntegerLiteral 0x8abb410 <col:31> 'int' 100
+  |   `-IfStmt 0x8abbd80 <line:80:5, line:91:5>
+  |     |-BinaryOperator 0x8abb618 <line:80:9, line:8:15> 'int' '&&'
+  |     | |-BinaryOperator 0x8abb580 <line:80:9, line:8:15> 'int' '<'
+  |     | | |-ImplicitCastExpr 0x8abb568 <line:80:9> 'int' <LValueToRValue>
+  |     | | | `-DeclRefExpr 0x8abb528 <col:9> 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+  |     | | `-IntegerLiteral 0x8abb548 <line:8:15> 'int' 2000000
+  |     | `-BinaryOperator 0x8abb5f8 <line:80:24, line:8:15> 'int' '<'
+  |     |   |-ImplicitCastExpr 0x8abb5e0 <line:80:24> 'int' <LValueToRValue>
+  |     |   | `-DeclRefExpr 0x8abb5a0 <col:24> 'int' lvalue Var 0x8aba558 'tid' 'int'
+  |     |   `-IntegerLiteral 0x8abb5c0 <line:8:15> 'int' 2000000
+  |     `-CompoundStmt 0x8abbd58 <line:81:5, line:91:5>
+  |       |-CallExpr 0x8abb750 <line:83:7, col:30> 'void'
+  |       | |-ImplicitCastExpr 0x8abb738 <col:7> 'void (*)(struct Graph *, int, int, double)' <FunctionToPointerDecay>
+  |       | | `-DeclRefExpr 0x8abb638 <col:7> 'void (struct Graph *, int, int, double)' Function 0x8ab7aa8 'add_edge' 'void (struct Graph *, int, int, double)'
+  |       | |-ImplicitCastExpr 0x8abb790 <col:16> 'struct Graph *' <LValueToRValue>
+  |       | | `-DeclRefExpr 0x8abb658 <col:16> 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+  |       | |-ImplicitCastExpr 0x8abb7a8 <col:19> 'int' <LValueToRValue>
+  |       | | `-DeclRefExpr 0x8abb678 <col:19> 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+  |       | |-ImplicitCastExpr 0x8abb7c0 <col:24> 'int' <LValueToRValue>
+  |       | | `-DeclRefExpr 0x8abb698 <col:24> 'int' lvalue Var 0x8aba558 'tid' 'int'
+  |       | `-ImplicitCastExpr 0x8abb7d8 <col:29> 'double' <LValueToRValue>
+  |       |   `-DeclRefExpr 0x8abb6b8 <col:29> 'double' lvalue Var 0x8aba978 'w' 'double'
+  |       |-BinaryOperator 0x8abb9c0 <line:84:7, col:45> 'int' '='
+  |       | |-DeclRefExpr 0x8abb850 <col:7> 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+  |       | `-ConditionalOperator 0x8abb990 <col:17, col:45> 'int'
+  |       |   |-ParenExpr 0x8abb900 <col:17, col:31> 'int'
+  |       |   | `-BinaryOperator 0x8abb8e0 <col:18, col:28> 'int' '>'
+  |       |   |   |-ImplicitCastExpr 0x8abb8b0 <col:18> 'int' <LValueToRValue>
+  |       |   |   | `-DeclRefExpr 0x8abb870 <col:18> 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+  |       |   |   `-ImplicitCastExpr 0x8abb8c8 <col:28> 'int' <LValueToRValue>
+  |       |   |     `-DeclRefExpr 0x8abb890 <col:28> 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+  |       |   |-ImplicitCastExpr 0x8abb960 <col:35> 'int' <LValueToRValue>
+  |       |   | `-DeclRefExpr 0x8abb920 <col:35> 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+  |       |   `-ImplicitCastExpr 0x8abb978 <col:45> 'int' <LValueToRValue>
+  |       |     `-DeclRefExpr 0x8abb940 <col:45> 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+  |       `-IfStmt 0x8abbd38 <line:86:7, line:90:7>
+  |         |-UnaryOperator 0x8abba18 <line:86:11, col:12> 'int' prefix '!' cannot overflow
+  |         | `-ImplicitCastExpr 0x8abba00 <col:12> 'uint8_t':'unsigned char' <LValueToRValue>
+  |         |   `-DeclRefExpr 0x8abb9e0 <col:12> 'uint8_t':'unsigned char' lvalue ParmVar 0x8ab84c0 'redundant' 'uint8_t':'unsigned char'
+  |         `-CompoundStmt 0x8abbd18 <line:87:7, line:90:7>
+  |           |-CallExpr 0x8abbae8 <line:88:9, col:32> 'void'
+  |           | |-ImplicitCastExpr 0x8abbad0 <col:9> 'void (*)(struct Graph *, int, int, double)' <FunctionToPointerDecay>
+  |           | | `-DeclRefExpr 0x8abba30 <col:9> 'void (struct Graph *, int, int, double)' Function 0x8ab7aa8 'add_edge' 'void (struct Graph *, int, int, double)'
+  |           | |-ImplicitCastExpr 0x8abbb28 <col:18> 'struct Graph *' <LValueToRValue>
+  |           | | `-DeclRefExpr 0x8abba50 <col:18> 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+  |           | |-ImplicitCastExpr 0x8abbb40 <col:21> 'int' <LValueToRValue>
+  |           | | `-DeclRefExpr 0x8abba70 <col:21> 'int' lvalue Var 0x8aba558 'tid' 'int'
+  |           | |-ImplicitCastExpr 0x8abbb58 <col:26> 'int' <LValueToRValue>
+  |           | | `-DeclRefExpr 0x8abba90 <col:26> 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+  |           | `-ImplicitCastExpr 0x8abbb70 <col:31> 'double' <LValueToRValue>
+  |           |   `-DeclRefExpr 0x8abbab0 <col:31> 'double' lvalue Var 0x8aba978 'w' 'double'
+  |           `-BinaryOperator 0x8abbcf8 <line:89:9, col:47> 'int' '='
+  |             |-DeclRefExpr 0x8abbb88 <col:9> 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+  |             `-ConditionalOperator 0x8abbcc8 <col:19, col:47> 'int'
+  |               |-ParenExpr 0x8abbc38 <col:19, col:33> 'int'
+  |               | `-BinaryOperator 0x8abbc18 <col:20, col:30> 'int' '>'
+  |               |   |-ImplicitCastExpr 0x8abbbe8 <col:20> 'int' <LValueToRValue>
+  |               |   | `-DeclRefExpr 0x8abbba8 <col:20> 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+  |               |   `-ImplicitCastExpr 0x8abbc00 <col:30> 'int' <LValueToRValue>
+  |               |     `-DeclRefExpr 0x8abbbc8 <col:30> 'int' lvalue Var 0x8aba558 'tid' 'int'
+  |               |-ImplicitCastExpr 0x8abbc98 <col:37> 'int' <LValueToRValue>
+  |               | `-DeclRefExpr 0x8abbc58 <col:37> 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+  |               `-ImplicitCastExpr 0x8abbcb0 <col:47> 'int' <LValueToRValue>
+  |                 `-DeclRefExpr 0x8abbc78 <col:47> 'int' lvalue Var 0x8aba558 'tid' 'int'
+  |-CallExpr 0x8abbe90 <line:93:3, col:14> 'int'
+  | |-ImplicitCastExpr 0x8abbe78 <col:3> 'int (*)(FILE *)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x8abbde0 <col:3> 'int (FILE *)' Function 0x8a186c0 'fclose' 'int (FILE *)'
+  | `-ImplicitCastExpr 0x8abbeb8 <col:10> 'FILE *' <LValueToRValue>
+  |   `-DeclRefExpr 0x8abbe00 <col:10> 'FILE *' lvalue Var 0x8ab8ee8 'fptr' 'FILE *'
+  |-BinaryOperator 0x8abbfb0 <line:94:3, col:20> 'int' '='
+  | |-MemberExpr 0x8abbf08 <col:3, col:6> 'int' lvalue ->V 0x8ab7608
+  | | `-ImplicitCastExpr 0x8abbef0 <col:3> 'struct Graph *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8abbed0 <col:3> 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+  | `-BinaryOperator 0x8abbf90 <col:10, col:20> 'int' '+'
+  |   |-ImplicitCastExpr 0x8abbf78 <col:10> 'int' <LValueToRValue>
+  |   | `-DeclRefExpr 0x8abbf38 <col:10> 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+  |   `-IntegerLiteral 0x8abbf58 <col:20> 'int' 1
+  |-BinaryOperator 0x8abc098 <line:95:3, col:24> 'int' '='
+  | |-UnaryOperator 0x8abc008 <col:3, col:4> 'int' lvalue prefix '*' cannot overflow
+  | | `-ImplicitCastExpr 0x8abbff0 <col:4> 'int *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8abbfd0 <col:4> 'int *' lvalue ParmVar 0x8ab8638 'total_v' 'int *'
+  | `-BinaryOperator 0x8abc078 <col:14, col:24> 'int' '+'
+  |   |-ImplicitCastExpr 0x8abc060 <col:14> 'int' <LValueToRValue>
+  |   | `-DeclRefExpr 0x8abc020 <col:14> 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+  |   `-IntegerLiteral 0x8abc040 <col:24> 'int' 1
+  `-ReturnStmt 0x8abc100 <line:97:3, col:10>
+    `-ImplicitCastExpr 0x8abc0d8 <col:10> 'struct Graph *' <LValueToRValue>
+      `-DeclRefExpr 0x8abc0b8 <col:10> 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+CompoundStmt 0x8abc110
+|-DeclStmt 0x8ab8a20
+| `-VarDecl 0x8ab8880  used g 'struct Graph *' cinit
+|   `-ImplicitCastExpr 0x8ab8a08 'struct Graph *' <BitCast>
+|     `-CallExpr 0x8ab89e0 'void *'
+|       |-ImplicitCastExpr 0x8ab89c8 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x8ab88e8 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+|       `-UnaryExprOrTypeTraitExpr 0x8ab8978 'unsigned long' sizeof
+|         `-ParenExpr 0x8ab8958 'struct Graph':'struct Graph' lvalue
+|           `-UnaryOperator 0x8ab8940 'struct Graph':'struct Graph' lvalue prefix '*' cannot overflow
+|             `-ImplicitCastExpr 0x8ab8928 'struct Graph *' <LValueToRValue>
+|               `-DeclRefExpr 0x8ab8908 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *' non_odr_use_unevaluated
+|-BinaryOperator 0x8ab8bb0 'struct AdjList *' '='
+| |-MemberExpr 0x8ab8a70 'struct AdjList *' lvalue ->l 0x8ab75a0
+| | `-ImplicitCastExpr 0x8ab8a58 'struct Graph *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8ab8a38 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+| `-ImplicitCastExpr 0x8ab8b98 'struct AdjList *' <BitCast>
+|   `-CallExpr 0x8ab8b70 'void *'
+|     |-ImplicitCastExpr 0x8ab8b58 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8ab8aa0 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+|     `-BinaryOperator 0x8ab8b38 'unsigned long' '*'
+|       |-UnaryExprOrTypeTraitExpr 0x8ab8ae0 'unsigned long' sizeof 'struct AdjList':'struct AdjList'
+|       `-ImplicitCastExpr 0x8ab8b20 'unsigned long' <IntegralCast>
+|         `-IntegerLiteral 0x8ab8b00 'int' 2000000
+|-ForStmt 0x8ab8e98
+| |-DeclStmt 0x8ab8c70
+| | `-VarDecl 0x8ab8be8  used i 'int' cinit
+| |   `-IntegerLiteral 0x8ab8c50 'int' 0
+| |-<<<NULL>>>
+| |-BinaryOperator 0x8ab8ce0 'int' '<'
+| | |-ImplicitCastExpr 0x8ab8cc8 'int' <LValueToRValue>
+| | | `-DeclRefExpr 0x8ab8c88 'int' lvalue Var 0x8ab8be8 'i' 'int'
+| | `-IntegerLiteral 0x8ab8ca8 'int' 2000000
+| |-UnaryOperator 0x8ab8d20 'int' prefix '++'
+| | `-DeclRefExpr 0x8ab8d00 'int' lvalue Var 0x8ab8be8 'i' 'int'
+| `-CompoundStmt 0x8ab8e80
+|   `-BinaryOperator 0x8ab8e60 'int' '='
+|     |-MemberExpr 0x8ab8e10 'int' lvalue .length 0x8ab7330
+|     | `-ArraySubscriptExpr 0x8ab8df0 'struct AdjList':'struct AdjList' lvalue
+|     |   |-ImplicitCastExpr 0x8ab8dc0 'struct AdjList *' <LValueToRValue>
+|     |   | `-MemberExpr 0x8ab8d70 'struct AdjList *' lvalue ->l 0x8ab75a0
+|     |   |   `-ImplicitCastExpr 0x8ab8d58 'struct Graph *' <LValueToRValue>
+|     |   |     `-DeclRefExpr 0x8ab8d38 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+|     |   `-ImplicitCastExpr 0x8ab8dd8 'int' <LValueToRValue>
+|     |     `-DeclRefExpr 0x8ab8da0 'int' lvalue Var 0x8ab8be8 'i' 'int'
+|     `-IntegerLiteral 0x8ab8e40 'int' 0
+|-DeclStmt 0x8aba128
+| `-VarDecl 0x8ab8ee8  used fptr 'FILE *' cinit
+|   `-CallExpr 0x8ab9090 'FILE *'
+|     |-ImplicitCastExpr 0x8ab9078 'FILE *(*)(const char *, const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8ab8f50 'FILE *(const char *, const char *)' Function 0x8a1a678 'fopen' 'FILE *(const char *, const char *)'
+|     |-ImplicitCastExpr 0x8aba0e0 'const char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x8ab8f70 'const char *' lvalue ParmVar 0x8ab85b8 'fpath' 'const char *'
+|     `-ImplicitCastExpr 0x8aba110 'const char *' <NoOp>
+|       `-ImplicitCastExpr 0x8aba0f8 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x8ab8fc8 'char[2]' lvalue "r"
+|-IfStmt 0x8aba420
+| |-BinaryOperator 0x8aba210 'int' '=='
+| | |-ImplicitCastExpr 0x8aba1e0 'FILE *' <LValueToRValue>
+| | | `-DeclRefExpr 0x8aba140 'FILE *' lvalue Var 0x8ab8ee8 'fptr' 'FILE *'
+| | `-ImplicitCastExpr 0x8aba1f8 'FILE *' <BitCast>
+| |   `-ParenExpr 0x8aba1c0 'void *'
+| |     `-CStyleCastExpr 0x8aba198 'void *' <NullToPointer>
+| |       `-IntegerLiteral 0x8aba160 'int' 0
+| `-CompoundStmt 0x8aba400
+|   |-CallExpr 0x8aba308 'int'
+|   | |-ImplicitCastExpr 0x8aba2f0 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x8aba230 'int (const char *, ...)' Function 0x8a1d8f0 'printf' 'int (const char *, ...)'
+|   | |-ImplicitCastExpr 0x8aba350 'const char *' <NoOp>
+|   | | `-ImplicitCastExpr 0x8aba338 'char *' <ArrayToPointerDecay>
+|   | |   `-StringLiteral 0x8aba288 'char[23]' lvalue "Couldn't open file %s\n"
+|   | `-ImplicitCastExpr 0x8aba368 'const char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x8aba2b8 'const char *' lvalue ParmVar 0x8ab85b8 'fpath' 'const char *'
+|   `-CallExpr 0x8aba3d8 'void'
+|     |-ImplicitCastExpr 0x8aba3c0 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8aba380 'void (int) __attribute__((noreturn))' Function 0x8a7abf8 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x8aba3a0 'int' 1
+|-DeclStmt 0x8aba668
+| |-VarDecl 0x8aba458  used eid 'int'
+| |-VarDecl 0x8aba4d8  used sid 'int'
+| |-VarDecl 0x8aba558  used tid 'int'
+| `-VarDecl 0x8aba5d8  used vid_max 'int'
+|-BinaryOperator 0x8aba740 'int' '='
+| |-DeclRefExpr 0x8aba680 'int' lvalue Var 0x8aba458 'eid' 'int'
+| `-BinaryOperator 0x8aba720 'int' '='
+|   |-DeclRefExpr 0x8aba6a0 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+|   `-BinaryOperator 0x8aba700 'int' '='
+|     |-DeclRefExpr 0x8aba6c0 'int' lvalue Var 0x8aba558 'tid' 'int'
+|     `-IntegerLiteral 0x8aba6e0 'int' 0
+|-DeclStmt 0x8aba818
+| `-VarDecl 0x8aba778  used prev_sid 'int' cinit
+|   `-UnaryOperator 0x8aba800 'int' prefix '-'
+|     `-IntegerLiteral 0x8aba7e0 'int' 1
+|-DeclStmt 0x8aba8d0
+| `-VarDecl 0x8aba848  used inter 'int' cinit
+|   `-IntegerLiteral 0x8aba8b0 'int' 0
+|-BinaryOperator 0x8aba940 'int' '='
+| |-DeclRefExpr 0x8aba8e8 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+| `-UnaryOperator 0x8aba928 'int' prefix '-'
+|   `-IntegerLiteral 0x8aba908 'int' 1
+|-DeclStmt 0x8aba9e0
+| `-VarDecl 0x8aba978  used w 'double'
+|-WhileStmt 0x8abbdc0
+| |-IntegerLiteral 0x8aba9f8 'int' 1
+| `-CompoundStmt 0x8abbda0
+|   |-IfStmt 0x8abb4f8 has_else
+|   | |-UnaryOperator 0x8abaa50 'int' prefix '!' cannot overflow
+|   | | `-ImplicitCastExpr 0x8abaa38 'uint8_t':'unsigned char' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x8abaa18 'uint8_t':'unsigned char' lvalue ParmVar 0x8ab8538 'need_fake' 'uint8_t':'unsigned char'
+|   | |-CompoundStmt 0x8abaf00
+|   | | `-IfStmt 0x8abaee0
+|   | |   |-BinaryOperator 0x8abaeb8 'int' '=='
+|   | |   | |-CallExpr 0x8abac90 'int'
+|   | |   | | |-ImplicitCastExpr 0x8abac78 'int (*)(FILE *__restrict, const char *__restrict, ...)' <FunctionToPointerDecay>
+|   | |   | | | `-DeclRefExpr 0x8abaa68 'int (FILE *__restrict, const char *__restrict, ...)' Function 0x8a22730 'fscanf' 'int (FILE *__restrict, const char *__restrict, ...)'
+|   | |   | | |-ImplicitCastExpr 0x8abace0 'FILE *' <LValueToRValue>
+|   | |   | | | `-DeclRefExpr 0x8abaa88 'FILE *' lvalue Var 0x8ab8ee8 'fptr' 'FILE *'
+|   | |   | | |-ImplicitCastExpr 0x8abad10 'const char *' <NoOp>
+|   | |   | | | `-ImplicitCastExpr 0x8abacf8 'char *' <ArrayToPointerDecay>
+|   | |   | | |   `-StringLiteral 0x8abaae8 'char[14]' lvalue "%d %d %d %lf\n"
+|   | |   | | |-UnaryOperator 0x8abab30 'int *' prefix '&' cannot overflow
+|   | |   | | | `-DeclRefExpr 0x8abab10 'int' lvalue Var 0x8aba458 'eid' 'int'
+|   | |   | | |-UnaryOperator 0x8abab68 'int *' prefix '&' cannot overflow
+|   | |   | | | `-DeclRefExpr 0x8abab48 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+|   | |   | | |-UnaryOperator 0x8ababa0 'int *' prefix '&' cannot overflow
+|   | |   | | | `-DeclRefExpr 0x8abab80 'int' lvalue Var 0x8aba558 'tid' 'int'
+|   | |   | | `-UnaryOperator 0x8ababd8 'double *' prefix '&' cannot overflow
+|   | |   | |   `-DeclRefExpr 0x8ababb8 'double' lvalue Var 0x8aba978 'w' 'double'
+|   | |   | `-ParenExpr 0x8abae98 'int'
+|   | |   |   `-UnaryOperator 0x8abae80 'int' prefix '-'
+|   | |   |     `-IntegerLiteral 0x8abae60 'int' 1
+|   | |   `-BreakStmt 0x8abaed8
+|   | `-CompoundStmt 0x8abb4c8
+|   |   |-IfStmt 0x8abb188
+|   |   | |-BinaryOperator 0x8abb160 'int' '=='
+|   |   | | |-CallExpr 0x8abb070 'int'
+|   |   | | | |-ImplicitCastExpr 0x8abb058 'int (*)(FILE *__restrict, const char *__restrict, ...)' <FunctionToPointerDecay>
+|   |   | | | | `-DeclRefExpr 0x8abaf18 'int (FILE *__restrict, const char *__restrict, ...)' Function 0x8a22730 'fscanf' 'int (FILE *__restrict, const char *__restrict, ...)'
+|   |   | | | |-ImplicitCastExpr 0x8abb0b0 'FILE *' <LValueToRValue>
+|   |   | | | | `-DeclRefExpr 0x8abaf38 'FILE *' lvalue Var 0x8ab8ee8 'fptr' 'FILE *'
+|   |   | | | |-ImplicitCastExpr 0x8abb0f0 'const char *' <NoOp>
+|   |   | | | | `-ImplicitCastExpr 0x8abb0c8 'char *' <ArrayToPointerDecay>
+|   |   | | | |   `-StringLiteral 0x8abaf98 'char[7]' lvalue "%d %d\n"
+|   |   | | | |-UnaryOperator 0x8abafd8 'int *' prefix '&' cannot overflow
+|   |   | | | | `-DeclRefExpr 0x8abafb8 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+|   |   | | | `-UnaryOperator 0x8abb010 'int *' prefix '&' cannot overflow
+|   |   | | |   `-DeclRefExpr 0x8abaff0 'int' lvalue Var 0x8aba558 'tid' 'int'
+|   |   | | `-ParenExpr 0x8abb140 'int'
+|   |   | |   `-UnaryOperator 0x8abb128 'int' prefix '-'
+|   |   | |     `-IntegerLiteral 0x8abb108 'int' 1
+|   |   | `-BreakStmt 0x8abb180
+|   |   |-UnaryOperator 0x8abb1c8 'int' postfix '++'
+|   |   | `-DeclRefExpr 0x8abb1a8 'int' lvalue Var 0x8aba458 'eid' 'int'
+|   |   |-BinaryOperator 0x8abb378 'int' '='
+|   |   | |-DeclRefExpr 0x8abb1e0 'int' lvalue Var 0x8aba848 'inter' 'int'
+|   |   | `-ConditionalOperator 0x8abb348 'int'
+|   |   |   |-ParenExpr 0x8abb290 'int'
+|   |   |   | `-BinaryOperator 0x8abb270 'int' '=='
+|   |   |   |   |-ImplicitCastExpr 0x8abb240 'int' <LValueToRValue>
+|   |   |   |   | `-DeclRefExpr 0x8abb200 'int' lvalue Var 0x8aba778 'prev_sid' 'int'
+|   |   |   |   `-ImplicitCastExpr 0x8abb258 'int' <LValueToRValue>
+|   |   |   |     `-DeclRefExpr 0x8abb220 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+|   |   |   |-BinaryOperator 0x8abb308 'int' '+'
+|   |   |   | |-ImplicitCastExpr 0x8abb2f0 'int' <LValueToRValue>
+|   |   |   | | `-DeclRefExpr 0x8abb2b0 'int' lvalue Var 0x8aba848 'inter' 'int'
+|   |   |   | `-IntegerLiteral 0x8abb2d0 'int' 1
+|   |   |   `-IntegerLiteral 0x8abb328 'int' 0
+|   |   `-BinaryOperator 0x8abb4a8 'double' '='
+|   |     |-DeclRefExpr 0x8abb398 'double' lvalue Var 0x8aba978 'w' 'double'
+|   |     `-BinaryOperator 0x8abb488 'double' '/'
+|   |       |-ImplicitCastExpr 0x8abb470 'double' <IntegralToFloating>
+|   |       | `-ParenExpr 0x8abb3f0 'int'
+|   |       |   `-UnaryOperator 0x8abb3d8 'int' prefix '++'
+|   |       |     `-DeclRefExpr 0x8abb3b8 'int' lvalue Var 0x8aba848 'inter' 'int'
+|   |       `-CStyleCastExpr 0x8abb448 'double' <IntegralToFloating>
+|   |         `-IntegerLiteral 0x8abb410 'int' 100
+|   `-IfStmt 0x8abbd80
+|     |-BinaryOperator 0x8abb618 'int' '&&'
+|     | |-BinaryOperator 0x8abb580 'int' '<'
+|     | | |-ImplicitCastExpr 0x8abb568 'int' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x8abb528 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+|     | | `-IntegerLiteral 0x8abb548 'int' 2000000
+|     | `-BinaryOperator 0x8abb5f8 'int' '<'
+|     |   |-ImplicitCastExpr 0x8abb5e0 'int' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x8abb5a0 'int' lvalue Var 0x8aba558 'tid' 'int'
+|     |   `-IntegerLiteral 0x8abb5c0 'int' 2000000
+|     `-CompoundStmt 0x8abbd58
+|       |-CallExpr 0x8abb750 'void'
+|       | |-ImplicitCastExpr 0x8abb738 'void (*)(struct Graph *, int, int, double)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x8abb638 'void (struct Graph *, int, int, double)' Function 0x8ab7aa8 'add_edge' 'void (struct Graph *, int, int, double)'
+|       | |-ImplicitCastExpr 0x8abb790 'struct Graph *' <LValueToRValue>
+|       | | `-DeclRefExpr 0x8abb658 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+|       | |-ImplicitCastExpr 0x8abb7a8 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x8abb678 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+|       | |-ImplicitCastExpr 0x8abb7c0 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x8abb698 'int' lvalue Var 0x8aba558 'tid' 'int'
+|       | `-ImplicitCastExpr 0x8abb7d8 'double' <LValueToRValue>
+|       |   `-DeclRefExpr 0x8abb6b8 'double' lvalue Var 0x8aba978 'w' 'double'
+|       |-BinaryOperator 0x8abb9c0 'int' '='
+|       | |-DeclRefExpr 0x8abb850 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+|       | `-ConditionalOperator 0x8abb990 'int'
+|       |   |-ParenExpr 0x8abb900 'int'
+|       |   | `-BinaryOperator 0x8abb8e0 'int' '>'
+|       |   |   |-ImplicitCastExpr 0x8abb8b0 'int' <LValueToRValue>
+|       |   |   | `-DeclRefExpr 0x8abb870 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+|       |   |   `-ImplicitCastExpr 0x8abb8c8 'int' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x8abb890 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+|       |   |-ImplicitCastExpr 0x8abb960 'int' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x8abb920 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+|       |   `-ImplicitCastExpr 0x8abb978 'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x8abb940 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+|       `-IfStmt 0x8abbd38
+|         |-UnaryOperator 0x8abba18 'int' prefix '!' cannot overflow
+|         | `-ImplicitCastExpr 0x8abba00 'uint8_t':'unsigned char' <LValueToRValue>
+|         |   `-DeclRefExpr 0x8abb9e0 'uint8_t':'unsigned char' lvalue ParmVar 0x8ab84c0 'redundant' 'uint8_t':'unsigned char'
+|         `-CompoundStmt 0x8abbd18
+|           |-CallExpr 0x8abbae8 'void'
+|           | |-ImplicitCastExpr 0x8abbad0 'void (*)(struct Graph *, int, int, double)' <FunctionToPointerDecay>
+|           | | `-DeclRefExpr 0x8abba30 'void (struct Graph *, int, int, double)' Function 0x8ab7aa8 'add_edge' 'void (struct Graph *, int, int, double)'
+|           | |-ImplicitCastExpr 0x8abbb28 'struct Graph *' <LValueToRValue>
+|           | | `-DeclRefExpr 0x8abba50 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+|           | |-ImplicitCastExpr 0x8abbb40 'int' <LValueToRValue>
+|           | | `-DeclRefExpr 0x8abba70 'int' lvalue Var 0x8aba558 'tid' 'int'
+|           | |-ImplicitCastExpr 0x8abbb58 'int' <LValueToRValue>
+|           | | `-DeclRefExpr 0x8abba90 'int' lvalue Var 0x8aba4d8 'sid' 'int'
+|           | `-ImplicitCastExpr 0x8abbb70 'double' <LValueToRValue>
+|           |   `-DeclRefExpr 0x8abbab0 'double' lvalue Var 0x8aba978 'w' 'double'
+|           `-BinaryOperator 0x8abbcf8 'int' '='
+|             |-DeclRefExpr 0x8abbb88 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+|             `-ConditionalOperator 0x8abbcc8 'int'
+|               |-ParenExpr 0x8abbc38 'int'
+|               | `-BinaryOperator 0x8abbc18 'int' '>'
+|               |   |-ImplicitCastExpr 0x8abbbe8 'int' <LValueToRValue>
+|               |   | `-DeclRefExpr 0x8abbba8 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+|               |   `-ImplicitCastExpr 0x8abbc00 'int' <LValueToRValue>
+|               |     `-DeclRefExpr 0x8abbbc8 'int' lvalue Var 0x8aba558 'tid' 'int'
+|               |-ImplicitCastExpr 0x8abbc98 'int' <LValueToRValue>
+|               | `-DeclRefExpr 0x8abbc58 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+|               `-ImplicitCastExpr 0x8abbcb0 'int' <LValueToRValue>
+|                 `-DeclRefExpr 0x8abbc78 'int' lvalue Var 0x8aba558 'tid' 'int'
+|-CallExpr 0x8abbe90 'int'
+| |-ImplicitCastExpr 0x8abbe78 'int (*)(FILE *)' <FunctionToPointerDecay>
+| | `-DeclRefExpr 0x8abbde0 'int (FILE *)' Function 0x8a186c0 'fclose' 'int (FILE *)'
+| `-ImplicitCastExpr 0x8abbeb8 'FILE *' <LValueToRValue>
+|   `-DeclRefExpr 0x8abbe00 'FILE *' lvalue Var 0x8ab8ee8 'fptr' 'FILE *'
+|-BinaryOperator 0x8abbfb0 'int' '='
+| |-MemberExpr 0x8abbf08 'int' lvalue ->V 0x8ab7608
+| | `-ImplicitCastExpr 0x8abbef0 'struct Graph *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8abbed0 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+| `-BinaryOperator 0x8abbf90 'int' '+'
+|   |-ImplicitCastExpr 0x8abbf78 'int' <LValueToRValue>
+|   | `-DeclRefExpr 0x8abbf38 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+|   `-IntegerLiteral 0x8abbf58 'int' 1
+|-BinaryOperator 0x8abc098 'int' '='
+| |-UnaryOperator 0x8abc008 'int' lvalue prefix '*' cannot overflow
+| | `-ImplicitCastExpr 0x8abbff0 'int *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8abbfd0 'int *' lvalue ParmVar 0x8ab8638 'total_v' 'int *'
+| `-BinaryOperator 0x8abc078 'int' '+'
+|   |-ImplicitCastExpr 0x8abc060 'int' <LValueToRValue>
+|   | `-DeclRefExpr 0x8abc020 'int' lvalue Var 0x8aba5d8 'vid_max' 'int'
+|   `-IntegerLiteral 0x8abc040 'int' 1
+`-ReturnStmt 0x8abc100
+  `-ImplicitCastExpr 0x8abc0d8 'struct Graph *' <LValueToRValue>
+    `-DeclRefExpr 0x8abc0b8 'struct Graph *' lvalue Var 0x8ab8880 'g' 'struct Graph *'
+Emitting fn: dijkstra
+FunctionDecl 0x8ac23c8 <SSSP.c:11:1, line:46:1> line:11:6 used dijkstra 'void (Graph *, int, double *)'
+|-ParmVarDecl 0x8ac21a0 <col:15, col:22> col:22 used graph 'Graph *'
+|-ParmVarDecl 0x8ac2220 <col:29, col:33> col:33 used src 'int'
+|-ParmVarDecl 0x8ac22a0 <col:38, col:46> col:46 used solution 'double *'
+`-CompoundStmt 0x8ac91a0 <line:12:1, line:46:1>
+  |-DeclStmt 0x8ac6d10 <line:13:3, col:42>
+  | `-VarDecl 0x8ac24a0 <col:3, col:41> col:12 used heap 'MinHeap *' cinit
+  |   `-CallExpr 0x8ac2600 <col:19, col:41> 'struct MinHeap *'
+  |     |-ImplicitCastExpr 0x8ac25e8 <col:19> 'struct MinHeap *(*)(int)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8ac2508 <col:19> 'struct MinHeap *(int)' Function 0x8abd110 'init_min_heap' 'struct MinHeap *(int)'
+  |     `-ImplicitCastExpr 0x8ac2628 <col:33, col:40> 'int' <LValueToRValue>
+  |       `-MemberExpr 0x8ac2560 <col:33, col:40> 'int' lvalue ->V 0x8ab7608
+  |         `-ImplicitCastExpr 0x8ac2548 <col:33> 'Graph *' <LValueToRValue>
+  |           `-DeclRefExpr 0x8ac2528 <col:33> 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+  |-ForStmt 0x8ac73c8 <line:14:3, line:19:3>
+  | |-DeclStmt 0x8ac6dc8 <line:14:8, col:19>
+  | | `-VarDecl 0x8ac6d40 <col:8, col:18> col:12 used vid 'int' cinit
+  | |   `-IntegerLiteral 0x8ac6da8 <col:18> 'int' 0
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x8ac6e98 <col:21, col:34> 'int' '<'
+  | | |-ImplicitCastExpr 0x8ac6e68 <col:21> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x8ac6de0 <col:21> 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+  | | `-ImplicitCastExpr 0x8ac6e80 <col:27, col:34> 'int' <LValueToRValue>
+  | |   `-MemberExpr 0x8ac6e38 <col:27, col:34> 'int' lvalue ->V 0x8ab7608
+  | |     `-ImplicitCastExpr 0x8ac6e20 <col:27> 'Graph *' <LValueToRValue>
+  | |       `-DeclRefExpr 0x8ac6e00 <col:27> 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+  | |-UnaryOperator 0x8ac6ed8 <col:37, col:39> 'int' prefix '++'
+  | | `-DeclRefExpr 0x8ac6eb8 <col:39> 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+  | `-CompoundStmt 0x8ac73a0 <line:15:3, line:19:3>
+  |   |-BinaryOperator 0x8ac6fb8 <line:16:5, col:21> 'double' '='
+  |   | |-ArraySubscriptExpr 0x8ac6f60 <col:5, col:17> 'double' lvalue
+  |   | | |-ImplicitCastExpr 0x8ac6f30 <col:5> 'double *' <LValueToRValue>
+  |   | | | `-DeclRefExpr 0x8ac6ef0 <col:5> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+  |   | | `-ImplicitCastExpr 0x8ac6f48 <col:14> 'int' <LValueToRValue>
+  |   | |   `-DeclRefExpr 0x8ac6f10 <col:14> 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+  |   | `-ImplicitCastExpr 0x8ac6fa0 <col:21> 'double' <LValueToRValue>
+  |   |   `-DeclRefExpr 0x8ac6f80 <col:21> 'const double' lvalue Var 0x8ac2078 'MAX_D' 'const double'
+  |   |-BinaryOperator 0x8ac7250 <line:17:5, col:56> 'struct MinHeapNode *' '='
+  |   | |-ArraySubscriptExpr 0x8ac7090 <col:5, col:20> 'struct MinHeapNode *' lvalue
+  |   | | |-ImplicitCastExpr 0x8ac7060 <col:5, col:11> 'struct MinHeapNode **' <LValueToRValue>
+  |   | | | `-MemberExpr 0x8ac7010 <col:5, col:11> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  |   | | |   `-ImplicitCastExpr 0x8ac6ff8 <col:5> 'MinHeap *' <LValueToRValue>
+  |   | | |     `-DeclRefExpr 0x8ac6fd8 <col:5> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+  |   | | `-ImplicitCastExpr 0x8ac7078 <col:17> 'int' <LValueToRValue>
+  |   | |   `-DeclRefExpr 0x8ac7040 <col:17> 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+  |   | `-CallExpr 0x8ac71f0 <col:24, col:56> 'struct MinHeapNode *'
+  |   |   |-ImplicitCastExpr 0x8ac71d8 <col:24> 'struct MinHeapNode *(*)(int, double)' <FunctionToPointerDecay>
+  |   |   | `-DeclRefExpr 0x8ac70b0 <col:24> 'struct MinHeapNode *(int, double)' Function 0x8abca10 'new_heap_node' 'struct MinHeapNode *(int, double)'
+  |   |   |-ImplicitCastExpr 0x8ac7220 <col:38> 'int' <LValueToRValue>
+  |   |   | `-DeclRefExpr 0x8ac70d0 <col:38> 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+  |   |   `-ImplicitCastExpr 0x8ac7238 <col:43, col:55> 'double' <LValueToRValue>
+  |   |     `-ArraySubscriptExpr 0x8ac7160 <col:43, col:55> 'double' lvalue
+  |   |       |-ImplicitCastExpr 0x8ac7130 <col:43> 'double *' <LValueToRValue>
+  |   |       | `-DeclRefExpr 0x8ac70f0 <col:43> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+  |   |       `-ImplicitCastExpr 0x8ac7148 <col:52> 'int' <LValueToRValue>
+  |   |         `-DeclRefExpr 0x8ac7110 <col:52> 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+  |   `-BinaryOperator 0x8ac7380 <line:18:5, col:22> 'int' '='
+  |     |-ArraySubscriptExpr 0x8ac7328 <col:5, col:18> 'int' lvalue
+  |     | |-ImplicitCastExpr 0x8ac72f8 <col:5, col:11> 'int *' <LValueToRValue>
+  |     | | `-MemberExpr 0x8ac72a8 <col:5, col:11> 'int *' lvalue ->pos 0x8abc728
+  |     | |   `-ImplicitCastExpr 0x8ac7290 <col:5> 'MinHeap *' <LValueToRValue>
+  |     | |     `-DeclRefExpr 0x8ac7270 <col:5> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+  |     | `-ImplicitCastExpr 0x8ac7310 <col:15> 'int' <LValueToRValue>
+  |     |   `-DeclRefExpr 0x8ac72d8 <col:15> 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+  |     `-ImplicitCastExpr 0x8ac7368 <col:22> 'int' <LValueToRValue>
+  |       `-DeclRefExpr 0x8ac7348 <col:22> 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+  |-BinaryOperator 0x8ac74e8 <line:20:3, col:23> 'int' '='
+  | |-MemberExpr 0x8ac7438 <col:3, col:9> 'int' lvalue ->size 0x8abc658
+  | | `-ImplicitCastExpr 0x8ac7420 <col:3> 'MinHeap *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8ac7400 <col:3> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+  | `-ImplicitCastExpr 0x8ac74d0 <col:16, col:23> 'int' <LValueToRValue>
+  |   `-MemberExpr 0x8ac74a0 <col:16, col:23> 'int' lvalue ->V 0x8ab7608
+  |     `-ImplicitCastExpr 0x8ac7488 <col:16> 'Graph *' <LValueToRValue>
+  |       `-DeclRefExpr 0x8ac7468 <col:16> 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+  |-CallExpr 0x8ac7580 <line:21:3, col:29> 'int'
+  | |-ImplicitCastExpr 0x8ac7568 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x8ac7508 <col:3> 'int (const char *, ...)' Function 0x8a1d8f0 'printf' 'int (const char *, ...)'
+  | `-ImplicitCastExpr 0x8ac75c0 <col:10> 'const char *' <NoOp>
+  |   `-ImplicitCastExpr 0x8ac75a8 <col:10> 'char *' <ArrayToPointerDecay>
+  |     `-StringLiteral 0x8ac7528 <col:10> 'char[17]' lvalue "After heap init\n"
+  |-ForStmt 0x8ac7990 <line:22:3, col:72>
+  | |-DeclStmt 0x8ac77d8 <col:8, col:42>
+  | | `-VarDecl 0x8ac75f0 <col:8, ./util.h:108:33> SSSP.c:22:12 used r 'int' cinit
+  | |   `-ParenExpr 0x8ac77b8 <./util.h:108:23, col:33> 'int'
+  | |     `-BinaryOperator 0x8ac7798 <col:24, col:32> 'int' '/'
+  | |       |-ParenExpr 0x8ac7758 <col:24, col:28> 'int'
+  | |       | `-BinaryOperator 0x8ac7738 <SSSP.c:22:27, ./util.h:108:27> 'int' '-'
+  | |       |   |-BinaryOperator 0x8ac76f8 <SSSP.c:22:27, col:40> 'int' '-'
+  | |       |   | |-ImplicitCastExpr 0x8ac76e0 <col:27, col:33> 'int' <LValueToRValue>
+  | |       |   | | `-MemberExpr 0x8ac7690 <col:27, col:33> 'int' lvalue ->size 0x8abc658
+  | |       |   | |   `-ImplicitCastExpr 0x8ac7678 <col:27> 'MinHeap *' <LValueToRValue>
+  | |       |   | |     `-DeclRefExpr 0x8ac7658 <col:27> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+  | |       |   | `-IntegerLiteral 0x8ac76c0 <col:40> 'int' 1
+  | |       |   `-IntegerLiteral 0x8ac7718 <./util.h:108:27> 'int' 1
+  | |       `-IntegerLiteral 0x8ac7778 <col:32> 'int' 2
+  | |-<<<NULL>>>
+  | |-BinaryOperator 0x8ac7860 <SSSP.c:22:44, col:49> 'int' '>'
+  | | |-ImplicitCastExpr 0x8ac7848 <col:44> 'int' <LValueToRValue>
+  | | | `-DeclRefExpr 0x8ac77f0 <col:44> 'int' lvalue Var 0x8ac75f0 'r' 'int'
+  | | `-UnaryOperator 0x8ac7830 <col:48, col:49> 'int' prefix '-'
+  | |   `-IntegerLiteral 0x8ac7810 <col:49> 'int' 1
+  | |-UnaryOperator 0x8ac78a0 <col:52, col:54> 'int' prefix '--'
+  | | `-DeclRefExpr 0x8ac7880 <col:54> 'int' lvalue Var 0x8ac75f0 'r' 'int'
+  | `-CallExpr 0x8ac7930 <col:57, col:72> 'void'
+  |   |-ImplicitCastExpr 0x8ac7918 <col:57> 'void (*)(MinHeap *, int)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x8ac78b8 <col:57> 'void (MinHeap *, int)' Function 0x8abe018 'heapify' 'void (MinHeap *, int)'
+  |   |-ImplicitCastExpr 0x8ac7960 <col:65> 'MinHeap *' <LValueToRValue>
+  |   | `-DeclRefExpr 0x8ac78d8 <col:65> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+  |   `-ImplicitCastExpr 0x8ac7978 <col:71> 'int' <LValueToRValue>
+  |     `-DeclRefExpr 0x8ac78f8 <col:71> 'int' lvalue Var 0x8ac75f0 'r' 'int'
+  |-CallExpr 0x8ac7a40 <line:23:3, col:27> 'int'
+  | |-ImplicitCastExpr 0x8ac7a28 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x8ac79c8 <col:3> 'int (const char *, ...)' Function 0x8a1d8f0 'printf' 'int (const char *, ...)'
+  | `-ImplicitCastExpr 0x8ac7a80 <col:10> 'const char *' <NoOp>
+  |   `-ImplicitCastExpr 0x8ac7a68 <col:10> 'char *' <ArrayToPointerDecay>
+  |     `-StringLiteral 0x8ac79e8 <col:10> 'char[15]' lvalue "After heapify\n"
+  |-BinaryOperator 0x8ac7b48 <line:25:3, col:19> 'double' '='
+  | |-ArraySubscriptExpr 0x8ac7b08 <col:3, col:15> 'double' lvalue
+  | | |-ImplicitCastExpr 0x8ac7ad8 <col:3> 'double *' <LValueToRValue>
+  | | | `-DeclRefExpr 0x8ac7a98 <col:3> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+  | | `-ImplicitCastExpr 0x8ac7af0 <col:12> 'int' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8ac7ab8 <col:12> 'int' lvalue ParmVar 0x8ac2220 'src' 'int'
+  | `-FloatingLiteral 0x8ac7b28 <col:19> 'double' 0.000000e+00
+  |-CallExpr 0x8ac7c60 <line:26:3, col:30> 'void'
+  | |-ImplicitCastExpr 0x8ac7c48 <col:3> 'void (*)(MinHeap *, int, double)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x8ac7b68 <col:3> 'void (MinHeap *, int, double)' Function 0x8ac0e48 'decrease_key' 'void (MinHeap *, int, double)'
+  | |-ImplicitCastExpr 0x8ac7c98 <col:16> 'MinHeap *' <LValueToRValue>
+  | | `-DeclRefExpr 0x8ac7b88 <col:16> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+  | |-ImplicitCastExpr 0x8ac7cb0 <col:22> 'int' <LValueToRValue>
+  | | `-DeclRefExpr 0x8ac7ba8 <col:22> 'int' lvalue ParmVar 0x8ac2220 'src' 'int'
+  | `-FloatingLiteral 0x8ac7bc8 <col:27> 'double' 0.000000e+00
+  `-WhileStmt 0x8ac9180 <line:28:3, line:45:3>
+    |-UnaryOperator 0x8ac7de0 <line:28:10, ./util.h:111:47> 'int' prefix '!' cannot overflow
+    | `-ParenExpr 0x8ac7dc0 <col:29, col:47> 'int'
+    |   `-BinaryOperator 0x8ac7da0 <col:30, col:46> 'int' '=='
+    |     |-ImplicitCastExpr 0x8ac7d88 <col:30, col:38> 'int' <LValueToRValue>
+    |     | `-MemberExpr 0x8ac7d38 <col:30, col:38> 'int' lvalue ->size 0x8abc658
+    |     |   `-ImplicitCastExpr 0x8ac7d20 <col:30, col:35> 'MinHeap *' <LValueToRValue>
+    |     |     `-ParenExpr 0x8ac7ce8 <col:30, col:35> 'MinHeap *' lvalue
+    |     |       `-DeclRefExpr 0x8ac7cc8 <SSSP.c:28:25> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+    |     `-IntegerLiteral 0x8ac7d68 <./util.h:111:46> 'int' 0
+    `-CompoundStmt 0x8ac9150 <SSSP.c:29:3, line:45:3>
+      |-DeclStmt 0x8ac7f70 <line:30:5, col:46>
+      | `-VarDecl 0x8ac7e10 <col:5, col:45> col:18 used min_node 'MinHeapNode *' cinit
+      |   `-CallExpr 0x8ac7f30 <col:29, col:45> 'MinHeapNode *'
+      |     |-ImplicitCastExpr 0x8ac7f18 <col:29> 'MinHeapNode *(*)(MinHeap *)' <FunctionToPointerDecay>
+      |     | `-DeclRefExpr 0x8ac7e78 <col:29> 'MinHeapNode *(MinHeap *)' Function 0x8abfa90 'extract_min' 'MinHeapNode *(MinHeap *)'
+      |     `-ImplicitCastExpr 0x8ac7f58 <col:41> 'MinHeap *' <LValueToRValue>
+      |       `-DeclRefExpr 0x8ac7e98 <col:41> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+      |-DeclStmt 0x8ac8088 <line:31:5, col:23>
+      | `-VarDecl 0x8ac7fa0 <col:5, col:22> col:9 used t 'int' cinit
+      |   `-ImplicitCastExpr 0x8ac8070 <col:12, col:22> 'int' <LValueToRValue>
+      |     `-MemberExpr 0x8ac8040 <col:12, col:22> 'int' lvalue ->v 0x8abc320
+      |       `-ImplicitCastExpr 0x8ac8028 <col:12> 'MinHeapNode *' <LValueToRValue>
+      |         `-DeclRefExpr 0x8ac8008 <col:12> 'MinHeapNode *' lvalue Var 0x8ac7e10 'min_node' 'MinHeapNode *'
+      |-IfStmt 0x8ac8200 <line:33:5, col:31>
+      | |-BinaryOperator 0x8ac8180 <col:9, col:24> 'int' '>='
+      | | |-ImplicitCastExpr 0x8ac8150 <col:9, col:19> 'double' <LValueToRValue>
+      | | | `-ArraySubscriptExpr 0x8ac8110 <col:9, col:19> 'double' lvalue
+      | | |   |-ImplicitCastExpr 0x8ac80e0 <col:9> 'double *' <LValueToRValue>
+      | | |   | `-DeclRefExpr 0x8ac80a0 <col:9> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+      | | |   `-ImplicitCastExpr 0x8ac80f8 <col:18> 'int' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x8ac80c0 <col:18> 'int' lvalue Var 0x8ac7fa0 't' 'int'
+      | | `-ImplicitCastExpr 0x8ac8168 <col:24> 'double' <LValueToRValue>
+      | |   `-DeclRefExpr 0x8ac8130 <col:24> 'const double' lvalue Var 0x8ac2078 'MAX_D' 'const double'
+      | `-BreakStmt 0x8ac81f8 <col:31>
+      `-ForStmt 0x8ac9118 <line:34:5, line:44:5>
+        |-DeclStmt 0x8ac82c0 <line:34:10, col:19>
+        | `-VarDecl 0x8ac8238 <col:10, col:18> col:14 used i 'int' cinit
+        |   `-IntegerLiteral 0x8ac82a0 <col:18> 'int' 0
+        |-<<<NULL>>>
+        |-BinaryOperator 0x8ac8430 <col:21, col:37> 'int' '<'
+        | |-ImplicitCastExpr 0x8ac8400 <col:21> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x8ac82d8 <col:21> 'int' lvalue Var 0x8ac8238 'i' 'int'
+        | `-ImplicitCastExpr 0x8ac8418 <col:25, col:37> 'int' <LValueToRValue>
+        |   `-MemberExpr 0x8ac83d0 <col:25, col:37> 'int' lvalue .length 0x8ab7330
+        |     `-ArraySubscriptExpr 0x8ac83b0 <col:25, col:35> 'struct AdjList':'struct AdjList' lvalue
+        |       |-ImplicitCastExpr 0x8ac8380 <col:25, col:32> 'struct AdjList *' <LValueToRValue>
+        |       | `-MemberExpr 0x8ac8330 <col:25, col:32> 'struct AdjList *' lvalue ->l 0x8ab75a0
+        |       |   `-ImplicitCastExpr 0x8ac8318 <col:25> 'Graph *' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x8ac82f8 <col:25> 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+        |       `-ImplicitCastExpr 0x8ac8398 <col:34> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x8ac8360 <col:34> 'int' lvalue Var 0x8ac7fa0 't' 'int'
+        |-UnaryOperator 0x8ac8470 <col:45, col:48> 'int' prefix '++'
+        | `-DeclRefExpr 0x8ac8450 <col:48> 'int' lvalue Var 0x8ac8238 'i' 'int'
+        `-CompoundStmt 0x8ac90f0 <line:35:5, line:44:5>
+          |-DeclStmt 0x8ac8690 <line:36:7, col:48>
+          | `-VarDecl 0x8ac8498 <col:7, col:47> col:17 used cur 'GraphNode':'struct GraphNode' cinit
+          |   `-ImplicitCastExpr 0x8ac8678 <col:23, col:47> 'struct GraphNode':'struct GraphNode' <LValueToRValue>
+          |     `-ArraySubscriptExpr 0x8ac8658 <col:23, col:47> 'struct GraphNode':'struct GraphNode' lvalue
+          |       |-ImplicitCastExpr 0x8ac8628 <col:23, col:35> 'struct GraphNode *' <ArrayToPointerDecay>
+          |       | `-MemberExpr 0x8ac85d8 <col:23, col:35> 'struct GraphNode[16]' lvalue .neighbours 0x8ab72c8
+          |       |   `-ArraySubscriptExpr 0x8ac85b8 <col:23, col:33> 'struct AdjList':'struct AdjList' lvalue
+          |       |     |-ImplicitCastExpr 0x8ac8588 <col:23, col:30> 'struct AdjList *' <LValueToRValue>
+          |       |     | `-MemberExpr 0x8ac8538 <col:23, col:30> 'struct AdjList *' lvalue ->l 0x8ab75a0
+          |       |     |   `-ImplicitCastExpr 0x8ac8520 <col:23> 'Graph *' <LValueToRValue>
+          |       |     |     `-DeclRefExpr 0x8ac8500 <col:23> 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+          |       |     `-ImplicitCastExpr 0x8ac85a0 <col:32> 'int' <LValueToRValue>
+          |       |       `-DeclRefExpr 0x8ac8568 <col:32> 'int' lvalue Var 0x8ac7fa0 't' 'int'
+          |       `-ImplicitCastExpr 0x8ac8640 <col:46> 'int' <LValueToRValue>
+          |         `-DeclRefExpr 0x8ac8608 <col:46> 'int' lvalue Var 0x8ac8238 'i' 'int'
+          |-DeclStmt 0x8ac8790 <line:38:7, col:25>
+          | `-VarDecl 0x8ac86c0 <col:7, col:21> col:11 used nid 'int' cinit
+          |   `-ImplicitCastExpr 0x8ac8778 <col:17, col:21> 'int' <LValueToRValue>
+          |     `-MemberExpr 0x8ac8748 <col:17, col:21> 'int' lvalue .dest 0x8ab6f10
+          |       `-DeclRefExpr 0x8ac8728 <col:17> 'GraphNode':'struct GraphNode' lvalue Var 0x8ac8498 'cur' 'GraphNode':'struct GraphNode'
+          `-IfStmt 0x8ac90d0 <line:39:7, line:43:7>
+            |-ParenExpr 0x8ac8998 <./util.h:112:32, col:64> 'int'
+            | `-BinaryOperator 0x8ac8978 <col:33, col:60> 'int' '<'
+            |   |-ImplicitCastExpr 0x8ac8948 <col:33, col:48> 'int' <LValueToRValue>
+            |   | `-ArraySubscriptExpr 0x8ac88a0 <col:33, col:48> 'int' lvalue
+            |   |   |-ImplicitCastExpr 0x8ac8870 <col:33, col:41> 'int *' <LValueToRValue>
+            |   |   | `-MemberExpr 0x8ac8800 <col:33, col:41> 'int *' lvalue ->pos 0x8abc728
+            |   |   |   `-ImplicitCastExpr 0x8ac87e8 <col:33, col:38> 'MinHeap *' <LValueToRValue>
+            |   |   |     `-ParenExpr 0x8ac87c8 <col:33, col:38> 'MinHeap *' lvalue
+            |   |   |       `-DeclRefExpr 0x8ac87a8 <SSSP.c:39:25> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+            |   |   `-ImplicitCastExpr 0x8ac8888 <./util.h:112:45, col:47> 'int' <LValueToRValue>
+            |   |     `-ParenExpr 0x8ac8850 <col:45, col:47> 'int' lvalue
+            |   |       `-DeclRefExpr 0x8ac8830 <SSSP.c:39:31> 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+            |   `-ImplicitCastExpr 0x8ac8960 <./util.h:112:52, col:60> 'int' <LValueToRValue>
+            |     `-MemberExpr 0x8ac8918 <col:52, col:60> 'int' lvalue ->size 0x8abc658
+            |       `-ImplicitCastExpr 0x8ac8900 <col:52, col:57> 'MinHeap *' <LValueToRValue>
+            |         `-ParenExpr 0x8ac88e0 <col:52, col:57> 'MinHeap *' lvalue
+            |           `-DeclRefExpr 0x8ac88c0 <SSSP.c:39:25> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+            `-CompoundStmt 0x8ac90b0 <line:40:7, line:43:7>
+              |-BinaryOperator 0x8ac8f08 <line:41:9, line:6:43> 'double' '='
+              | |-ArraySubscriptExpr 0x8ac8a28 <line:41:9, col:21> 'double' lvalue
+              | | |-ImplicitCastExpr 0x8ac89f8 <col:9> 'double *' <LValueToRValue>
+              | | | `-DeclRefExpr 0x8ac89b8 <col:9> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+              | | `-ImplicitCastExpr 0x8ac8a10 <col:18> 'int' <LValueToRValue>
+              | |   `-DeclRefExpr 0x8ac89d8 <col:18> 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+              | `-ParenExpr 0x8ac8ee8 <line:6:21, col:43> 'double'
+              |   `-ConditionalOperator 0x8ac8eb8 <col:22, col:42> 'double'
+              |     |-BinaryOperator 0x8ac8c60 <col:22, col:30> 'int' '<'
+              |     | |-ImplicitCastExpr 0x8ac8c48 <col:22, col:24> 'double' <LValueToRValue>
+              |     | | `-ParenExpr 0x8ac8ad8 <col:22, col:24> 'double' lvalue
+              |     | |   `-ArraySubscriptExpr 0x8ac8ab8 <line:41:31, col:43> 'double' lvalue
+              |     | |     |-ImplicitCastExpr 0x8ac8a88 <col:31> 'double *' <LValueToRValue>
+              |     | |     | `-DeclRefExpr 0x8ac8a48 <col:31> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+              |     | |     `-ImplicitCastExpr 0x8ac8aa0 <col:40> 'int' <LValueToRValue>
+              |     | |       `-DeclRefExpr 0x8ac8a68 <col:40> 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+              |     | `-ParenExpr 0x8ac8c28 <line:6:28, col:30> 'double'
+              |     |   `-BinaryOperator 0x8ac8c08 <line:41:46, col:64> 'double' '+'
+              |     |     |-ImplicitCastExpr 0x8ac8bd8 <col:46, col:50> 'double' <LValueToRValue>
+              |     |     | `-MemberExpr 0x8ac8b18 <col:46, col:50> 'double' lvalue .w 0x8ab6ea8
+              |     |     |   `-DeclRefExpr 0x8ac8af8 <col:46> 'GraphNode':'struct GraphNode' lvalue Var 0x8ac8498 'cur' 'GraphNode':'struct GraphNode'
+              |     |     `-ImplicitCastExpr 0x8ac8bf0 <col:54, col:64> 'double' <LValueToRValue>
+              |     |       `-ArraySubscriptExpr 0x8ac8bb8 <col:54, col:64> 'double' lvalue
+              |     |         |-ImplicitCastExpr 0x8ac8b88 <col:54> 'double *' <LValueToRValue>
+              |     |         | `-DeclRefExpr 0x8ac8b48 <col:54> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+              |     |         `-ImplicitCastExpr 0x8ac8ba0 <col:63> 'int' <LValueToRValue>
+              |     |           `-DeclRefExpr 0x8ac8b68 <col:63> 'int' lvalue Var 0x8ac7fa0 't' 'int'
+              |     |-ImplicitCastExpr 0x8ac8ea0 <line:6:34, col:36> 'double' <LValueToRValue>
+              |     | `-ParenExpr 0x8ac8d30 <col:34, col:36> 'double' lvalue
+              |     |   `-ArraySubscriptExpr 0x8ac8cf0 <line:41:31, col:43> 'double' lvalue
+              |     |     |-ImplicitCastExpr 0x8ac8cc0 <col:31> 'double *' <LValueToRValue>
+              |     |     | `-DeclRefExpr 0x8ac8c80 <col:31> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+              |     |     `-ImplicitCastExpr 0x8ac8cd8 <col:40> 'int' <LValueToRValue>
+              |     |       `-DeclRefExpr 0x8ac8ca0 <col:40> 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+              |     `-ParenExpr 0x8ac8e80 <line:6:40, col:42> 'double'
+              |       `-BinaryOperator 0x8ac8e60 <line:41:46, col:64> 'double' '+'
+              |         |-ImplicitCastExpr 0x8ac8e30 <col:46, col:50> 'double' <LValueToRValue>
+              |         | `-MemberExpr 0x8ac8d70 <col:46, col:50> 'double' lvalue .w 0x8ab6ea8
+              |         |   `-DeclRefExpr 0x8ac8d50 <col:46> 'GraphNode':'struct GraphNode' lvalue Var 0x8ac8498 'cur' 'GraphNode':'struct GraphNode'
+              |         `-ImplicitCastExpr 0x8ac8e48 <col:54, col:64> 'double' <LValueToRValue>
+              |           `-ArraySubscriptExpr 0x8ac8e10 <col:54, col:64> 'double' lvalue
+              |             |-ImplicitCastExpr 0x8ac8de0 <col:54> 'double *' <LValueToRValue>
+              |             | `-DeclRefExpr 0x8ac8da0 <col:54> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+              |             `-ImplicitCastExpr 0x8ac8df8 <col:63> 'int' <LValueToRValue>
+              |               `-DeclRefExpr 0x8ac8dc0 <col:63> 'int' lvalue Var 0x8ac7fa0 't' 'int'
+              `-CallExpr 0x8ac9030 <line:42:9, col:46> 'void'
+                |-ImplicitCastExpr 0x8ac9018 <col:9> 'void (*)(MinHeap *, int, double)' <FunctionToPointerDecay>
+                | `-DeclRefExpr 0x8ac8f28 <col:9> 'void (MinHeap *, int, double)' Function 0x8ac0e48 'decrease_key' 'void (MinHeap *, int, double)'
+                |-ImplicitCastExpr 0x8ac9068 <col:22> 'MinHeap *' <LValueToRValue>
+                | `-DeclRefExpr 0x8ac8f48 <col:22> 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+                |-ImplicitCastExpr 0x8ac9080 <col:28> 'int' <LValueToRValue>
+                | `-DeclRefExpr 0x8ac8f68 <col:28> 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+                `-ImplicitCastExpr 0x8ac9098 <col:33, col:45> 'double' <LValueToRValue>
+                  `-ArraySubscriptExpr 0x8ac8ff8 <col:33, col:45> 'double' lvalue
+                    |-ImplicitCastExpr 0x8ac8fc8 <col:33> 'double *' <LValueToRValue>
+                    | `-DeclRefExpr 0x8ac8f88 <col:33> 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+                    `-ImplicitCastExpr 0x8ac8fe0 <col:42> 'int' <LValueToRValue>
+                      `-DeclRefExpr 0x8ac8fa8 <col:42> 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+CompoundStmt 0x8ac91a0
+|-DeclStmt 0x8ac6d10
+| `-VarDecl 0x8ac24a0  used heap 'MinHeap *' cinit
+|   `-CallExpr 0x8ac2600 'struct MinHeap *'
+|     |-ImplicitCastExpr 0x8ac25e8 'struct MinHeap *(*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8ac2508 'struct MinHeap *(int)' Function 0x8abd110 'init_min_heap' 'struct MinHeap *(int)'
+|     `-ImplicitCastExpr 0x8ac2628 'int' <LValueToRValue>
+|       `-MemberExpr 0x8ac2560 'int' lvalue ->V 0x8ab7608
+|         `-ImplicitCastExpr 0x8ac2548 'Graph *' <LValueToRValue>
+|           `-DeclRefExpr 0x8ac2528 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+|-ForStmt 0x8ac73c8
+| |-DeclStmt 0x8ac6dc8
+| | `-VarDecl 0x8ac6d40  used vid 'int' cinit
+| |   `-IntegerLiteral 0x8ac6da8 'int' 0
+| |-<<<NULL>>>
+| |-BinaryOperator 0x8ac6e98 'int' '<'
+| | |-ImplicitCastExpr 0x8ac6e68 'int' <LValueToRValue>
+| | | `-DeclRefExpr 0x8ac6de0 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+| | `-ImplicitCastExpr 0x8ac6e80 'int' <LValueToRValue>
+| |   `-MemberExpr 0x8ac6e38 'int' lvalue ->V 0x8ab7608
+| |     `-ImplicitCastExpr 0x8ac6e20 'Graph *' <LValueToRValue>
+| |       `-DeclRefExpr 0x8ac6e00 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+| |-UnaryOperator 0x8ac6ed8 'int' prefix '++'
+| | `-DeclRefExpr 0x8ac6eb8 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+| `-CompoundStmt 0x8ac73a0
+|   |-BinaryOperator 0x8ac6fb8 'double' '='
+|   | |-ArraySubscriptExpr 0x8ac6f60 'double' lvalue
+|   | | |-ImplicitCastExpr 0x8ac6f30 'double *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x8ac6ef0 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+|   | | `-ImplicitCastExpr 0x8ac6f48 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x8ac6f10 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+|   | `-ImplicitCastExpr 0x8ac6fa0 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x8ac6f80 'const double' lvalue Var 0x8ac2078 'MAX_D' 'const double'
+|   |-BinaryOperator 0x8ac7250 'struct MinHeapNode *' '='
+|   | |-ArraySubscriptExpr 0x8ac7090 'struct MinHeapNode *' lvalue
+|   | | |-ImplicitCastExpr 0x8ac7060 'struct MinHeapNode **' <LValueToRValue>
+|   | | | `-MemberExpr 0x8ac7010 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+|   | | |   `-ImplicitCastExpr 0x8ac6ff8 'MinHeap *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x8ac6fd8 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+|   | | `-ImplicitCastExpr 0x8ac7078 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x8ac7040 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+|   | `-CallExpr 0x8ac71f0 'struct MinHeapNode *'
+|   |   |-ImplicitCastExpr 0x8ac71d8 'struct MinHeapNode *(*)(int, double)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x8ac70b0 'struct MinHeapNode *(int, double)' Function 0x8abca10 'new_heap_node' 'struct MinHeapNode *(int, double)'
+|   |   |-ImplicitCastExpr 0x8ac7220 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x8ac70d0 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+|   |   `-ImplicitCastExpr 0x8ac7238 'double' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x8ac7160 'double' lvalue
+|   |       |-ImplicitCastExpr 0x8ac7130 'double *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x8ac70f0 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+|   |       `-ImplicitCastExpr 0x8ac7148 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x8ac7110 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+|   `-BinaryOperator 0x8ac7380 'int' '='
+|     |-ArraySubscriptExpr 0x8ac7328 'int' lvalue
+|     | |-ImplicitCastExpr 0x8ac72f8 'int *' <LValueToRValue>
+|     | | `-MemberExpr 0x8ac72a8 'int *' lvalue ->pos 0x8abc728
+|     | |   `-ImplicitCastExpr 0x8ac7290 'MinHeap *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x8ac7270 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+|     | `-ImplicitCastExpr 0x8ac7310 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x8ac72d8 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+|     `-ImplicitCastExpr 0x8ac7368 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x8ac7348 'int' lvalue Var 0x8ac6d40 'vid' 'int'
+|-BinaryOperator 0x8ac74e8 'int' '='
+| |-MemberExpr 0x8ac7438 'int' lvalue ->size 0x8abc658
+| | `-ImplicitCastExpr 0x8ac7420 'MinHeap *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8ac7400 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+| `-ImplicitCastExpr 0x8ac74d0 'int' <LValueToRValue>
+|   `-MemberExpr 0x8ac74a0 'int' lvalue ->V 0x8ab7608
+|     `-ImplicitCastExpr 0x8ac7488 'Graph *' <LValueToRValue>
+|       `-DeclRefExpr 0x8ac7468 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+|-CallExpr 0x8ac7580 'int'
+| |-ImplicitCastExpr 0x8ac7568 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+| | `-DeclRefExpr 0x8ac7508 'int (const char *, ...)' Function 0x8a1d8f0 'printf' 'int (const char *, ...)'
+| `-ImplicitCastExpr 0x8ac75c0 'const char *' <NoOp>
+|   `-ImplicitCastExpr 0x8ac75a8 'char *' <ArrayToPointerDecay>
+|     `-StringLiteral 0x8ac7528 'char[17]' lvalue "After heap init\n"
+|-ForStmt 0x8ac7990
+| |-DeclStmt 0x8ac77d8
+| | `-VarDecl 0x8ac75f0  used r 'int' cinit
+| |   `-ParenExpr 0x8ac77b8 'int'
+| |     `-BinaryOperator 0x8ac7798 'int' '/'
+| |       |-ParenExpr 0x8ac7758 'int'
+| |       | `-BinaryOperator 0x8ac7738 'int' '-'
+| |       |   |-BinaryOperator 0x8ac76f8 'int' '-'
+| |       |   | |-ImplicitCastExpr 0x8ac76e0 'int' <LValueToRValue>
+| |       |   | | `-MemberExpr 0x8ac7690 'int' lvalue ->size 0x8abc658
+| |       |   | |   `-ImplicitCastExpr 0x8ac7678 'MinHeap *' <LValueToRValue>
+| |       |   | |     `-DeclRefExpr 0x8ac7658 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+| |       |   | `-IntegerLiteral 0x8ac76c0 'int' 1
+| |       |   `-IntegerLiteral 0x8ac7718 'int' 1
+| |       `-IntegerLiteral 0x8ac7778 'int' 2
+| |-<<<NULL>>>
+| |-BinaryOperator 0x8ac7860 'int' '>'
+| | |-ImplicitCastExpr 0x8ac7848 'int' <LValueToRValue>
+| | | `-DeclRefExpr 0x8ac77f0 'int' lvalue Var 0x8ac75f0 'r' 'int'
+| | `-UnaryOperator 0x8ac7830 'int' prefix '-'
+| |   `-IntegerLiteral 0x8ac7810 'int' 1
+| |-UnaryOperator 0x8ac78a0 'int' prefix '--'
+| | `-DeclRefExpr 0x8ac7880 'int' lvalue Var 0x8ac75f0 'r' 'int'
+| `-CallExpr 0x8ac7930 'void'
+|   |-ImplicitCastExpr 0x8ac7918 'void (*)(MinHeap *, int)' <FunctionToPointerDecay>
+|   | `-DeclRefExpr 0x8ac78b8 'void (MinHeap *, int)' Function 0x8abe018 'heapify' 'void (MinHeap *, int)'
+|   |-ImplicitCastExpr 0x8ac7960 'MinHeap *' <LValueToRValue>
+|   | `-DeclRefExpr 0x8ac78d8 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+|   `-ImplicitCastExpr 0x8ac7978 'int' <LValueToRValue>
+|     `-DeclRefExpr 0x8ac78f8 'int' lvalue Var 0x8ac75f0 'r' 'int'
+|-CallExpr 0x8ac7a40 'int'
+| |-ImplicitCastExpr 0x8ac7a28 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+| | `-DeclRefExpr 0x8ac79c8 'int (const char *, ...)' Function 0x8a1d8f0 'printf' 'int (const char *, ...)'
+| `-ImplicitCastExpr 0x8ac7a80 'const char *' <NoOp>
+|   `-ImplicitCastExpr 0x8ac7a68 'char *' <ArrayToPointerDecay>
+|     `-StringLiteral 0x8ac79e8 'char[15]' lvalue "After heapify\n"
+|-BinaryOperator 0x8ac7b48 'double' '='
+| |-ArraySubscriptExpr 0x8ac7b08 'double' lvalue
+| | |-ImplicitCastExpr 0x8ac7ad8 'double *' <LValueToRValue>
+| | | `-DeclRefExpr 0x8ac7a98 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+| | `-ImplicitCastExpr 0x8ac7af0 'int' <LValueToRValue>
+| |   `-DeclRefExpr 0x8ac7ab8 'int' lvalue ParmVar 0x8ac2220 'src' 'int'
+| `-FloatingLiteral 0x8ac7b28 'double' 0.000000e+00
+|-CallExpr 0x8ac7c60 'void'
+| |-ImplicitCastExpr 0x8ac7c48 'void (*)(MinHeap *, int, double)' <FunctionToPointerDecay>
+| | `-DeclRefExpr 0x8ac7b68 'void (MinHeap *, int, double)' Function 0x8ac0e48 'decrease_key' 'void (MinHeap *, int, double)'
+| |-ImplicitCastExpr 0x8ac7c98 'MinHeap *' <LValueToRValue>
+| | `-DeclRefExpr 0x8ac7b88 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+| |-ImplicitCastExpr 0x8ac7cb0 'int' <LValueToRValue>
+| | `-DeclRefExpr 0x8ac7ba8 'int' lvalue ParmVar 0x8ac2220 'src' 'int'
+| `-FloatingLiteral 0x8ac7bc8 'double' 0.000000e+00
+`-WhileStmt 0x8ac9180
+  |-UnaryOperator 0x8ac7de0 'int' prefix '!' cannot overflow
+  | `-ParenExpr 0x8ac7dc0 'int'
+  |   `-BinaryOperator 0x8ac7da0 'int' '=='
+  |     |-ImplicitCastExpr 0x8ac7d88 'int' <LValueToRValue>
+  |     | `-MemberExpr 0x8ac7d38 'int' lvalue ->size 0x8abc658
+  |     |   `-ImplicitCastExpr 0x8ac7d20 'MinHeap *' <LValueToRValue>
+  |     |     `-ParenExpr 0x8ac7ce8 'MinHeap *' lvalue
+  |     |       `-DeclRefExpr 0x8ac7cc8 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+  |     `-IntegerLiteral 0x8ac7d68 'int' 0
+  `-CompoundStmt 0x8ac9150
+    |-DeclStmt 0x8ac7f70
+    | `-VarDecl 0x8ac7e10  used min_node 'MinHeapNode *' cinit
+    |   `-CallExpr 0x8ac7f30 'MinHeapNode *'
+    |     |-ImplicitCastExpr 0x8ac7f18 'MinHeapNode *(*)(MinHeap *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x8ac7e78 'MinHeapNode *(MinHeap *)' Function 0x8abfa90 'extract_min' 'MinHeapNode *(MinHeap *)'
+    |     `-ImplicitCastExpr 0x8ac7f58 'MinHeap *' <LValueToRValue>
+    |       `-DeclRefExpr 0x8ac7e98 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+    |-DeclStmt 0x8ac8088
+    | `-VarDecl 0x8ac7fa0  used t 'int' cinit
+    |   `-ImplicitCastExpr 0x8ac8070 'int' <LValueToRValue>
+    |     `-MemberExpr 0x8ac8040 'int' lvalue ->v 0x8abc320
+    |       `-ImplicitCastExpr 0x8ac8028 'MinHeapNode *' <LValueToRValue>
+    |         `-DeclRefExpr 0x8ac8008 'MinHeapNode *' lvalue Var 0x8ac7e10 'min_node' 'MinHeapNode *'
+    |-IfStmt 0x8ac8200
+    | |-BinaryOperator 0x8ac8180 'int' '>='
+    | | |-ImplicitCastExpr 0x8ac8150 'double' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x8ac8110 'double' lvalue
+    | | |   |-ImplicitCastExpr 0x8ac80e0 'double *' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x8ac80a0 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+    | | |   `-ImplicitCastExpr 0x8ac80f8 'int' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x8ac80c0 'int' lvalue Var 0x8ac7fa0 't' 'int'
+    | | `-ImplicitCastExpr 0x8ac8168 'double' <LValueToRValue>
+    | |   `-DeclRefExpr 0x8ac8130 'const double' lvalue Var 0x8ac2078 'MAX_D' 'const double'
+    | `-BreakStmt 0x8ac81f8
+    `-ForStmt 0x8ac9118
+      |-DeclStmt 0x8ac82c0
+      | `-VarDecl 0x8ac8238  used i 'int' cinit
+      |   `-IntegerLiteral 0x8ac82a0 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x8ac8430 'int' '<'
+      | |-ImplicitCastExpr 0x8ac8400 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x8ac82d8 'int' lvalue Var 0x8ac8238 'i' 'int'
+      | `-ImplicitCastExpr 0x8ac8418 'int' <LValueToRValue>
+      |   `-MemberExpr 0x8ac83d0 'int' lvalue .length 0x8ab7330
+      |     `-ArraySubscriptExpr 0x8ac83b0 'struct AdjList':'struct AdjList' lvalue
+      |       |-ImplicitCastExpr 0x8ac8380 'struct AdjList *' <LValueToRValue>
+      |       | `-MemberExpr 0x8ac8330 'struct AdjList *' lvalue ->l 0x8ab75a0
+      |       |   `-ImplicitCastExpr 0x8ac8318 'Graph *' <LValueToRValue>
+      |       |     `-DeclRefExpr 0x8ac82f8 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+      |       `-ImplicitCastExpr 0x8ac8398 'int' <LValueToRValue>
+      |         `-DeclRefExpr 0x8ac8360 'int' lvalue Var 0x8ac7fa0 't' 'int'
+      |-UnaryOperator 0x8ac8470 'int' prefix '++'
+      | `-DeclRefExpr 0x8ac8450 'int' lvalue Var 0x8ac8238 'i' 'int'
+      `-CompoundStmt 0x8ac90f0
+        |-DeclStmt 0x8ac8690
+        | `-VarDecl 0x8ac8498  used cur 'GraphNode':'struct GraphNode' cinit
+        |   `-ImplicitCastExpr 0x8ac8678 'struct GraphNode':'struct GraphNode' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x8ac8658 'struct GraphNode':'struct GraphNode' lvalue
+        |       |-ImplicitCastExpr 0x8ac8628 'struct GraphNode *' <ArrayToPointerDecay>
+        |       | `-MemberExpr 0x8ac85d8 'struct GraphNode[16]' lvalue .neighbours 0x8ab72c8
+        |       |   `-ArraySubscriptExpr 0x8ac85b8 'struct AdjList':'struct AdjList' lvalue
+        |       |     |-ImplicitCastExpr 0x8ac8588 'struct AdjList *' <LValueToRValue>
+        |       |     | `-MemberExpr 0x8ac8538 'struct AdjList *' lvalue ->l 0x8ab75a0
+        |       |     |   `-ImplicitCastExpr 0x8ac8520 'Graph *' <LValueToRValue>
+        |       |     |     `-DeclRefExpr 0x8ac8500 'Graph *' lvalue ParmVar 0x8ac21a0 'graph' 'Graph *'
+        |       |     `-ImplicitCastExpr 0x8ac85a0 'int' <LValueToRValue>
+        |       |       `-DeclRefExpr 0x8ac8568 'int' lvalue Var 0x8ac7fa0 't' 'int'
+        |       `-ImplicitCastExpr 0x8ac8640 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x8ac8608 'int' lvalue Var 0x8ac8238 'i' 'int'
+        |-DeclStmt 0x8ac8790
+        | `-VarDecl 0x8ac86c0  used nid 'int' cinit
+        |   `-ImplicitCastExpr 0x8ac8778 'int' <LValueToRValue>
+        |     `-MemberExpr 0x8ac8748 'int' lvalue .dest 0x8ab6f10
+        |       `-DeclRefExpr 0x8ac8728 'GraphNode':'struct GraphNode' lvalue Var 0x8ac8498 'cur' 'GraphNode':'struct GraphNode'
+        `-IfStmt 0x8ac90d0
+          |-ParenExpr 0x8ac8998 'int'
+          | `-BinaryOperator 0x8ac8978 'int' '<'
+          |   |-ImplicitCastExpr 0x8ac8948 'int' <LValueToRValue>
+          |   | `-ArraySubscriptExpr 0x8ac88a0 'int' lvalue
+          |   |   |-ImplicitCastExpr 0x8ac8870 'int *' <LValueToRValue>
+          |   |   | `-MemberExpr 0x8ac8800 'int *' lvalue ->pos 0x8abc728
+          |   |   |   `-ImplicitCastExpr 0x8ac87e8 'MinHeap *' <LValueToRValue>
+          |   |   |     `-ParenExpr 0x8ac87c8 'MinHeap *' lvalue
+          |   |   |       `-DeclRefExpr 0x8ac87a8 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+          |   |   `-ImplicitCastExpr 0x8ac8888 'int' <LValueToRValue>
+          |   |     `-ParenExpr 0x8ac8850 'int' lvalue
+          |   |       `-DeclRefExpr 0x8ac8830 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+          |   `-ImplicitCastExpr 0x8ac8960 'int' <LValueToRValue>
+          |     `-MemberExpr 0x8ac8918 'int' lvalue ->size 0x8abc658
+          |       `-ImplicitCastExpr 0x8ac8900 'MinHeap *' <LValueToRValue>
+          |         `-ParenExpr 0x8ac88e0 'MinHeap *' lvalue
+          |           `-DeclRefExpr 0x8ac88c0 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+          `-CompoundStmt 0x8ac90b0
+            |-BinaryOperator 0x8ac8f08 'double' '='
+            | |-ArraySubscriptExpr 0x8ac8a28 'double' lvalue
+            | | |-ImplicitCastExpr 0x8ac89f8 'double *' <LValueToRValue>
+            | | | `-DeclRefExpr 0x8ac89b8 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+            | | `-ImplicitCastExpr 0x8ac8a10 'int' <LValueToRValue>
+            | |   `-DeclRefExpr 0x8ac89d8 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+            | `-ParenExpr 0x8ac8ee8 'double'
+            |   `-ConditionalOperator 0x8ac8eb8 'double'
+            |     |-BinaryOperator 0x8ac8c60 'int' '<'
+            |     | |-ImplicitCastExpr 0x8ac8c48 'double' <LValueToRValue>
+            |     | | `-ParenExpr 0x8ac8ad8 'double' lvalue
+            |     | |   `-ArraySubscriptExpr 0x8ac8ab8 'double' lvalue
+            |     | |     |-ImplicitCastExpr 0x8ac8a88 'double *' <LValueToRValue>
+            |     | |     | `-DeclRefExpr 0x8ac8a48 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+            |     | |     `-ImplicitCastExpr 0x8ac8aa0 'int' <LValueToRValue>
+            |     | |       `-DeclRefExpr 0x8ac8a68 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+            |     | `-ParenExpr 0x8ac8c28 'double'
+            |     |   `-BinaryOperator 0x8ac8c08 'double' '+'
+            |     |     |-ImplicitCastExpr 0x8ac8bd8 'double' <LValueToRValue>
+            |     |     | `-MemberExpr 0x8ac8b18 'double' lvalue .w 0x8ab6ea8
+            |     |     |   `-DeclRefExpr 0x8ac8af8 'GraphNode':'struct GraphNode' lvalue Var 0x8ac8498 'cur' 'GraphNode':'struct GraphNode'
+            |     |     `-ImplicitCastExpr 0x8ac8bf0 'double' <LValueToRValue>
+            |     |       `-ArraySubscriptExpr 0x8ac8bb8 'double' lvalue
+            |     |         |-ImplicitCastExpr 0x8ac8b88 'double *' <LValueToRValue>
+            |     |         | `-DeclRefExpr 0x8ac8b48 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+            |     |         `-ImplicitCastExpr 0x8ac8ba0 'int' <LValueToRValue>
+            |     |           `-DeclRefExpr 0x8ac8b68 'int' lvalue Var 0x8ac7fa0 't' 'int'
+            |     |-ImplicitCastExpr 0x8ac8ea0 'double' <LValueToRValue>
+            |     | `-ParenExpr 0x8ac8d30 'double' lvalue
+            |     |   `-ArraySubscriptExpr 0x8ac8cf0 'double' lvalue
+            |     |     |-ImplicitCastExpr 0x8ac8cc0 'double *' <LValueToRValue>
+            |     |     | `-DeclRefExpr 0x8ac8c80 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+            |     |     `-ImplicitCastExpr 0x8ac8cd8 'int' <LValueToRValue>
+            |     |       `-DeclRefExpr 0x8ac8ca0 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+            |     `-ParenExpr 0x8ac8e80 'double'
+            |       `-BinaryOperator 0x8ac8e60 'double' '+'
+            |         |-ImplicitCastExpr 0x8ac8e30 'double' <LValueToRValue>
+            |         | `-MemberExpr 0x8ac8d70 'double' lvalue .w 0x8ab6ea8
+            |         |   `-DeclRefExpr 0x8ac8d50 'GraphNode':'struct GraphNode' lvalue Var 0x8ac8498 'cur' 'GraphNode':'struct GraphNode'
+            |         `-ImplicitCastExpr 0x8ac8e48 'double' <LValueToRValue>
+            |           `-ArraySubscriptExpr 0x8ac8e10 'double' lvalue
+            |             |-ImplicitCastExpr 0x8ac8de0 'double *' <LValueToRValue>
+            |             | `-DeclRefExpr 0x8ac8da0 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+            |             `-ImplicitCastExpr 0x8ac8df8 'int' <LValueToRValue>
+            |               `-DeclRefExpr 0x8ac8dc0 'int' lvalue Var 0x8ac7fa0 't' 'int'
+            `-CallExpr 0x8ac9030 'void'
+              |-ImplicitCastExpr 0x8ac9018 'void (*)(MinHeap *, int, double)' <FunctionToPointerDecay>
+              | `-DeclRefExpr 0x8ac8f28 'void (MinHeap *, int, double)' Function 0x8ac0e48 'decrease_key' 'void (MinHeap *, int, double)'
+              |-ImplicitCastExpr 0x8ac9068 'MinHeap *' <LValueToRValue>
+              | `-DeclRefExpr 0x8ac8f48 'MinHeap *' lvalue Var 0x8ac24a0 'heap' 'MinHeap *'
+              |-ImplicitCastExpr 0x8ac9080 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x8ac8f68 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+              `-ImplicitCastExpr 0x8ac9098 'double' <LValueToRValue>
+                `-ArraySubscriptExpr 0x8ac8ff8 'double' lvalue
+                  |-ImplicitCastExpr 0x8ac8fc8 'double *' <LValueToRValue>
+                  | `-DeclRefExpr 0x8ac8f88 'double *' lvalue ParmVar 0x8ac22a0 'solution' 'double *'
+                  `-ImplicitCastExpr 0x8ac8fe0 'int' <LValueToRValue>
+                    `-DeclRefExpr 0x8ac8fa8 'int' lvalue Var 0x8ac86c0 'nid' 'int'
+Emitting fn: add_edge
+FunctionDecl 0x8ab7aa8 <./util.h:32:1, line:39:1> line:32:6 used add_edge 'void (struct Graph *, int, int, double)'
+|-ParmVarDecl 0x8ab77e0 <col:15, col:29> col:29 used g 'struct Graph *'
+|-ParmVarDecl 0x8ab7860 <col:32, col:36> col:36 used s 'int'
+|-ParmVarDecl 0x8ab78e0 <col:39, col:43> col:43 used t 'int'
+|-ParmVarDecl 0x8ab7960 <col:46, col:53> col:53 used w 'double'
+`-CompoundStmt 0x8ab8430 <line:33:1, line:39:1>
+  |-IfStmt 0x8ab7f28 <line:34:3, line:37:3>
+  | |-BinaryOperator 0x8ab7cb0 <line:34:7, line:10:16> 'int' '>='
+  | | |-ImplicitCastExpr 0x8ab7c98 <line:34:7, col:15> 'int' <LValueToRValue>
+  | | | `-MemberExpr 0x8ab7c48 <col:7, col:15> 'int' lvalue .length 0x8ab7330
+  | | |   `-ArraySubscriptExpr 0x8ab7c28 <col:7, col:13> 'struct AdjList':'struct AdjList' lvalue
+  | | |     |-ImplicitCastExpr 0x8ab7bf8 <col:7, col:10> 'struct AdjList *' <LValueToRValue>
+  | | |     | `-MemberExpr 0x8ab7ba8 <col:7, col:10> 'struct AdjList *' lvalue ->l 0x8ab75a0
+  | | |     |   `-ImplicitCastExpr 0x8ab7b90 <col:7> 'struct Graph *' <LValueToRValue>
+  | | |     |     `-DeclRefExpr 0x8ab7b70 <col:7> 'struct Graph *' lvalue ParmVar 0x8ab77e0 'g' 'struct Graph *'
+  | | |     `-ImplicitCastExpr 0x8ab7c10 <col:12> 'int' <LValueToRValue>
+  | | |       `-DeclRefExpr 0x8ab7bd8 <col:12> 'int' lvalue ParmVar 0x8ab7860 's' 'int'
+  | | `-IntegerLiteral 0x8ab7c78 <line:10:16> 'int' 16
+  | `-CompoundStmt 0x8ab7f08 <line:34:33, line:37:3>
+  |   |-CallExpr 0x8ab7de0 <line:35:5, col:50> 'int'
+  |   | |-ImplicitCastExpr 0x8ab7dc8 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+  |   | | `-DeclRefExpr 0x8ab7cd0 <col:5> 'int (const char *, ...)' Function 0x8a1d8f0 'printf' 'int (const char *, ...)'
+  |   | |-ImplicitCastExpr 0x8ab7e28 <col:12> 'const char *' <NoOp>
+  |   | | `-ImplicitCastExpr 0x8ab7e10 <col:12> 'char *' <ArrayToPointerDecay>
+  |   | |   `-StringLiteral 0x8ab7d28 <col:12> 'char[33]' lvalue "Too many neighbours for node %d\n"
+  |   | `-ImplicitCastExpr 0x8ab7e40 <col:49> 'int' <LValueToRValue>
+  |   |   `-DeclRefExpr 0x8ab7d60 <col:49> 'int' lvalue ParmVar 0x8ab7860 's' 'int'
+  |   `-CallExpr 0x8ab7ee0 <line:36:5, col:11> 'void'
+  |     |-ImplicitCastExpr 0x8ab7ec8 <col:5> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8ab7e58 <col:5> 'void (int) __attribute__((noreturn))' Function 0x8a7abf8 'exit' 'void (int) __attribute__((noreturn))'
+  |     `-IntegerLiteral 0x8ab7e78 <col:10> 'int' 1
+  `-BinaryOperator 0x8ab8410 <line:38:3, col:59> 'struct GraphNode':'struct GraphNode' '='
+    |-ArraySubscriptExpr 0x8ab8220 <col:3, col:38> 'struct GraphNode':'struct GraphNode' lvalue
+    | |-ImplicitCastExpr 0x8ab8208 <col:3, col:11> 'struct GraphNode *' <ArrayToPointerDecay>
+    | | `-MemberExpr 0x8ab8020 <col:3, col:11> 'struct GraphNode[16]' lvalue .neighbours 0x8ab72c8
+    | |   `-ArraySubscriptExpr 0x8ab8000 <col:3, col:9> 'struct AdjList':'struct AdjList' lvalue
+    | |     |-ImplicitCastExpr 0x8ab7fd0 <col:3, col:6> 'struct AdjList *' <LValueToRValue>
+    | |     | `-MemberExpr 0x8ab7f80 <col:3, col:6> 'struct AdjList *' lvalue ->l 0x8ab75a0
+    | |     |   `-ImplicitCastExpr 0x8ab7f68 <col:3> 'struct Graph *' <LValueToRValue>
+    | |     |     `-DeclRefExpr 0x8ab7f48 <col:3> 'struct Graph *' lvalue ParmVar 0x8ab77e0 'g' 'struct Graph *'
+    | |     `-ImplicitCastExpr 0x8ab7fe8 <col:8> 'int' <LValueToRValue>
+    | |       `-DeclRefExpr 0x8ab7fb0 <col:8> 'int' lvalue ParmVar 0x8ab7860 's' 'int'
+    | `-UnaryOperator 0x8ab8190 <col:22, col:36> 'int' postfix '++'
+    |   `-MemberExpr 0x8ab8160 <col:22, col:30> 'int' lvalue .length 0x8ab7330
+    |     `-ArraySubscriptExpr 0x8ab8140 <col:22, col:28> 'struct AdjList':'struct AdjList' lvalue
+    |       |-ImplicitCastExpr 0x8ab8110 <col:22, col:25> 'struct AdjList *' <LValueToRValue>
+    |       | `-MemberExpr 0x8ab80c0 <col:22, col:25> 'struct AdjList *' lvalue ->l 0x8ab75a0
+    |       |   `-ImplicitCastExpr 0x8ab8070 <col:22> 'struct Graph *' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x8ab8050 <col:22> 'struct Graph *' lvalue ParmVar 0x8ab77e0 'g' 'struct Graph *'
+    |       `-ImplicitCastExpr 0x8ab8128 <col:27> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x8ab80f0 <col:27> 'int' lvalue ParmVar 0x8ab7860 's' 'int'
+    `-ImplicitCastExpr 0x8ab83f8 <col:42, col:59> 'GraphNode':'struct GraphNode' <LValueToRValue>
+      `-CompoundLiteralExpr 0x8ab83d0 <col:42, col:59> 'GraphNode':'struct GraphNode' lvalue
+        `-InitListExpr 0x8ab8350 <col:54, col:59> 'GraphNode':'struct GraphNode'
+          |-ImplicitCastExpr 0x8ab83a0 <col:55> 'double' <LValueToRValue>
+          | `-DeclRefExpr 0x8ab82b0 <col:55> 'double' lvalue ParmVar 0x8ab7960 'w' 'double'
+          `-ImplicitCastExpr 0x8ab83b8 <col:58> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x8ab82d0 <col:58> 'int' lvalue ParmVar 0x8ab78e0 't' 'int'
+CompoundStmt 0x8ab8430
+|-IfStmt 0x8ab7f28
+| |-BinaryOperator 0x8ab7cb0 'int' '>='
+| | |-ImplicitCastExpr 0x8ab7c98 'int' <LValueToRValue>
+| | | `-MemberExpr 0x8ab7c48 'int' lvalue .length 0x8ab7330
+| | |   `-ArraySubscriptExpr 0x8ab7c28 'struct AdjList':'struct AdjList' lvalue
+| | |     |-ImplicitCastExpr 0x8ab7bf8 'struct AdjList *' <LValueToRValue>
+| | |     | `-MemberExpr 0x8ab7ba8 'struct AdjList *' lvalue ->l 0x8ab75a0
+| | |     |   `-ImplicitCastExpr 0x8ab7b90 'struct Graph *' <LValueToRValue>
+| | |     |     `-DeclRefExpr 0x8ab7b70 'struct Graph *' lvalue ParmVar 0x8ab77e0 'g' 'struct Graph *'
+| | |     `-ImplicitCastExpr 0x8ab7c10 'int' <LValueToRValue>
+| | |       `-DeclRefExpr 0x8ab7bd8 'int' lvalue ParmVar 0x8ab7860 's' 'int'
+| | `-IntegerLiteral 0x8ab7c78 'int' 16
+| `-CompoundStmt 0x8ab7f08
+|   |-CallExpr 0x8ab7de0 'int'
+|   | |-ImplicitCastExpr 0x8ab7dc8 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x8ab7cd0 'int (const char *, ...)' Function 0x8a1d8f0 'printf' 'int (const char *, ...)'
+|   | |-ImplicitCastExpr 0x8ab7e28 'const char *' <NoOp>
+|   | | `-ImplicitCastExpr 0x8ab7e10 'char *' <ArrayToPointerDecay>
+|   | |   `-StringLiteral 0x8ab7d28 'char[33]' lvalue "Too many neighbours for node %d\n"
+|   | `-ImplicitCastExpr 0x8ab7e40 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x8ab7d60 'int' lvalue ParmVar 0x8ab7860 's' 'int'
+|   `-CallExpr 0x8ab7ee0 'void'
+|     |-ImplicitCastExpr 0x8ab7ec8 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8ab7e58 'void (int) __attribute__((noreturn))' Function 0x8a7abf8 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x8ab7e78 'int' 1
+`-BinaryOperator 0x8ab8410 'struct GraphNode':'struct GraphNode' '='
+  |-ArraySubscriptExpr 0x8ab8220 'struct GraphNode':'struct GraphNode' lvalue
+  | |-ImplicitCastExpr 0x8ab8208 'struct GraphNode *' <ArrayToPointerDecay>
+  | | `-MemberExpr 0x8ab8020 'struct GraphNode[16]' lvalue .neighbours 0x8ab72c8
+  | |   `-ArraySubscriptExpr 0x8ab8000 'struct AdjList':'struct AdjList' lvalue
+  | |     |-ImplicitCastExpr 0x8ab7fd0 'struct AdjList *' <LValueToRValue>
+  | |     | `-MemberExpr 0x8ab7f80 'struct AdjList *' lvalue ->l 0x8ab75a0
+  | |     |   `-ImplicitCastExpr 0x8ab7f68 'struct Graph *' <LValueToRValue>
+  | |     |     `-DeclRefExpr 0x8ab7f48 'struct Graph *' lvalue ParmVar 0x8ab77e0 'g' 'struct Graph *'
+  | |     `-ImplicitCastExpr 0x8ab7fe8 'int' <LValueToRValue>
+  | |       `-DeclRefExpr 0x8ab7fb0 'int' lvalue ParmVar 0x8ab7860 's' 'int'
+  | `-UnaryOperator 0x8ab8190 'int' postfix '++'
+  |   `-MemberExpr 0x8ab8160 'int' lvalue .length 0x8ab7330
+  |     `-ArraySubscriptExpr 0x8ab8140 'struct AdjList':'struct AdjList' lvalue
+  |       |-ImplicitCastExpr 0x8ab8110 'struct AdjList *' <LValueToRValue>
+  |       | `-MemberExpr 0x8ab80c0 'struct AdjList *' lvalue ->l 0x8ab75a0
+  |       |   `-ImplicitCastExpr 0x8ab8070 'struct Graph *' <LValueToRValue>
+  |       |     `-DeclRefExpr 0x8ab8050 'struct Graph *' lvalue ParmVar 0x8ab77e0 'g' 'struct Graph *'
+  |       `-ImplicitCastExpr 0x8ab8128 'int' <LValueToRValue>
+  |         `-DeclRefExpr 0x8ab80f0 'int' lvalue ParmVar 0x8ab7860 's' 'int'
+  `-ImplicitCastExpr 0x8ab83f8 'GraphNode':'struct GraphNode' <LValueToRValue>
+    `-CompoundLiteralExpr 0x8ab83d0 'GraphNode':'struct GraphNode' lvalue
+      `-InitListExpr 0x8ab8350 'GraphNode':'struct GraphNode'
+        |-ImplicitCastExpr 0x8ab83a0 'double' <LValueToRValue>
+        | `-DeclRefExpr 0x8ab82b0 'double' lvalue ParmVar 0x8ab7960 'w' 'double'
+        `-ImplicitCastExpr 0x8ab83b8 'int' <LValueToRValue>
+          `-DeclRefExpr 0x8ab82d0 'int' lvalue ParmVar 0x8ab78e0 't' 'int'
+comp lit
+CompoundLiteralExpr 0x8ab83d0 'GraphNode':'struct GraphNode' lvalue
+`-InitListExpr 0x8ab8350 'GraphNode':'struct GraphNode'
+  |-ImplicitCastExpr 0x8ab83a0 'double' <LValueToRValue>
+  | `-DeclRefExpr 0x8ab82b0 'double' lvalue ParmVar 0x8ab7960 'w' 'double'
+  `-ImplicitCastExpr 0x8ab83b8 'int' <LValueToRValue>
+    `-DeclRefExpr 0x8ab82d0 'int' lvalue ParmVar 0x8ab78e0 't' 'int'
+Emitting fn: init_min_heap
+FunctionDecl 0x8abd110 <./util.h:130:1, line:138:1> line:130:17 used init_min_heap 'struct MinHeap *(int)'
+|-ParmVarDecl 0x8abcf08 <col:31, col:35> col:35 used capacity 'int'
+`-CompoundStmt 0x8abd8e8 <line:131:1, line:138:1>
+  |-DeclStmt 0x8abd3d0 <line:132:3, col:40>
+  | `-VarDecl 0x8abd260 <col:3, col:39> col:12 used heap 'MinHeap *' cinit
+  |   `-ImplicitCastExpr 0x8abd3b8 <col:19, col:39> 'MinHeap *' <BitCast>
+  |     `-CallExpr 0x8abd390 <col:19, col:39> 'void *'
+  |       |-ImplicitCastExpr 0x8abd378 <col:19> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+  |       | `-DeclRefExpr 0x8abd2c8 <col:19> 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+  |       `-UnaryExprOrTypeTraitExpr 0x8abd358 <col:26, col:38> 'unsigned long' sizeof
+  |         `-ParenExpr 0x8abd338 <col:32, col:38> 'MinHeap':'struct MinHeap' lvalue
+  |           `-UnaryOperator 0x8abd320 <col:33, col:34> 'MinHeap':'struct MinHeap' lvalue prefix '*' cannot overflow
+  |             `-ImplicitCastExpr 0x8abd308 <col:34> 'MinHeap *' <LValueToRValue>
+  |               `-DeclRefExpr 0x8abd2e8 <col:34> 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *' non_odr_use_unevaluated
+  |-BinaryOperator 0x8abd570 <line:133:3, col:44> 'int *' '='
+  | |-MemberExpr 0x8abd420 <col:3, col:9> 'int *' lvalue ->pos 0x8abc728
+  | | `-ImplicitCastExpr 0x8abd408 <col:3> 'MinHeap *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8abd3e8 <col:3> 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+  | `-ImplicitCastExpr 0x8abd558 <col:15, col:44> 'int *' <BitCast>
+  |   `-CallExpr 0x8abd530 <col:15, col:44> 'void *'
+  |     |-ImplicitCastExpr 0x8abd518 <col:15> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8abd450 <col:15> 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+  |     `-BinaryOperator 0x8abd4f8 <col:22, col:36> 'unsigned long' '*'
+  |       |-UnaryExprOrTypeTraitExpr 0x8abd488 <col:22, col:32> 'unsigned long' sizeof 'int'
+  |       `-ImplicitCastExpr 0x8abd4e0 <col:36> 'unsigned long' <IntegralCast>
+  |         `-ImplicitCastExpr 0x8abd4c8 <col:36> 'int' <LValueToRValue>
+  |           `-DeclRefExpr 0x8abd4a8 <col:36> 'int' lvalue ParmVar 0x8abcf08 'capacity' 'int'
+  |-BinaryOperator 0x8abd618 <line:134:3, col:16> 'int' '='
+  | |-MemberExpr 0x8abd5c8 <col:3, col:9> 'int' lvalue ->size 0x8abc658
+  | | `-ImplicitCastExpr 0x8abd5b0 <col:3> 'MinHeap *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8abd590 <col:3> 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+  | `-IntegerLiteral 0x8abd5f8 <col:16> 'int' 0
+  |-BinaryOperator 0x8abd6d8 <line:135:3, col:20> 'int' '='
+  | |-MemberExpr 0x8abd670 <col:3, col:9> 'int' lvalue ->capacity 0x8abc6c0
+  | | `-ImplicitCastExpr 0x8abd658 <col:3> 'MinHeap *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8abd638 <col:3> 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+  | `-ImplicitCastExpr 0x8abd6c0 <col:20> 'int' <LValueToRValue>
+  |   `-DeclRefExpr 0x8abd6a0 <col:20> 'int' lvalue ParmVar 0x8abcf08 'capacity' 'int'
+  |-BinaryOperator 0x8abd880 <line:136:3, col:56> 'struct MinHeapNode **' '='
+  | |-MemberExpr 0x8abd730 <col:3, col:9> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  | | `-ImplicitCastExpr 0x8abd718 <col:3> 'MinHeap *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8abd6f8 <col:3> 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+  | `-ImplicitCastExpr 0x8abd868 <col:17, col:56> 'struct MinHeapNode **' <BitCast>
+  |   `-CallExpr 0x8abd840 <col:17, col:56> 'void *'
+  |     |-ImplicitCastExpr 0x8abd828 <col:17> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x8abd760 <col:17> 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+  |     `-BinaryOperator 0x8abd808 <col:24, col:48> 'unsigned long' '*'
+  |       |-UnaryExprOrTypeTraitExpr 0x8abd798 <col:24, col:44> 'unsigned long' sizeof 'MinHeapNode *'
+  |       `-ImplicitCastExpr 0x8abd7f0 <col:48> 'unsigned long' <IntegralCast>
+  |         `-ImplicitCastExpr 0x8abd7d8 <col:48> 'int' <LValueToRValue>
+  |           `-DeclRefExpr 0x8abd7b8 <col:48> 'int' lvalue ParmVar 0x8abcf08 'capacity' 'int'
+  `-ReturnStmt 0x8abd8d8 <line:137:3, col:10>
+    `-ImplicitCastExpr 0x8abd8c0 <col:10> 'MinHeap *' <LValueToRValue>
+      `-DeclRefExpr 0x8abd8a0 <col:10> 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+CompoundStmt 0x8abd8e8
+|-DeclStmt 0x8abd3d0
+| `-VarDecl 0x8abd260  used heap 'MinHeap *' cinit
+|   `-ImplicitCastExpr 0x8abd3b8 'MinHeap *' <BitCast>
+|     `-CallExpr 0x8abd390 'void *'
+|       |-ImplicitCastExpr 0x8abd378 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x8abd2c8 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+|       `-UnaryExprOrTypeTraitExpr 0x8abd358 'unsigned long' sizeof
+|         `-ParenExpr 0x8abd338 'MinHeap':'struct MinHeap' lvalue
+|           `-UnaryOperator 0x8abd320 'MinHeap':'struct MinHeap' lvalue prefix '*' cannot overflow
+|             `-ImplicitCastExpr 0x8abd308 'MinHeap *' <LValueToRValue>
+|               `-DeclRefExpr 0x8abd2e8 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *' non_odr_use_unevaluated
+|-BinaryOperator 0x8abd570 'int *' '='
+| |-MemberExpr 0x8abd420 'int *' lvalue ->pos 0x8abc728
+| | `-ImplicitCastExpr 0x8abd408 'MinHeap *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8abd3e8 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+| `-ImplicitCastExpr 0x8abd558 'int *' <BitCast>
+|   `-CallExpr 0x8abd530 'void *'
+|     |-ImplicitCastExpr 0x8abd518 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8abd450 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+|     `-BinaryOperator 0x8abd4f8 'unsigned long' '*'
+|       |-UnaryExprOrTypeTraitExpr 0x8abd488 'unsigned long' sizeof 'int'
+|       `-ImplicitCastExpr 0x8abd4e0 'unsigned long' <IntegralCast>
+|         `-ImplicitCastExpr 0x8abd4c8 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x8abd4a8 'int' lvalue ParmVar 0x8abcf08 'capacity' 'int'
+|-BinaryOperator 0x8abd618 'int' '='
+| |-MemberExpr 0x8abd5c8 'int' lvalue ->size 0x8abc658
+| | `-ImplicitCastExpr 0x8abd5b0 'MinHeap *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8abd590 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+| `-IntegerLiteral 0x8abd5f8 'int' 0
+|-BinaryOperator 0x8abd6d8 'int' '='
+| |-MemberExpr 0x8abd670 'int' lvalue ->capacity 0x8abc6c0
+| | `-ImplicitCastExpr 0x8abd658 'MinHeap *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8abd638 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+| `-ImplicitCastExpr 0x8abd6c0 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x8abd6a0 'int' lvalue ParmVar 0x8abcf08 'capacity' 'int'
+|-BinaryOperator 0x8abd880 'struct MinHeapNode **' '='
+| |-MemberExpr 0x8abd730 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+| | `-ImplicitCastExpr 0x8abd718 'MinHeap *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8abd6f8 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+| `-ImplicitCastExpr 0x8abd868 'struct MinHeapNode **' <BitCast>
+|   `-CallExpr 0x8abd840 'void *'
+|     |-ImplicitCastExpr 0x8abd828 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x8abd760 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+|     `-BinaryOperator 0x8abd808 'unsigned long' '*'
+|       |-UnaryExprOrTypeTraitExpr 0x8abd798 'unsigned long' sizeof 'MinHeapNode *'
+|       `-ImplicitCastExpr 0x8abd7f0 'unsigned long' <IntegralCast>
+|         `-ImplicitCastExpr 0x8abd7d8 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x8abd7b8 'int' lvalue ParmVar 0x8abcf08 'capacity' 'int'
+`-ReturnStmt 0x8abd8d8
+  `-ImplicitCastExpr 0x8abd8c0 'MinHeap *' <LValueToRValue>
+    `-DeclRefExpr 0x8abd8a0 'MinHeap *' lvalue Var 0x8abd260 'heap' 'MinHeap *'
+Emitting fn: new_heap_node
+FunctionDecl 0x8abca10 <./util.h:122:1, line:128:1> line:122:21 used new_heap_node 'struct MinHeapNode *(int, double)'
+|-ParmVarDecl 0x8abc860 <col:35, col:39> col:39 used v 'int'
+|-ParmVarDecl 0x8abc8e0 <col:42, col:49> col:49 used dist 'double'
+`-CompoundStmt 0x8abcec0 <line:123:1, line:128:1>
+  |-DeclStmt 0x8abcce0 <line:124:3, col:38>
+  | `-VarDecl 0x8abcb70 <col:3, col:37> col:16 used n 'MinHeapNode *' cinit
+  |   `-ImplicitCastExpr 0x8abccc8 <col:20, col:37> 'MinHeapNode *' <BitCast>
+  |     `-CallExpr 0x8abcca0 <col:20, col:37> 'void *'
+  |       |-ImplicitCastExpr 0x8abcc88 <col:20> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+  |       | `-DeclRefExpr 0x8abcbd8 <col:20> 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+  |       `-UnaryExprOrTypeTraitExpr 0x8abcc68 <col:27, col:36> 'unsigned long' sizeof
+  |         `-ParenExpr 0x8abcc48 <col:33, col:36> 'MinHeapNode':'struct MinHeapNode' lvalue
+  |           `-UnaryOperator 0x8abcc30 <col:34, col:35> 'MinHeapNode':'struct MinHeapNode' lvalue prefix '*' cannot overflow
+  |             `-ImplicitCastExpr 0x8abcc18 <col:35> 'MinHeapNode *' <LValueToRValue>
+  |               `-DeclRefExpr 0x8abcbf8 <col:35> 'MinHeapNode *' lvalue Var 0x8abcb70 'n' 'MinHeapNode *' non_odr_use_unevaluated
+  |-BinaryOperator 0x8abcd98 <line:125:3, col:10> 'int' '='
+  | |-MemberExpr 0x8abcd30 <col:3, col:6> 'int' lvalue ->v 0x8abc320
+  | | `-ImplicitCastExpr 0x8abcd18 <col:3> 'MinHeapNode *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8abccf8 <col:3> 'MinHeapNode *' lvalue Var 0x8abcb70 'n' 'MinHeapNode *'
+  | `-ImplicitCastExpr 0x8abcd80 <col:10> 'int' <LValueToRValue>
+  |   `-DeclRefExpr 0x8abcd60 <col:10> 'int' lvalue ParmVar 0x8abc860 'v' 'int'
+  |-BinaryOperator 0x8abce58 <line:126:3, col:13> 'double' '='
+  | |-MemberExpr 0x8abcdf0 <col:3, col:6> 'double' lvalue ->dist 0x8abc2b8
+  | | `-ImplicitCastExpr 0x8abcdd8 <col:3> 'MinHeapNode *' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8abcdb8 <col:3> 'MinHeapNode *' lvalue Var 0x8abcb70 'n' 'MinHeapNode *'
+  | `-ImplicitCastExpr 0x8abce40 <col:13> 'double' <LValueToRValue>
+  |   `-DeclRefExpr 0x8abce20 <col:13> 'double' lvalue ParmVar 0x8abc8e0 'dist' 'double'
+  `-ReturnStmt 0x8abceb0 <line:127:3, col:10>
+    `-ImplicitCastExpr 0x8abce98 <col:10> 'MinHeapNode *' <LValueToRValue>
+      `-DeclRefExpr 0x8abce78 <col:10> 'MinHeapNode *' lvalue Var 0x8abcb70 'n' 'MinHeapNode *'
+CompoundStmt 0x8abcec0
+|-DeclStmt 0x8abcce0
+| `-VarDecl 0x8abcb70  used n 'MinHeapNode *' cinit
+|   `-ImplicitCastExpr 0x8abccc8 'MinHeapNode *' <BitCast>
+|     `-CallExpr 0x8abcca0 'void *'
+|       |-ImplicitCastExpr 0x8abcc88 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x8abcbd8 'void *(unsigned long)' Function 0x8a77860 'malloc' 'void *(unsigned long)'
+|       `-UnaryExprOrTypeTraitExpr 0x8abcc68 'unsigned long' sizeof
+|         `-ParenExpr 0x8abcc48 'MinHeapNode':'struct MinHeapNode' lvalue
+|           `-UnaryOperator 0x8abcc30 'MinHeapNode':'struct MinHeapNode' lvalue prefix '*' cannot overflow
+|             `-ImplicitCastExpr 0x8abcc18 'MinHeapNode *' <LValueToRValue>
+|               `-DeclRefExpr 0x8abcbf8 'MinHeapNode *' lvalue Var 0x8abcb70 'n' 'MinHeapNode *' non_odr_use_unevaluated
+|-BinaryOperator 0x8abcd98 'int' '='
+| |-MemberExpr 0x8abcd30 'int' lvalue ->v 0x8abc320
+| | `-ImplicitCastExpr 0x8abcd18 'MinHeapNode *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8abccf8 'MinHeapNode *' lvalue Var 0x8abcb70 'n' 'MinHeapNode *'
+| `-ImplicitCastExpr 0x8abcd80 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x8abcd60 'int' lvalue ParmVar 0x8abc860 'v' 'int'
+|-BinaryOperator 0x8abce58 'double' '='
+| |-MemberExpr 0x8abcdf0 'double' lvalue ->dist 0x8abc2b8
+| | `-ImplicitCastExpr 0x8abcdd8 'MinHeapNode *' <LValueToRValue>
+| |   `-DeclRefExpr 0x8abcdb8 'MinHeapNode *' lvalue Var 0x8abcb70 'n' 'MinHeapNode *'
+| `-ImplicitCastExpr 0x8abce40 'double' <LValueToRValue>
+|   `-DeclRefExpr 0x8abce20 'double' lvalue ParmVar 0x8abc8e0 'dist' 'double'
+`-ReturnStmt 0x8abceb0
+  `-ImplicitCastExpr 0x8abce98 'MinHeapNode *' <LValueToRValue>
+    `-DeclRefExpr 0x8abce78 'MinHeapNode *' lvalue Var 0x8abcb70 'n' 'MinHeapNode *'
+Emitting fn: heapify
+FunctionDecl 0x8abe018 <./util.h:147:1, line:170:1> line:147:6 used heapify 'void (MinHeap *, int)'
+|-ParmVarDecl 0x8abde80 <col:14, col:23> col:23 used heap 'MinHeap *'
+|-ParmVarDecl 0x8abdf00 <col:29, col:33> col:33 used idx 'int'
+`-CompoundStmt 0x8abf930 <line:148:1, line:170:1>
+  |-DeclStmt 0x8abe2a8 <line:149:3, col:23>
+  | |-VarDecl 0x8abe120 <col:3, col:7> col:7 used min 'int'
+  | |-VarDecl 0x8abe1a0 <col:3, col:12> col:12 used left 'int'
+  | `-VarDecl 0x8abe220 <col:3, col:18> col:18 used right 'int'
+  |-BinaryOperator 0x8abe318 <line:150:3, col:9> 'int' '='
+  | |-DeclRefExpr 0x8abe2c0 <col:3> 'int' lvalue Var 0x8abe120 'min' 'int'
+  | `-ImplicitCastExpr 0x8abe300 <col:9> 'int' <LValueToRValue>
+  |   `-DeclRefExpr 0x8abe2e0 <col:9> 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+  |-BinaryOperator 0x8abe450 <line:151:3, line:109:36> 'int' '='
+  | |-DeclRefExpr 0x8abe338 <line:151:3> 'int' lvalue Var 0x8abe1a0 'left' 'int'
+  | `-ParenExpr 0x8abe430 <line:109:23, col:36> 'int'
+  |   `-BinaryOperator 0x8abe410 <col:24, col:35> 'int' '+'
+  |     |-ParenExpr 0x8abe3d0 <col:24, col:31> 'int'
+  |     | `-BinaryOperator 0x8abe3b0 <line:151:21, line:109:30> 'int' '<<'
+  |     |   |-ImplicitCastExpr 0x8abe398 <line:151:21> 'int' <LValueToRValue>
+  |     |   | `-DeclRefExpr 0x8abe358 <col:21> 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+  |     |   `-IntegerLiteral 0x8abe378 <line:109:30> 'int' 1
+  |     `-IntegerLiteral 0x8abe3f0 <col:35> 'int' 1
+  |-BinaryOperator 0x8abe588 <line:152:3, line:110:37> 'int' '='
+  | |-DeclRefExpr 0x8abe470 <line:152:3> 'int' lvalue Var 0x8abe220 'right' 'int'
+  | `-ParenExpr 0x8abe568 <line:110:24, col:37> 'int'
+  |   `-BinaryOperator 0x8abe548 <col:25, col:36> 'int' '+'
+  |     |-ParenExpr 0x8abe508 <col:25, col:32> 'int'
+  |     | `-BinaryOperator 0x8abe4e8 <line:152:23, line:110:31> 'int' '<<'
+  |     |   |-ImplicitCastExpr 0x8abe4d0 <line:152:23> 'int' <LValueToRValue>
+  |     |   | `-DeclRefExpr 0x8abe490 <col:23> 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+  |     |   `-IntegerLiteral 0x8abe4b0 <line:110:31> 'int' 1
+  |     `-IntegerLiteral 0x8abe528 <col:36> 'int' 2
+  |-IfStmt 0x8abe9a8 <line:154:3, line:155:11>
+  | |-BinaryOperator 0x8abe910 <line:154:7, col:72> 'int' '&&'
+  | | |-BinaryOperator 0x8abe660 <col:7, col:20> 'int' '<'
+  | | | |-ImplicitCastExpr 0x8abe630 <col:7> 'int' <LValueToRValue>
+  | | | | `-DeclRefExpr 0x8abe5a8 <col:7> 'int' lvalue Var 0x8abe1a0 'left' 'int'
+  | | | `-ImplicitCastExpr 0x8abe648 <col:14, col:20> 'int' <LValueToRValue>
+  | | |   `-MemberExpr 0x8abe600 <col:14, col:20> 'int' lvalue ->size 0x8abc658
+  | | |     `-ImplicitCastExpr 0x8abe5e8 <col:14> 'MinHeap *' <LValueToRValue>
+  | | |       `-DeclRefExpr 0x8abe5c8 <col:14> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+  | | `-BinaryOperator 0x8abe8f0 <col:28, col:72> 'int' '<'
+  | |   |-ImplicitCastExpr 0x8abe8c0 <col:28, col:47> 'double' <LValueToRValue>
+  | |   | `-MemberExpr 0x8abe770 <col:28, col:47> 'double' lvalue ->dist 0x8abc2b8
+  | |   |   `-ImplicitCastExpr 0x8abe758 <col:28, col:44> 'struct MinHeapNode *' <LValueToRValue>
+  | |   |     `-ArraySubscriptExpr 0x8abe738 <col:28, col:44> 'struct MinHeapNode *' lvalue
+  | |   |       |-ImplicitCastExpr 0x8abe708 <col:28, col:34> 'struct MinHeapNode **' <LValueToRValue>
+  | |   |       | `-MemberExpr 0x8abe6b8 <col:28, col:34> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  | |   |       |   `-ImplicitCastExpr 0x8abe6a0 <col:28> 'MinHeap *' <LValueToRValue>
+  | |   |       |     `-DeclRefExpr 0x8abe680 <col:28> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+  | |   |       `-ImplicitCastExpr 0x8abe720 <col:40> 'int' <LValueToRValue>
+  | |   |         `-DeclRefExpr 0x8abe6e8 <col:40> 'int' lvalue Var 0x8abe1a0 'left' 'int'
+  | |   `-ImplicitCastExpr 0x8abe8d8 <col:54, col:72> 'double' <LValueToRValue>
+  | |     `-MemberExpr 0x8abe890 <col:54, col:72> 'double' lvalue ->dist 0x8abc2b8
+  | |       `-ImplicitCastExpr 0x8abe878 <col:54, col:69> 'struct MinHeapNode *' <LValueToRValue>
+  | |         `-ArraySubscriptExpr 0x8abe858 <col:54, col:69> 'struct MinHeapNode *' lvalue
+  | |           |-ImplicitCastExpr 0x8abe828 <col:54, col:60> 'struct MinHeapNode **' <LValueToRValue>
+  | |           | `-MemberExpr 0x8abe7d8 <col:54, col:60> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  | |           |   `-ImplicitCastExpr 0x8abe7c0 <col:54> 'MinHeap *' <LValueToRValue>
+  | |           |     `-DeclRefExpr 0x8abe7a0 <col:54> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+  | |           `-ImplicitCastExpr 0x8abe840 <col:66> 'int' <LValueToRValue>
+  | |             `-DeclRefExpr 0x8abe808 <col:66> 'int' lvalue Var 0x8abe120 'min' 'int'
+  | `-BinaryOperator 0x8abe988 <line:155:5, col:11> 'int' '='
+  |   |-DeclRefExpr 0x8abe930 <col:5> 'int' lvalue Var 0x8abe120 'min' 'int'
+  |   `-ImplicitCastExpr 0x8abe970 <col:11> 'int' <LValueToRValue>
+  |     `-DeclRefExpr 0x8abe950 <col:11> 'int' lvalue Var 0x8abe1a0 'left' 'int'
+  |-IfStmt 0x8abedc8 <line:156:3, line:157:11>
+  | |-BinaryOperator 0x8abed30 <line:156:7, col:74> 'int' '&&'
+  | | |-BinaryOperator 0x8abea80 <col:7, col:21> 'int' '<'
+  | | | |-ImplicitCastExpr 0x8abea50 <col:7> 'int' <LValueToRValue>
+  | | | | `-DeclRefExpr 0x8abe9c8 <col:7> 'int' lvalue Var 0x8abe220 'right' 'int'
+  | | | `-ImplicitCastExpr 0x8abea68 <col:15, col:21> 'int' <LValueToRValue>
+  | | |   `-MemberExpr 0x8abea20 <col:15, col:21> 'int' lvalue ->size 0x8abc658
+  | | |     `-ImplicitCastExpr 0x8abea08 <col:15> 'MinHeap *' <LValueToRValue>
+  | | |       `-DeclRefExpr 0x8abe9e8 <col:15> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+  | | `-BinaryOperator 0x8abed10 <col:29, col:74> 'int' '<'
+  | |   |-ImplicitCastExpr 0x8abece0 <col:29, col:49> 'double' <LValueToRValue>
+  | |   | `-MemberExpr 0x8abeb90 <col:29, col:49> 'double' lvalue ->dist 0x8abc2b8
+  | |   |   `-ImplicitCastExpr 0x8abeb78 <col:29, col:46> 'struct MinHeapNode *' <LValueToRValue>
+  | |   |     `-ArraySubscriptExpr 0x8abeb58 <col:29, col:46> 'struct MinHeapNode *' lvalue
+  | |   |       |-ImplicitCastExpr 0x8abeb28 <col:29, col:35> 'struct MinHeapNode **' <LValueToRValue>
+  | |   |       | `-MemberExpr 0x8abead8 <col:29, col:35> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  | |   |       |   `-ImplicitCastExpr 0x8abeac0 <col:29> 'MinHeap *' <LValueToRValue>
+  | |   |       |     `-DeclRefExpr 0x8abeaa0 <col:29> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+  | |   |       `-ImplicitCastExpr 0x8abeb40 <col:41> 'int' <LValueToRValue>
+  | |   |         `-DeclRefExpr 0x8abeb08 <col:41> 'int' lvalue Var 0x8abe220 'right' 'int'
+  | |   `-ImplicitCastExpr 0x8abecf8 <col:56, col:74> 'double' <LValueToRValue>
+  | |     `-MemberExpr 0x8abecb0 <col:56, col:74> 'double' lvalue ->dist 0x8abc2b8
+  | |       `-ImplicitCastExpr 0x8abec98 <col:56, col:71> 'struct MinHeapNode *' <LValueToRValue>
+  | |         `-ArraySubscriptExpr 0x8abec78 <col:56, col:71> 'struct MinHeapNode *' lvalue
+  | |           |-ImplicitCastExpr 0x8abec48 <col:56, col:62> 'struct MinHeapNode **' <LValueToRValue>
+  | |           | `-MemberExpr 0x8abebf8 <col:56, col:62> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  | |           |   `-ImplicitCastExpr 0x8abebe0 <col:56> 'MinHeap *' <LValueToRValue>
+  | |           |     `-DeclRefExpr 0x8abebc0 <col:56> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+  | |           `-ImplicitCastExpr 0x8abec60 <col:68> 'int' <LValueToRValue>
+  | |             `-DeclRefExpr 0x8abec28 <col:68> 'int' lvalue Var 0x8abe120 'min' 'int'
+  | `-BinaryOperator 0x8abeda8 <line:157:5, col:11> 'int' '='
+  |   |-DeclRefExpr 0x8abed50 <col:5> 'int' lvalue Var 0x8abe120 'min' 'int'
+  |   `-ImplicitCastExpr 0x8abed90 <col:11> 'int' <LValueToRValue>
+  |     `-DeclRefExpr 0x8abed70 <col:11> 'int' lvalue Var 0x8abe220 'right' 'int'
+  `-IfStmt 0x8abf910 <line:159:3, line:169:3>
+    |-BinaryOperator 0x8abee58 <line:159:7, col:14> 'int' '!='
+    | |-ImplicitCastExpr 0x8abee28 <col:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x8abede8 <col:7> 'int' lvalue Var 0x8abe120 'min' 'int'
+    | `-ImplicitCastExpr 0x8abee40 <col:14> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x8abee08 <col:14> 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+    `-CompoundStmt 0x8abf8d0 <line:160:3, line:169:3>
+      |-DeclStmt 0x8abefe8 <line:161:5, col:45>
+      | `-VarDecl 0x8abee90 <col:5, col:44> col:18 used min_node 'MinHeapNode *' cinit
+      |   `-ImplicitCastExpr 0x8abefd0 <col:29, col:44> 'struct MinHeapNode *' <LValueToRValue>
+      |     `-ArraySubscriptExpr 0x8abefb0 <col:29, col:44> 'struct MinHeapNode *' lvalue
+      |       |-ImplicitCastExpr 0x8abef80 <col:29, col:35> 'struct MinHeapNode **' <LValueToRValue>
+      |       | `-MemberExpr 0x8abef30 <col:29, col:35> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+      |       |   `-ImplicitCastExpr 0x8abef18 <col:29> 'MinHeap *' <LValueToRValue>
+      |       |     `-DeclRefExpr 0x8abeef8 <col:29> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+      |       `-ImplicitCastExpr 0x8abef98 <col:41> 'int' <LValueToRValue>
+      |         `-DeclRefExpr 0x8abef60 <col:41> 'int' lvalue Var 0x8abe120 'min' 'int'
+      |-DeclStmt 0x8abf180 <line:162:5, col:45>
+      | `-VarDecl 0x8abf018 <col:5, col:44> col:18 used idx_node 'MinHeapNode *' cinit
+      |   `-ImplicitCastExpr 0x8abf168 <col:29, col:44> 'struct MinHeapNode *' <LValueToRValue>
+      |     `-ArraySubscriptExpr 0x8abf148 <col:29, col:44> 'struct MinHeapNode *' lvalue
+      |       |-ImplicitCastExpr 0x8abf108 <col:29, col:35> 'struct MinHeapNode **' <LValueToRValue>
+      |       | `-MemberExpr 0x8abf0b8 <col:29, col:35> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+      |       |   `-ImplicitCastExpr 0x8abf0a0 <col:29> 'MinHeap *' <LValueToRValue>
+      |       |     `-DeclRefExpr 0x8abf080 <col:29> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+      |       `-ImplicitCastExpr 0x8abf130 <col:41> 'int' <LValueToRValue>
+      |         `-DeclRefExpr 0x8abf0e8 <col:41> 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+      |-BinaryOperator 0x8abf2f0 <line:164:5, col:30> 'int' '='
+      | |-ArraySubscriptExpr 0x8abf298 <col:5, col:26> 'int' lvalue
+      | | |-ImplicitCastExpr 0x8abf268 <col:5, col:11> 'int *' <LValueToRValue>
+      | | | `-MemberExpr 0x8abf1d0 <col:5, col:11> 'int *' lvalue ->pos 0x8abc728
+      | | |   `-ImplicitCastExpr 0x8abf1b8 <col:5> 'MinHeap *' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x8abf198 <col:5> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+      | | `-ImplicitCastExpr 0x8abf280 <col:15, col:25> 'int' <LValueToRValue>
+      | |   `-MemberExpr 0x8abf238 <col:15, col:25> 'int' lvalue ->v 0x8abc320
+      | |     `-ImplicitCastExpr 0x8abf220 <col:15> 'MinHeapNode *' <LValueToRValue>
+      | |       `-DeclRefExpr 0x8abf200 <col:15> 'MinHeapNode *' lvalue Var 0x8abee90 'min_node' 'MinHeapNode *'
+      | `-ImplicitCastExpr 0x8abf2d8 <col:30> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x8abf2b8 <col:30> 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+      |-BinaryOperator 0x8abf468 <line:165:5, col:30> 'int' '='
+      | |-ArraySubscriptExpr 0x8abf410 <col:5, col:26> 'int' lvalue
+      | | |-ImplicitCastExpr 0x8abf3e0 <col:5, col:11> 'int *' <LValueToRValue>
+      | | | `-MemberExpr 0x8abf348 <col:5, col:11> 'int *' lvalue ->pos 0x8abc728
+      | | |   `-ImplicitCastExpr 0x8abf330 <col:5> 'MinHeap *' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x8abf310 <col:5> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+      | | `-ImplicitCastExpr 0x8abf3f8 <col:15, col:25> 'int' <LValueToRValue>
+      | |   `-MemberExpr 0x8abf3b0 <col:15, col:25> 'int' lvalue ->v 0x8abc320
+      | |     `-ImplicitCastExpr 0x8abf398 <col:15> 'MinHeapNode *' <LValueToRValue>
+      | |       `-DeclRefExpr 0x8abf378 <col:15> 'MinHeapNode *' lvalue Var 0x8abf018 'idx_node' 'MinHeapNode *'
+      | `-ImplicitCastExpr 0x8abf450 <col:30> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x8abf430 <col:30> 'int' lvalue Var 0x8abe120 'min' 'int'
+      |-CallExpr 0x8abf700 <line:167:5, col:56> 'void'
+      | |-ImplicitCastExpr 0x8abf6e8 <col:5> 'void (*)(MinHeapNode **, MinHeapNode **)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x8abf488 <col:5> 'void (MinHeapNode **, MinHeapNode **)' Function 0x8abdb08 'swap_heap_node' 'void (MinHeapNode **, MinHeapNode **)'
+      | |-UnaryOperator 0x8abf580 <col:20, col:36> 'struct MinHeapNode **' prefix '&' cannot overflow
+      | | `-ArraySubscriptExpr 0x8abf560 <col:21, col:36> 'struct MinHeapNode *' lvalue
+      | |   |-ImplicitCastExpr 0x8abf530 <col:21, col:27> 'struct MinHeapNode **' <LValueToRValue>
+      | |   | `-MemberExpr 0x8abf4e0 <col:21, col:27> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+      | |   |   `-ImplicitCastExpr 0x8abf4c8 <col:21> 'MinHeap *' <LValueToRValue>
+      | |   |     `-DeclRefExpr 0x8abf4a8 <col:21> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+      | |   `-ImplicitCastExpr 0x8abf548 <col:33> 'int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x8abf510 <col:33> 'int' lvalue Var 0x8abe120 'min' 'int'
+      | `-UnaryOperator 0x8abf670 <col:39, col:55> 'struct MinHeapNode **' prefix '&' cannot overflow
+      |   `-ArraySubscriptExpr 0x8abf650 <col:40, col:55> 'struct MinHeapNode *' lvalue
+      |     |-ImplicitCastExpr 0x8abf620 <col:40, col:46> 'struct MinHeapNode **' <LValueToRValue>
+      |     | `-MemberExpr 0x8abf5d0 <col:40, col:46> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+      |     |   `-ImplicitCastExpr 0x8abf5b8 <col:40> 'MinHeap *' <LValueToRValue>
+      |     |     `-DeclRefExpr 0x8abf598 <col:40> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+      |     `-ImplicitCastExpr 0x8abf638 <col:52> 'int' <LValueToRValue>
+      |       `-DeclRefExpr 0x8abf600 <col:52> 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+      `-CallExpr 0x8abf800 <line:168:5, col:22> 'void'
+        |-ImplicitCastExpr 0x8abf7e8 <col:5> 'void (*)(MinHeap *, int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x8abf730 <col:5> 'void (MinHeap *, int)' Function 0x8abe018 'heapify' 'void (MinHeap *, int)'
+        |-ImplicitCastExpr 0x8abf830 <col:13> 'MinHeap *' <LValueToRValue>
+        | `-DeclRefExpr 0x8abf750 <col:13> 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+        `-ImplicitCastExpr 0x8abf848 <col:19> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x8abf770 <col:19> 'int' lvalue Var 0x8abe120 'min' 'int'
+CompoundStmt 0x8abf930
+|-DeclStmt 0x8abe2a8
+| |-VarDecl 0x8abe120  used min 'int'
+| |-VarDecl 0x8abe1a0  used left 'int'
+| `-VarDecl 0x8abe220  used right 'int'
+|-BinaryOperator 0x8abe318 'int' '='
+| |-DeclRefExpr 0x8abe2c0 'int' lvalue Var 0x8abe120 'min' 'int'
+| `-ImplicitCastExpr 0x8abe300 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x8abe2e0 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+|-BinaryOperator 0x8abe450 'int' '='
+| |-DeclRefExpr 0x8abe338 'int' lvalue Var 0x8abe1a0 'left' 'int'
+| `-ParenExpr 0x8abe430 'int'
+|   `-BinaryOperator 0x8abe410 'int' '+'
+|     |-ParenExpr 0x8abe3d0 'int'
+|     | `-BinaryOperator 0x8abe3b0 'int' '<<'
+|     |   |-ImplicitCastExpr 0x8abe398 'int' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x8abe358 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+|     |   `-IntegerLiteral 0x8abe378 'int' 1
+|     `-IntegerLiteral 0x8abe3f0 'int' 1
+|-BinaryOperator 0x8abe588 'int' '='
+| |-DeclRefExpr 0x8abe470 'int' lvalue Var 0x8abe220 'right' 'int'
+| `-ParenExpr 0x8abe568 'int'
+|   `-BinaryOperator 0x8abe548 'int' '+'
+|     |-ParenExpr 0x8abe508 'int'
+|     | `-BinaryOperator 0x8abe4e8 'int' '<<'
+|     |   |-ImplicitCastExpr 0x8abe4d0 'int' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x8abe490 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+|     |   `-IntegerLiteral 0x8abe4b0 'int' 1
+|     `-IntegerLiteral 0x8abe528 'int' 2
+|-IfStmt 0x8abe9a8
+| |-BinaryOperator 0x8abe910 'int' '&&'
+| | |-BinaryOperator 0x8abe660 'int' '<'
+| | | |-ImplicitCastExpr 0x8abe630 'int' <LValueToRValue>
+| | | | `-DeclRefExpr 0x8abe5a8 'int' lvalue Var 0x8abe1a0 'left' 'int'
+| | | `-ImplicitCastExpr 0x8abe648 'int' <LValueToRValue>
+| | |   `-MemberExpr 0x8abe600 'int' lvalue ->size 0x8abc658
+| | |     `-ImplicitCastExpr 0x8abe5e8 'MinHeap *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x8abe5c8 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+| | `-BinaryOperator 0x8abe8f0 'int' '<'
+| |   |-ImplicitCastExpr 0x8abe8c0 'double' <LValueToRValue>
+| |   | `-MemberExpr 0x8abe770 'double' lvalue ->dist 0x8abc2b8
+| |   |   `-ImplicitCastExpr 0x8abe758 'struct MinHeapNode *' <LValueToRValue>
+| |   |     `-ArraySubscriptExpr 0x8abe738 'struct MinHeapNode *' lvalue
+| |   |       |-ImplicitCastExpr 0x8abe708 'struct MinHeapNode **' <LValueToRValue>
+| |   |       | `-MemberExpr 0x8abe6b8 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+| |   |       |   `-ImplicitCastExpr 0x8abe6a0 'MinHeap *' <LValueToRValue>
+| |   |       |     `-DeclRefExpr 0x8abe680 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+| |   |       `-ImplicitCastExpr 0x8abe720 'int' <LValueToRValue>
+| |   |         `-DeclRefExpr 0x8abe6e8 'int' lvalue Var 0x8abe1a0 'left' 'int'
+| |   `-ImplicitCastExpr 0x8abe8d8 'double' <LValueToRValue>
+| |     `-MemberExpr 0x8abe890 'double' lvalue ->dist 0x8abc2b8
+| |       `-ImplicitCastExpr 0x8abe878 'struct MinHeapNode *' <LValueToRValue>
+| |         `-ArraySubscriptExpr 0x8abe858 'struct MinHeapNode *' lvalue
+| |           |-ImplicitCastExpr 0x8abe828 'struct MinHeapNode **' <LValueToRValue>
+| |           | `-MemberExpr 0x8abe7d8 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+| |           |   `-ImplicitCastExpr 0x8abe7c0 'MinHeap *' <LValueToRValue>
+| |           |     `-DeclRefExpr 0x8abe7a0 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+| |           `-ImplicitCastExpr 0x8abe840 'int' <LValueToRValue>
+| |             `-DeclRefExpr 0x8abe808 'int' lvalue Var 0x8abe120 'min' 'int'
+| `-BinaryOperator 0x8abe988 'int' '='
+|   |-DeclRefExpr 0x8abe930 'int' lvalue Var 0x8abe120 'min' 'int'
+|   `-ImplicitCastExpr 0x8abe970 'int' <LValueToRValue>
+|     `-DeclRefExpr 0x8abe950 'int' lvalue Var 0x8abe1a0 'left' 'int'
+|-IfStmt 0x8abedc8
+| |-BinaryOperator 0x8abed30 'int' '&&'
+| | |-BinaryOperator 0x8abea80 'int' '<'
+| | | |-ImplicitCastExpr 0x8abea50 'int' <LValueToRValue>
+| | | | `-DeclRefExpr 0x8abe9c8 'int' lvalue Var 0x8abe220 'right' 'int'
+| | | `-ImplicitCastExpr 0x8abea68 'int' <LValueToRValue>
+| | |   `-MemberExpr 0x8abea20 'int' lvalue ->size 0x8abc658
+| | |     `-ImplicitCastExpr 0x8abea08 'MinHeap *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x8abe9e8 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+| | `-BinaryOperator 0x8abed10 'int' '<'
+| |   |-ImplicitCastExpr 0x8abece0 'double' <LValueToRValue>
+| |   | `-MemberExpr 0x8abeb90 'double' lvalue ->dist 0x8abc2b8
+| |   |   `-ImplicitCastExpr 0x8abeb78 'struct MinHeapNode *' <LValueToRValue>
+| |   |     `-ArraySubscriptExpr 0x8abeb58 'struct MinHeapNode *' lvalue
+| |   |       |-ImplicitCastExpr 0x8abeb28 'struct MinHeapNode **' <LValueToRValue>
+| |   |       | `-MemberExpr 0x8abead8 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+| |   |       |   `-ImplicitCastExpr 0x8abeac0 'MinHeap *' <LValueToRValue>
+| |   |       |     `-DeclRefExpr 0x8abeaa0 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+| |   |       `-ImplicitCastExpr 0x8abeb40 'int' <LValueToRValue>
+| |   |         `-DeclRefExpr 0x8abeb08 'int' lvalue Var 0x8abe220 'right' 'int'
+| |   `-ImplicitCastExpr 0x8abecf8 'double' <LValueToRValue>
+| |     `-MemberExpr 0x8abecb0 'double' lvalue ->dist 0x8abc2b8
+| |       `-ImplicitCastExpr 0x8abec98 'struct MinHeapNode *' <LValueToRValue>
+| |         `-ArraySubscriptExpr 0x8abec78 'struct MinHeapNode *' lvalue
+| |           |-ImplicitCastExpr 0x8abec48 'struct MinHeapNode **' <LValueToRValue>
+| |           | `-MemberExpr 0x8abebf8 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+| |           |   `-ImplicitCastExpr 0x8abebe0 'MinHeap *' <LValueToRValue>
+| |           |     `-DeclRefExpr 0x8abebc0 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+| |           `-ImplicitCastExpr 0x8abec60 'int' <LValueToRValue>
+| |             `-DeclRefExpr 0x8abec28 'int' lvalue Var 0x8abe120 'min' 'int'
+| `-BinaryOperator 0x8abeda8 'int' '='
+|   |-DeclRefExpr 0x8abed50 'int' lvalue Var 0x8abe120 'min' 'int'
+|   `-ImplicitCastExpr 0x8abed90 'int' <LValueToRValue>
+|     `-DeclRefExpr 0x8abed70 'int' lvalue Var 0x8abe220 'right' 'int'
+`-IfStmt 0x8abf910
+  |-BinaryOperator 0x8abee58 'int' '!='
+  | |-ImplicitCastExpr 0x8abee28 'int' <LValueToRValue>
+  | | `-DeclRefExpr 0x8abede8 'int' lvalue Var 0x8abe120 'min' 'int'
+  | `-ImplicitCastExpr 0x8abee40 'int' <LValueToRValue>
+  |   `-DeclRefExpr 0x8abee08 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+  `-CompoundStmt 0x8abf8d0
+    |-DeclStmt 0x8abefe8
+    | `-VarDecl 0x8abee90  used min_node 'MinHeapNode *' cinit
+    |   `-ImplicitCastExpr 0x8abefd0 'struct MinHeapNode *' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x8abefb0 'struct MinHeapNode *' lvalue
+    |       |-ImplicitCastExpr 0x8abef80 'struct MinHeapNode **' <LValueToRValue>
+    |       | `-MemberExpr 0x8abef30 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    |       |   `-ImplicitCastExpr 0x8abef18 'MinHeap *' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x8abeef8 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+    |       `-ImplicitCastExpr 0x8abef98 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x8abef60 'int' lvalue Var 0x8abe120 'min' 'int'
+    |-DeclStmt 0x8abf180
+    | `-VarDecl 0x8abf018  used idx_node 'MinHeapNode *' cinit
+    |   `-ImplicitCastExpr 0x8abf168 'struct MinHeapNode *' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x8abf148 'struct MinHeapNode *' lvalue
+    |       |-ImplicitCastExpr 0x8abf108 'struct MinHeapNode **' <LValueToRValue>
+    |       | `-MemberExpr 0x8abf0b8 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    |       |   `-ImplicitCastExpr 0x8abf0a0 'MinHeap *' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x8abf080 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+    |       `-ImplicitCastExpr 0x8abf130 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x8abf0e8 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+    |-BinaryOperator 0x8abf2f0 'int' '='
+    | |-ArraySubscriptExpr 0x8abf298 'int' lvalue
+    | | |-ImplicitCastExpr 0x8abf268 'int *' <LValueToRValue>
+    | | | `-MemberExpr 0x8abf1d0 'int *' lvalue ->pos 0x8abc728
+    | | |   `-ImplicitCastExpr 0x8abf1b8 'MinHeap *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x8abf198 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+    | | `-ImplicitCastExpr 0x8abf280 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x8abf238 'int' lvalue ->v 0x8abc320
+    | |     `-ImplicitCastExpr 0x8abf220 'MinHeapNode *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x8abf200 'MinHeapNode *' lvalue Var 0x8abee90 'min_node' 'MinHeapNode *'
+    | `-ImplicitCastExpr 0x8abf2d8 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x8abf2b8 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+    |-BinaryOperator 0x8abf468 'int' '='
+    | |-ArraySubscriptExpr 0x8abf410 'int' lvalue
+    | | |-ImplicitCastExpr 0x8abf3e0 'int *' <LValueToRValue>
+    | | | `-MemberExpr 0x8abf348 'int *' lvalue ->pos 0x8abc728
+    | | |   `-ImplicitCastExpr 0x8abf330 'MinHeap *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x8abf310 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+    | | `-ImplicitCastExpr 0x8abf3f8 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x8abf3b0 'int' lvalue ->v 0x8abc320
+    | |     `-ImplicitCastExpr 0x8abf398 'MinHeapNode *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x8abf378 'MinHeapNode *' lvalue Var 0x8abf018 'idx_node' 'MinHeapNode *'
+    | `-ImplicitCastExpr 0x8abf450 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x8abf430 'int' lvalue Var 0x8abe120 'min' 'int'
+    |-CallExpr 0x8abf700 'void'
+    | |-ImplicitCastExpr 0x8abf6e8 'void (*)(MinHeapNode **, MinHeapNode **)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x8abf488 'void (MinHeapNode **, MinHeapNode **)' Function 0x8abdb08 'swap_heap_node' 'void (MinHeapNode **, MinHeapNode **)'
+    | |-UnaryOperator 0x8abf580 'struct MinHeapNode **' prefix '&' cannot overflow
+    | | `-ArraySubscriptExpr 0x8abf560 'struct MinHeapNode *' lvalue
+    | |   |-ImplicitCastExpr 0x8abf530 'struct MinHeapNode **' <LValueToRValue>
+    | |   | `-MemberExpr 0x8abf4e0 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    | |   |   `-ImplicitCastExpr 0x8abf4c8 'MinHeap *' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x8abf4a8 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+    | |   `-ImplicitCastExpr 0x8abf548 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x8abf510 'int' lvalue Var 0x8abe120 'min' 'int'
+    | `-UnaryOperator 0x8abf670 'struct MinHeapNode **' prefix '&' cannot overflow
+    |   `-ArraySubscriptExpr 0x8abf650 'struct MinHeapNode *' lvalue
+    |     |-ImplicitCastExpr 0x8abf620 'struct MinHeapNode **' <LValueToRValue>
+    |     | `-MemberExpr 0x8abf5d0 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    |     |   `-ImplicitCastExpr 0x8abf5b8 'MinHeap *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x8abf598 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+    |     `-ImplicitCastExpr 0x8abf638 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x8abf600 'int' lvalue ParmVar 0x8abdf00 'idx' 'int'
+    `-CallExpr 0x8abf800 'void'
+      |-ImplicitCastExpr 0x8abf7e8 'void (*)(MinHeap *, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x8abf730 'void (MinHeap *, int)' Function 0x8abe018 'heapify' 'void (MinHeap *, int)'
+      |-ImplicitCastExpr 0x8abf830 'MinHeap *' <LValueToRValue>
+      | `-DeclRefExpr 0x8abf750 'MinHeap *' lvalue ParmVar 0x8abde80 'heap' 'MinHeap *'
+      `-ImplicitCastExpr 0x8abf848 'int' <LValueToRValue>
+        `-DeclRefExpr 0x8abf770 'int' lvalue Var 0x8abe120 'min' 'int'
+Emitting fn: decrease_key
+FunctionDecl 0x8ac0e48 <./util.h:192:1, line:204:1> line:192:6 used decrease_key 'void (MinHeap *, int, double)'
+|-ParmVarDecl 0x8ac0c28 <col:19, col:28> col:28 used heap 'MinHeap *'
+|-ParmVarDecl 0x8ac0ca8 <col:34, col:38> col:38 used v 'int'
+|-ParmVarDecl 0x8ac0d28 <col:41, col:48> col:48 used dist 'double'
+`-CompoundStmt 0x8ac2038 <line:193:1, line:204:1>
+  |-DeclStmt 0x8ac1078 <line:194:3, col:23>
+  | `-VarDecl 0x8ac0f20 <col:3, col:22> col:7 used i 'int' cinit
+  |   `-ImplicitCastExpr 0x8ac1060 <col:11, col:22> 'int' <LValueToRValue>
+  |     `-ArraySubscriptExpr 0x8ac1040 <col:11, col:22> 'int' lvalue
+  |       |-ImplicitCastExpr 0x8ac1010 <col:11, col:17> 'int *' <LValueToRValue>
+  |       | `-MemberExpr 0x8ac0fc0 <col:11, col:17> 'int *' lvalue ->pos 0x8abc728
+  |       |   `-ImplicitCastExpr 0x8ac0fa8 <col:11> 'MinHeap *' <LValueToRValue>
+  |       |     `-DeclRefExpr 0x8ac0f88 <col:11> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+  |       `-ImplicitCastExpr 0x8ac1028 <col:21> 'int' <LValueToRValue>
+  |         `-DeclRefExpr 0x8ac0ff0 <col:21> 'int' lvalue ParmVar 0x8ac0ca8 'v' 'int'
+  |-BinaryOperator 0x8ac11e8 <line:195:3, col:26> 'double' '='
+  | |-MemberExpr 0x8ac1180 <col:3, col:19> 'double' lvalue ->dist 0x8abc2b8
+  | | `-ImplicitCastExpr 0x8ac1168 <col:3, col:16> 'struct MinHeapNode *' <LValueToRValue>
+  | |   `-ArraySubscriptExpr 0x8ac1148 <col:3, col:16> 'struct MinHeapNode *' lvalue
+  | |     |-ImplicitCastExpr 0x8ac1118 <col:3, col:9> 'struct MinHeapNode **' <LValueToRValue>
+  | |     | `-MemberExpr 0x8ac10c8 <col:3, col:9> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  | |     |   `-ImplicitCastExpr 0x8ac10b0 <col:3> 'MinHeap *' <LValueToRValue>
+  | |     |     `-DeclRefExpr 0x8ac1090 <col:3> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+  | |     `-ImplicitCastExpr 0x8ac1130 <col:15> 'int' <LValueToRValue>
+  | |       `-DeclRefExpr 0x8ac10f8 <col:15> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+  | `-ImplicitCastExpr 0x8ac11d0 <col:26> 'double' <LValueToRValue>
+  |   `-DeclRefExpr 0x8ac11b0 <col:26> 'double' lvalue ParmVar 0x8ac0d28 'dist' 'double'
+  `-WhileStmt 0x8ac2018 <line:197:3, line:203:3>
+    |-BinaryOperator 0x8ac1590 <line:197:10, col:66> 'int' '&&'
+    | |-ImplicitCastExpr 0x8ac1578 <col:10> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x8ac1208 <col:10> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+    | `-BinaryOperator 0x8ac1558 <col:15, col:66> 'int' '<'
+    |   |-ImplicitCastExpr 0x8ac1528 <col:15, col:31> 'double' <LValueToRValue>
+    |   | `-MemberExpr 0x8ac1318 <col:15, col:31> 'double' lvalue ->dist 0x8abc2b8
+    |   |   `-ImplicitCastExpr 0x8ac1300 <col:15, col:28> 'struct MinHeapNode *' <LValueToRValue>
+    |   |     `-ArraySubscriptExpr 0x8ac12e0 <col:15, col:28> 'struct MinHeapNode *' lvalue
+    |   |       |-ImplicitCastExpr 0x8ac12b0 <col:15, col:21> 'struct MinHeapNode **' <LValueToRValue>
+    |   |       | `-MemberExpr 0x8ac1260 <col:15, col:21> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    |   |       |   `-ImplicitCastExpr 0x8ac1248 <col:15> 'MinHeap *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x8ac1228 <col:15> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+    |   |       `-ImplicitCastExpr 0x8ac12c8 <col:27> 'int' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x8ac1290 <col:27> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+    |   `-ImplicitCastExpr 0x8ac1540 <col:38, col:66> 'double' <LValueToRValue>
+    |     `-MemberExpr 0x8ac14f8 <col:38, col:66> 'double' lvalue ->dist 0x8abc2b8
+    |       `-ImplicitCastExpr 0x8ac14e0 <col:38, col:63> 'struct MinHeapNode *' <LValueToRValue>
+    |         `-ArraySubscriptExpr 0x8ac14c0 <col:38, col:63> 'struct MinHeapNode *' lvalue
+    |           |-ImplicitCastExpr 0x8ac14a8 <col:38, col:44> 'struct MinHeapNode **' <LValueToRValue>
+    |           | `-MemberExpr 0x8ac1380 <col:38, col:44> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    |           |   `-ImplicitCastExpr 0x8ac1368 <col:38> 'MinHeap *' <LValueToRValue>
+    |           |     `-DeclRefExpr 0x8ac1348 <col:38> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+    |           `-ParenExpr 0x8ac1488 <line:108:23, col:33> 'int'
+    |             `-BinaryOperator 0x8ac1468 <col:24, col:32> 'int' '/'
+    |               |-ParenExpr 0x8ac1428 <col:24, col:28> 'int'
+    |               | `-BinaryOperator 0x8ac1408 <line:197:61, line:108:27> 'int' '-'
+    |               |   |-ImplicitCastExpr 0x8ac13f0 <line:197:61> 'int' <LValueToRValue>
+    |               |   | `-DeclRefExpr 0x8ac13b0 <col:61> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+    |               |   `-IntegerLiteral 0x8ac13d0 <line:108:27> 'int' 1
+    |               `-IntegerLiteral 0x8ac1448 <col:32> 'int' 2
+    `-CompoundStmt 0x8ac1fe8 <line:198:3, line:203:3>
+      |-BinaryOperator 0x8ac1898 <line:199:5, line:108:33> 'int' '='
+      | |-ArraySubscriptExpr 0x8ac1780 <line:199:5, col:32> 'int' lvalue
+      | | |-ImplicitCastExpr 0x8ac1750 <col:5, col:11> 'int *' <LValueToRValue>
+      | | | `-MemberExpr 0x8ac15e8 <col:5, col:11> 'int *' lvalue ->pos 0x8abc728
+      | | |   `-ImplicitCastExpr 0x8ac15d0 <col:5> 'MinHeap *' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x8ac15b0 <col:5> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+      | | `-ImplicitCastExpr 0x8ac1768 <col:15, col:31> 'int' <LValueToRValue>
+      | |   `-MemberExpr 0x8ac1720 <col:15, col:31> 'int' lvalue ->v 0x8abc320
+      | |     `-ImplicitCastExpr 0x8ac1708 <col:15, col:28> 'struct MinHeapNode *' <LValueToRValue>
+      | |       `-ArraySubscriptExpr 0x8ac16e8 <col:15, col:28> 'struct MinHeapNode *' lvalue
+      | |         |-ImplicitCastExpr 0x8ac16b8 <col:15, col:21> 'struct MinHeapNode **' <LValueToRValue>
+      | |         | `-MemberExpr 0x8ac1668 <col:15, col:21> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+      | |         |   `-ImplicitCastExpr 0x8ac1650 <col:15> 'MinHeap *' <LValueToRValue>
+      | |         |     `-DeclRefExpr 0x8ac1618 <col:15> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+      | |         `-ImplicitCastExpr 0x8ac16d0 <col:27> 'int' <LValueToRValue>
+      | |           `-DeclRefExpr 0x8ac1698 <col:27> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+      | `-ParenExpr 0x8ac1878 <line:108:23, col:33> 'int'
+      |   `-BinaryOperator 0x8ac1858 <col:24, col:32> 'int' '/'
+      |     |-ParenExpr 0x8ac1818 <col:24, col:28> 'int'
+      |     | `-BinaryOperator 0x8ac17f8 <line:199:47, line:108:27> 'int' '-'
+      |     |   |-ImplicitCastExpr 0x8ac17e0 <line:199:47> 'int' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x8ac17a0 <col:47> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+      |     |   `-IntegerLiteral 0x8ac17c0 <line:108:27> 'int' 1
+      |     `-IntegerLiteral 0x8ac1838 <col:32> 'int' 2
+      |-BinaryOperator 0x8ac1b88 <line:200:5, col:48> 'int' '='
+      | |-ArraySubscriptExpr 0x8ac1b30 <col:5, col:44> 'int' lvalue
+      | | |-ImplicitCastExpr 0x8ac1b00 <col:5, col:11> 'int *' <LValueToRValue>
+      | | | `-MemberExpr 0x8ac18f0 <col:5, col:11> 'int *' lvalue ->pos 0x8abc728
+      | | |   `-ImplicitCastExpr 0x8ac18d8 <col:5> 'MinHeap *' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x8ac18b8 <col:5> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+      | | `-ImplicitCastExpr 0x8ac1b18 <col:15, col:43> 'int' <LValueToRValue>
+      | |   `-MemberExpr 0x8ac1ad0 <col:15, col:43> 'int' lvalue ->v 0x8abc320
+      | |     `-ImplicitCastExpr 0x8ac1ab8 <col:15, col:40> 'struct MinHeapNode *' <LValueToRValue>
+      | |       `-ArraySubscriptExpr 0x8ac1a98 <col:15, col:40> 'struct MinHeapNode *' lvalue
+      | |         |-ImplicitCastExpr 0x8ac1a80 <col:15, col:21> 'struct MinHeapNode **' <LValueToRValue>
+      | |         | `-MemberExpr 0x8ac1958 <col:15, col:21> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+      | |         |   `-ImplicitCastExpr 0x8ac1940 <col:15> 'MinHeap *' <LValueToRValue>
+      | |         |     `-DeclRefExpr 0x8ac1920 <col:15> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+      | |         `-ParenExpr 0x8ac1a60 <line:108:23, col:33> 'int'
+      | |           `-BinaryOperator 0x8ac1a40 <col:24, col:32> 'int' '/'
+      | |             |-ParenExpr 0x8ac1a00 <col:24, col:28> 'int'
+      | |             | `-BinaryOperator 0x8ac19e0 <line:200:38, line:108:27> 'int' '-'
+      | |             |   |-ImplicitCastExpr 0x8ac19c8 <line:200:38> 'int' <LValueToRValue>
+      | |             |   | `-DeclRefExpr 0x8ac1988 <col:38> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+      | |             |   `-IntegerLiteral 0x8ac19a8 <line:108:27> 'int' 1
+      | |             `-IntegerLiteral 0x8ac1a20 <col:32> 'int' 2
+      | `-ImplicitCastExpr 0x8ac1b70 <line:200:48> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x8ac1b50 <col:48> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+      |-CallExpr 0x8ac1e80 <line:201:5, col:64> 'void'
+      | |-ImplicitCastExpr 0x8ac1e68 <col:5> 'void (*)(MinHeapNode **, MinHeapNode **)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x8ac1ba8 <col:5> 'void (MinHeapNode **, MinHeapNode **)' Function 0x8abdb08 'swap_heap_node' 'void (MinHeapNode **, MinHeapNode **)'
+      | |-UnaryOperator 0x8ac1ca0 <col:20, col:34> 'struct MinHeapNode **' prefix '&' cannot overflow
+      | | `-ArraySubscriptExpr 0x8ac1c80 <col:21, col:34> 'struct MinHeapNode *' lvalue
+      | |   |-ImplicitCastExpr 0x8ac1c50 <col:21, col:27> 'struct MinHeapNode **' <LValueToRValue>
+      | |   | `-MemberExpr 0x8ac1c00 <col:21, col:27> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+      | |   |   `-ImplicitCastExpr 0x8ac1be8 <col:21> 'MinHeap *' <LValueToRValue>
+      | |   |     `-DeclRefExpr 0x8ac1bc8 <col:21> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+      | |   `-ImplicitCastExpr 0x8ac1c68 <col:33> 'int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x8ac1c30 <col:33> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+      | `-UnaryOperator 0x8ac1e50 <col:37, col:63> 'struct MinHeapNode **' prefix '&' cannot overflow
+      |   `-ArraySubscriptExpr 0x8ac1e30 <col:38, col:63> 'struct MinHeapNode *' lvalue
+      |     |-ImplicitCastExpr 0x8ac1e18 <col:38, col:44> 'struct MinHeapNode **' <LValueToRValue>
+      |     | `-MemberExpr 0x8ac1cf0 <col:38, col:44> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+      |     |   `-ImplicitCastExpr 0x8ac1cd8 <col:38> 'MinHeap *' <LValueToRValue>
+      |     |     `-DeclRefExpr 0x8ac1cb8 <col:38> 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+      |     `-ParenExpr 0x8ac1df8 <line:108:23, col:33> 'int'
+      |       `-BinaryOperator 0x8ac1dd8 <col:24, col:32> 'int' '/'
+      |         |-ParenExpr 0x8ac1d98 <col:24, col:28> 'int'
+      |         | `-BinaryOperator 0x8ac1d78 <line:201:61, line:108:27> 'int' '-'
+      |         |   |-ImplicitCastExpr 0x8ac1d60 <line:201:61> 'int' <LValueToRValue>
+      |         |   | `-DeclRefExpr 0x8ac1d20 <col:61> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+      |         |   `-IntegerLiteral 0x8ac1d40 <line:108:27> 'int' 1
+      |         `-IntegerLiteral 0x8ac1db8 <col:32> 'int' 2
+      `-BinaryOperator 0x8ac1fc8 <line:202:5, line:108:33> 'int' '='
+        |-DeclRefExpr 0x8ac1eb0 <line:202:5> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+        `-ParenExpr 0x8ac1fa8 <line:108:23, col:33> 'int'
+          `-BinaryOperator 0x8ac1f88 <col:24, col:32> 'int' '/'
+            |-ParenExpr 0x8ac1f48 <col:24, col:28> 'int'
+            | `-BinaryOperator 0x8ac1f28 <line:202:20, line:108:27> 'int' '-'
+            |   |-ImplicitCastExpr 0x8ac1f10 <line:202:20> 'int' <LValueToRValue>
+            |   | `-DeclRefExpr 0x8ac1ed0 <col:20> 'int' lvalue Var 0x8ac0f20 'i' 'int'
+            |   `-IntegerLiteral 0x8ac1ef0 <line:108:27> 'int' 1
+            `-IntegerLiteral 0x8ac1f68 <col:32> 'int' 2
+CompoundStmt 0x8ac2038
+|-DeclStmt 0x8ac1078
+| `-VarDecl 0x8ac0f20  used i 'int' cinit
+|   `-ImplicitCastExpr 0x8ac1060 'int' <LValueToRValue>
+|     `-ArraySubscriptExpr 0x8ac1040 'int' lvalue
+|       |-ImplicitCastExpr 0x8ac1010 'int *' <LValueToRValue>
+|       | `-MemberExpr 0x8ac0fc0 'int *' lvalue ->pos 0x8abc728
+|       |   `-ImplicitCastExpr 0x8ac0fa8 'MinHeap *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x8ac0f88 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+|       `-ImplicitCastExpr 0x8ac1028 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x8ac0ff0 'int' lvalue ParmVar 0x8ac0ca8 'v' 'int'
+|-BinaryOperator 0x8ac11e8 'double' '='
+| |-MemberExpr 0x8ac1180 'double' lvalue ->dist 0x8abc2b8
+| | `-ImplicitCastExpr 0x8ac1168 'struct MinHeapNode *' <LValueToRValue>
+| |   `-ArraySubscriptExpr 0x8ac1148 'struct MinHeapNode *' lvalue
+| |     |-ImplicitCastExpr 0x8ac1118 'struct MinHeapNode **' <LValueToRValue>
+| |     | `-MemberExpr 0x8ac10c8 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+| |     |   `-ImplicitCastExpr 0x8ac10b0 'MinHeap *' <LValueToRValue>
+| |     |     `-DeclRefExpr 0x8ac1090 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+| |     `-ImplicitCastExpr 0x8ac1130 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x8ac10f8 'int' lvalue Var 0x8ac0f20 'i' 'int'
+| `-ImplicitCastExpr 0x8ac11d0 'double' <LValueToRValue>
+|   `-DeclRefExpr 0x8ac11b0 'double' lvalue ParmVar 0x8ac0d28 'dist' 'double'
+`-WhileStmt 0x8ac2018
+  |-BinaryOperator 0x8ac1590 'int' '&&'
+  | |-ImplicitCastExpr 0x8ac1578 'int' <LValueToRValue>
+  | | `-DeclRefExpr 0x8ac1208 'int' lvalue Var 0x8ac0f20 'i' 'int'
+  | `-BinaryOperator 0x8ac1558 'int' '<'
+  |   |-ImplicitCastExpr 0x8ac1528 'double' <LValueToRValue>
+  |   | `-MemberExpr 0x8ac1318 'double' lvalue ->dist 0x8abc2b8
+  |   |   `-ImplicitCastExpr 0x8ac1300 'struct MinHeapNode *' <LValueToRValue>
+  |   |     `-ArraySubscriptExpr 0x8ac12e0 'struct MinHeapNode *' lvalue
+  |   |       |-ImplicitCastExpr 0x8ac12b0 'struct MinHeapNode **' <LValueToRValue>
+  |   |       | `-MemberExpr 0x8ac1260 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  |   |       |   `-ImplicitCastExpr 0x8ac1248 'MinHeap *' <LValueToRValue>
+  |   |       |     `-DeclRefExpr 0x8ac1228 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+  |   |       `-ImplicitCastExpr 0x8ac12c8 'int' <LValueToRValue>
+  |   |         `-DeclRefExpr 0x8ac1290 'int' lvalue Var 0x8ac0f20 'i' 'int'
+  |   `-ImplicitCastExpr 0x8ac1540 'double' <LValueToRValue>
+  |     `-MemberExpr 0x8ac14f8 'double' lvalue ->dist 0x8abc2b8
+  |       `-ImplicitCastExpr 0x8ac14e0 'struct MinHeapNode *' <LValueToRValue>
+  |         `-ArraySubscriptExpr 0x8ac14c0 'struct MinHeapNode *' lvalue
+  |           |-ImplicitCastExpr 0x8ac14a8 'struct MinHeapNode **' <LValueToRValue>
+  |           | `-MemberExpr 0x8ac1380 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  |           |   `-ImplicitCastExpr 0x8ac1368 'MinHeap *' <LValueToRValue>
+  |           |     `-DeclRefExpr 0x8ac1348 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+  |           `-ParenExpr 0x8ac1488 'int'
+  |             `-BinaryOperator 0x8ac1468 'int' '/'
+  |               |-ParenExpr 0x8ac1428 'int'
+  |               | `-BinaryOperator 0x8ac1408 'int' '-'
+  |               |   |-ImplicitCastExpr 0x8ac13f0 'int' <LValueToRValue>
+  |               |   | `-DeclRefExpr 0x8ac13b0 'int' lvalue Var 0x8ac0f20 'i' 'int'
+  |               |   `-IntegerLiteral 0x8ac13d0 'int' 1
+  |               `-IntegerLiteral 0x8ac1448 'int' 2
+  `-CompoundStmt 0x8ac1fe8
+    |-BinaryOperator 0x8ac1898 'int' '='
+    | |-ArraySubscriptExpr 0x8ac1780 'int' lvalue
+    | | |-ImplicitCastExpr 0x8ac1750 'int *' <LValueToRValue>
+    | | | `-MemberExpr 0x8ac15e8 'int *' lvalue ->pos 0x8abc728
+    | | |   `-ImplicitCastExpr 0x8ac15d0 'MinHeap *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x8ac15b0 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+    | | `-ImplicitCastExpr 0x8ac1768 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x8ac1720 'int' lvalue ->v 0x8abc320
+    | |     `-ImplicitCastExpr 0x8ac1708 'struct MinHeapNode *' <LValueToRValue>
+    | |       `-ArraySubscriptExpr 0x8ac16e8 'struct MinHeapNode *' lvalue
+    | |         |-ImplicitCastExpr 0x8ac16b8 'struct MinHeapNode **' <LValueToRValue>
+    | |         | `-MemberExpr 0x8ac1668 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    | |         |   `-ImplicitCastExpr 0x8ac1650 'MinHeap *' <LValueToRValue>
+    | |         |     `-DeclRefExpr 0x8ac1618 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+    | |         `-ImplicitCastExpr 0x8ac16d0 'int' <LValueToRValue>
+    | |           `-DeclRefExpr 0x8ac1698 'int' lvalue Var 0x8ac0f20 'i' 'int'
+    | `-ParenExpr 0x8ac1878 'int'
+    |   `-BinaryOperator 0x8ac1858 'int' '/'
+    |     |-ParenExpr 0x8ac1818 'int'
+    |     | `-BinaryOperator 0x8ac17f8 'int' '-'
+    |     |   |-ImplicitCastExpr 0x8ac17e0 'int' <LValueToRValue>
+    |     |   | `-DeclRefExpr 0x8ac17a0 'int' lvalue Var 0x8ac0f20 'i' 'int'
+    |     |   `-IntegerLiteral 0x8ac17c0 'int' 1
+    |     `-IntegerLiteral 0x8ac1838 'int' 2
+    |-BinaryOperator 0x8ac1b88 'int' '='
+    | |-ArraySubscriptExpr 0x8ac1b30 'int' lvalue
+    | | |-ImplicitCastExpr 0x8ac1b00 'int *' <LValueToRValue>
+    | | | `-MemberExpr 0x8ac18f0 'int *' lvalue ->pos 0x8abc728
+    | | |   `-ImplicitCastExpr 0x8ac18d8 'MinHeap *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x8ac18b8 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+    | | `-ImplicitCastExpr 0x8ac1b18 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x8ac1ad0 'int' lvalue ->v 0x8abc320
+    | |     `-ImplicitCastExpr 0x8ac1ab8 'struct MinHeapNode *' <LValueToRValue>
+    | |       `-ArraySubscriptExpr 0x8ac1a98 'struct MinHeapNode *' lvalue
+    | |         |-ImplicitCastExpr 0x8ac1a80 'struct MinHeapNode **' <LValueToRValue>
+    | |         | `-MemberExpr 0x8ac1958 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    | |         |   `-ImplicitCastExpr 0x8ac1940 'MinHeap *' <LValueToRValue>
+    | |         |     `-DeclRefExpr 0x8ac1920 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+    | |         `-ParenExpr 0x8ac1a60 'int'
+    | |           `-BinaryOperator 0x8ac1a40 'int' '/'
+    | |             |-ParenExpr 0x8ac1a00 'int'
+    | |             | `-BinaryOperator 0x8ac19e0 'int' '-'
+    | |             |   |-ImplicitCastExpr 0x8ac19c8 'int' <LValueToRValue>
+    | |             |   | `-DeclRefExpr 0x8ac1988 'int' lvalue Var 0x8ac0f20 'i' 'int'
+    | |             |   `-IntegerLiteral 0x8ac19a8 'int' 1
+    | |             `-IntegerLiteral 0x8ac1a20 'int' 2
+    | `-ImplicitCastExpr 0x8ac1b70 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x8ac1b50 'int' lvalue Var 0x8ac0f20 'i' 'int'
+    |-CallExpr 0x8ac1e80 'void'
+    | |-ImplicitCastExpr 0x8ac1e68 'void (*)(MinHeapNode **, MinHeapNode **)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x8ac1ba8 'void (MinHeapNode **, MinHeapNode **)' Function 0x8abdb08 'swap_heap_node' 'void (MinHeapNode **, MinHeapNode **)'
+    | |-UnaryOperator 0x8ac1ca0 'struct MinHeapNode **' prefix '&' cannot overflow
+    | | `-ArraySubscriptExpr 0x8ac1c80 'struct MinHeapNode *' lvalue
+    | |   |-ImplicitCastExpr 0x8ac1c50 'struct MinHeapNode **' <LValueToRValue>
+    | |   | `-MemberExpr 0x8ac1c00 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    | |   |   `-ImplicitCastExpr 0x8ac1be8 'MinHeap *' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x8ac1bc8 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+    | |   `-ImplicitCastExpr 0x8ac1c68 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x8ac1c30 'int' lvalue Var 0x8ac0f20 'i' 'int'
+    | `-UnaryOperator 0x8ac1e50 'struct MinHeapNode **' prefix '&' cannot overflow
+    |   `-ArraySubscriptExpr 0x8ac1e30 'struct MinHeapNode *' lvalue
+    |     |-ImplicitCastExpr 0x8ac1e18 'struct MinHeapNode **' <LValueToRValue>
+    |     | `-MemberExpr 0x8ac1cf0 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+    |     |   `-ImplicitCastExpr 0x8ac1cd8 'MinHeap *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x8ac1cb8 'MinHeap *' lvalue ParmVar 0x8ac0c28 'heap' 'MinHeap *'
+    |     `-ParenExpr 0x8ac1df8 'int'
+    |       `-BinaryOperator 0x8ac1dd8 'int' '/'
+    |         |-ParenExpr 0x8ac1d98 'int'
+    |         | `-BinaryOperator 0x8ac1d78 'int' '-'
+    |         |   |-ImplicitCastExpr 0x8ac1d60 'int' <LValueToRValue>
+    |         |   | `-DeclRefExpr 0x8ac1d20 'int' lvalue Var 0x8ac0f20 'i' 'int'
+    |         |   `-IntegerLiteral 0x8ac1d40 'int' 1
+    |         `-IntegerLiteral 0x8ac1db8 'int' 2
+    `-BinaryOperator 0x8ac1fc8 'int' '='
+      |-DeclRefExpr 0x8ac1eb0 'int' lvalue Var 0x8ac0f20 'i' 'int'
+      `-ParenExpr 0x8ac1fa8 'int'
+        `-BinaryOperator 0x8ac1f88 'int' '/'
+          |-ParenExpr 0x8ac1f48 'int'
+          | `-BinaryOperator 0x8ac1f28 'int' '-'
+          |   |-ImplicitCastExpr 0x8ac1f10 'int' <LValueToRValue>
+          |   | `-DeclRefExpr 0x8ac1ed0 'int' lvalue Var 0x8ac0f20 'i' 'int'
+          |   `-IntegerLiteral 0x8ac1ef0 'int' 1
+          `-IntegerLiteral 0x8ac1f68 'int' 2
+Emitting fn: extract_min
+FunctionDecl 0x8abfa90 <./util.h:172:1, line:189:1> line:172:14 used extract_min 'MinHeapNode *(MinHeap *)'
+|-ParmVarDecl 0x8abf990 <col:26, col:35> col:35 used heap 'MinHeap *'
+`-CompoundStmt 0x8ac0bb8 <line:173:1, line:189:1>
+  |-IfStmt 0x8abfce8 <line:174:3, /users/Zijian/Disagg-mlir/llvm-project/build/lib/clang/16.0.0/include/stddef.h:89:25>
+  | |-ParenExpr 0x8abfc20 <./util.h:111:29, col:47> 'int'
+  | | `-BinaryOperator 0x8abfc00 <col:30, col:46> 'int' '=='
+  | |   |-ImplicitCastExpr 0x8abfbe8 <col:30, col:38> 'int' <LValueToRValue>
+  | |   | `-MemberExpr 0x8abfb98 <col:30, col:38> 'int' lvalue ->size 0x8abc658
+  | |   |   `-ImplicitCastExpr 0x8abfb80 <col:30, col:35> 'MinHeap *' <LValueToRValue>
+  | |   |     `-ParenExpr 0x8abfb60 <col:30, col:35> 'MinHeap *' lvalue
+  | |   |       `-DeclRefExpr 0x8abfb40 <line:174:21> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  | |   `-IntegerLiteral 0x8abfbc8 <line:111:46> 'int' 0
+  | `-ReturnStmt 0x8abfcd8 <line:174:28, /users/Zijian/Disagg-mlir/llvm-project/build/lib/clang/16.0.0/include/stddef.h:89:25>
+  |   `-ImplicitCastExpr 0x8abfcc0 <col:16, col:25> 'MinHeapNode *' <NullToPointer>
+  |     `-ParenExpr 0x8abfca0 <col:16, col:25> 'void *'
+  |       `-CStyleCastExpr 0x8abfc78 <col:17, col:24> 'void *' <NullToPointer>
+  |         `-IntegerLiteral 0x8abfc40 <col:24> 'int' 0
+  |-DeclStmt 0x8abfe60 <./util.h:175:3, col:37>
+  | `-VarDecl 0x8abfd20 <col:3, col:36> col:16 used root 'MinHeapNode *' cinit
+  |   `-ImplicitCastExpr 0x8abfe48 <col:23, col:36> 'struct MinHeapNode *' <LValueToRValue>
+  |     `-ArraySubscriptExpr 0x8abfe28 <col:23, col:36> 'struct MinHeapNode *' lvalue
+  |       |-ImplicitCastExpr 0x8abfe10 <col:23, col:29> 'struct MinHeapNode **' <LValueToRValue>
+  |       | `-MemberExpr 0x8abfdc0 <col:23, col:29> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  |       |   `-ImplicitCastExpr 0x8abfda8 <col:23> 'MinHeap *' <LValueToRValue>
+  |       |     `-DeclRefExpr 0x8abfd88 <col:23> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  |       `-IntegerLiteral 0x8abfdf0 <col:35> 'int' 0
+  |-DeclStmt 0x8ac0090 <line:178:3, col:38>
+  | `-VarDecl 0x8abfe90 <col:3, line:106:53> line:178:16 used last 'MinHeapNode *' cinit
+  |   `-ImplicitCastExpr 0x8ac0078 <line:106:25, col:53> 'struct MinHeapNode *' <LValueToRValue>
+  |     `-ParenExpr 0x8ac0058 <col:25, col:53> 'struct MinHeapNode *' lvalue
+  |       `-ArraySubscriptExpr 0x8ac0038 <line:178:33, line:106:52> 'struct MinHeapNode *' lvalue
+  |         |-ImplicitCastExpr 0x8ac0020 <line:178:33, line:106:32> 'struct MinHeapNode **' <LValueToRValue>
+  |         | `-MemberExpr 0x8abff30 <line:178:33, line:106:32> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  |         |   `-ImplicitCastExpr 0x8abff18 <line:178:33> 'MinHeap *' <LValueToRValue>
+  |         |     `-DeclRefExpr 0x8abfef8 <col:33> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  |         `-BinaryOperator 0x8ac0000 <col:33, line:106:51> 'int' '-'
+  |           |-ImplicitCastExpr 0x8abffe8 <line:178:33, line:106:44> 'int' <LValueToRValue>
+  |           | `-MemberExpr 0x8abff98 <line:178:33, line:106:44> 'int' lvalue ->size 0x8abc658
+  |           |   `-ImplicitCastExpr 0x8abff80 <line:178:33> 'MinHeap *' <LValueToRValue>
+  |           |     `-DeclRefExpr 0x8abff60 <col:33> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  |           `-IntegerLiteral 0x8abffc8 <line:106:51> 'int' 1
+  |-BinaryOperator 0x8ac06b0 <line:179:3, col:20> 'struct MinHeapNode *' '='
+  | |-ArraySubscriptExpr 0x8ac0658 <col:3, col:16> 'struct MinHeapNode *' lvalue
+  | | |-ImplicitCastExpr 0x8ac0640 <col:3, col:9> 'struct MinHeapNode **' <LValueToRValue>
+  | | | `-MemberExpr 0x8ac00e0 <col:3, col:9> 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+  | | |   `-ImplicitCastExpr 0x8ac00c8 <col:3> 'MinHeap *' <LValueToRValue>
+  | | |     `-DeclRefExpr 0x8ac00a8 <col:3> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  | | `-IntegerLiteral 0x8ac0110 <col:15> 'int' 0
+  | `-ImplicitCastExpr 0x8ac0698 <col:20> 'MinHeapNode *' <LValueToRValue>
+  |   `-DeclRefExpr 0x8ac0678 <col:20> 'MinHeapNode *' lvalue Var 0x8abfe90 'last' 'MinHeapNode *'
+  |-BinaryOperator 0x8ac08b0 <line:182:3, col:37> 'int' '='
+  | |-ArraySubscriptExpr 0x8ac07d0 <col:3, col:20> 'int' lvalue
+  | | |-ImplicitCastExpr 0x8ac07a0 <col:3, col:9> 'int *' <LValueToRValue>
+  | | | `-MemberExpr 0x8ac0708 <col:3, col:9> 'int *' lvalue ->pos 0x8abc728
+  | | |   `-ImplicitCastExpr 0x8ac06f0 <col:3> 'MinHeap *' <LValueToRValue>
+  | | |     `-DeclRefExpr 0x8ac06d0 <col:3> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  | | `-ImplicitCastExpr 0x8ac07b8 <col:13, col:19> 'int' <LValueToRValue>
+  | |   `-MemberExpr 0x8ac0770 <col:13, col:19> 'int' lvalue ->v 0x8abc320
+  | |     `-ImplicitCastExpr 0x8ac0758 <col:13> 'MinHeapNode *' <LValueToRValue>
+  | |       `-DeclRefExpr 0x8ac0738 <col:13> 'MinHeapNode *' lvalue Var 0x8abfd20 'root' 'MinHeapNode *'
+  | `-BinaryOperator 0x8ac0890 <col:24, col:37> 'int' '-'
+  |   |-ImplicitCastExpr 0x8ac0878 <col:24, col:30> 'int' <LValueToRValue>
+  |   | `-MemberExpr 0x8ac0828 <col:24, col:30> 'int' lvalue ->size 0x8abc658
+  |   |   `-ImplicitCastExpr 0x8ac0810 <col:24> 'MinHeap *' <LValueToRValue>
+  |   |     `-DeclRefExpr 0x8ac07f0 <col:24> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  |   `-IntegerLiteral 0x8ac0858 <col:37> 'int' 1
+  |-BinaryOperator 0x8ac0a10 <line:183:3, col:24> 'int' '='
+  | |-ArraySubscriptExpr 0x8ac09d0 <col:3, col:20> 'int' lvalue
+  | | |-ImplicitCastExpr 0x8ac09a0 <col:3, col:9> 'int *' <LValueToRValue>
+  | | | `-MemberExpr 0x8ac0908 <col:3, col:9> 'int *' lvalue ->pos 0x8abc728
+  | | |   `-ImplicitCastExpr 0x8ac08f0 <col:3> 'MinHeap *' <LValueToRValue>
+  | | |     `-DeclRefExpr 0x8ac08d0 <col:3> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  | | `-ImplicitCastExpr 0x8ac09b8 <col:13, col:19> 'int' <LValueToRValue>
+  | |   `-MemberExpr 0x8ac0970 <col:13, col:19> 'int' lvalue ->v 0x8abc320
+  | |     `-ImplicitCastExpr 0x8ac0958 <col:13> 'MinHeapNode *' <LValueToRValue>
+  | |       `-DeclRefExpr 0x8ac0938 <col:13> 'MinHeapNode *' lvalue Var 0x8abfe90 'last' 'MinHeapNode *'
+  | `-IntegerLiteral 0x8ac09f0 <col:24> 'int' 0
+  |-UnaryOperator 0x8ac0a98 <line:186:3, col:14> 'int' postfix '--'
+  | `-MemberExpr 0x8ac0a68 <col:3, col:9> 'int' lvalue ->size 0x8abc658
+  |   `-ImplicitCastExpr 0x8ac0a50 <col:3> 'MinHeap *' <LValueToRValue>
+  |     `-DeclRefExpr 0x8ac0a30 <col:3> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  |-CallExpr 0x8ac0b28 <line:187:3, col:18> 'void'
+  | |-ImplicitCastExpr 0x8ac0b10 <col:3> 'void (*)(MinHeap *, int)' <FunctionToPointerDecay>
+  | | `-DeclRefExpr 0x8ac0ab0 <col:3> 'void (MinHeap *, int)' Function 0x8abe018 'heapify' 'void (MinHeap *, int)'
+  | |-ImplicitCastExpr 0x8ac0b58 <col:11> 'MinHeap *' <LValueToRValue>
+  | | `-DeclRefExpr 0x8ac0ad0 <col:11> 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+  | `-IntegerLiteral 0x8ac0af0 <col:17> 'int' 0
+  `-ReturnStmt 0x8ac0ba8 <line:188:3, col:10>
+    `-ImplicitCastExpr 0x8ac0b90 <col:10> 'MinHeapNode *' <LValueToRValue>
+      `-DeclRefExpr 0x8ac0b70 <col:10> 'MinHeapNode *' lvalue Var 0x8abfd20 'root' 'MinHeapNode *'
+CompoundStmt 0x8ac0bb8
+|-IfStmt 0x8abfce8
+| |-ParenExpr 0x8abfc20 'int'
+| | `-BinaryOperator 0x8abfc00 'int' '=='
+| |   |-ImplicitCastExpr 0x8abfbe8 'int' <LValueToRValue>
+| |   | `-MemberExpr 0x8abfb98 'int' lvalue ->size 0x8abc658
+| |   |   `-ImplicitCastExpr 0x8abfb80 'MinHeap *' <LValueToRValue>
+| |   |     `-ParenExpr 0x8abfb60 'MinHeap *' lvalue
+| |   |       `-DeclRefExpr 0x8abfb40 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+| |   `-IntegerLiteral 0x8abfbc8 'int' 0
+| `-ReturnStmt 0x8abfcd8
+|   `-ImplicitCastExpr 0x8abfcc0 'MinHeapNode *' <NullToPointer>
+|     `-ParenExpr 0x8abfca0 'void *'
+|       `-CStyleCastExpr 0x8abfc78 'void *' <NullToPointer>
+|         `-IntegerLiteral 0x8abfc40 'int' 0
+|-DeclStmt 0x8abfe60
+| `-VarDecl 0x8abfd20  used root 'MinHeapNode *' cinit
+|   `-ImplicitCastExpr 0x8abfe48 'struct MinHeapNode *' <LValueToRValue>
+|     `-ArraySubscriptExpr 0x8abfe28 'struct MinHeapNode *' lvalue
+|       |-ImplicitCastExpr 0x8abfe10 'struct MinHeapNode **' <LValueToRValue>
+|       | `-MemberExpr 0x8abfdc0 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+|       |   `-ImplicitCastExpr 0x8abfda8 'MinHeap *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x8abfd88 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+|       `-IntegerLiteral 0x8abfdf0 'int' 0
+|-DeclStmt 0x8ac0090
+| `-VarDecl 0x8abfe90  used last 'MinHeapNode *' cinit
+|   `-ImplicitCastExpr 0x8ac0078 'struct MinHeapNode *' <LValueToRValue>
+|     `-ParenExpr 0x8ac0058 'struct MinHeapNode *' lvalue
+|       `-ArraySubscriptExpr 0x8ac0038 'struct MinHeapNode *' lvalue
+|         |-ImplicitCastExpr 0x8ac0020 'struct MinHeapNode **' <LValueToRValue>
+|         | `-MemberExpr 0x8abff30 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+|         |   `-ImplicitCastExpr 0x8abff18 'MinHeap *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x8abfef8 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+|         `-BinaryOperator 0x8ac0000 'int' '-'
+|           |-ImplicitCastExpr 0x8abffe8 'int' <LValueToRValue>
+|           | `-MemberExpr 0x8abff98 'int' lvalue ->size 0x8abc658
+|           |   `-ImplicitCastExpr 0x8abff80 'MinHeap *' <LValueToRValue>
+|           |     `-DeclRefExpr 0x8abff60 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+|           `-IntegerLiteral 0x8abffc8 'int' 1
+|-BinaryOperator 0x8ac06b0 'struct MinHeapNode *' '='
+| |-ArraySubscriptExpr 0x8ac0658 'struct MinHeapNode *' lvalue
+| | |-ImplicitCastExpr 0x8ac0640 'struct MinHeapNode **' <LValueToRValue>
+| | | `-MemberExpr 0x8ac00e0 'struct MinHeapNode **' lvalue ->array 0x8abc5f0
+| | |   `-ImplicitCastExpr 0x8ac00c8 'MinHeap *' <LValueToRValue>
+| | |     `-DeclRefExpr 0x8ac00a8 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+| | `-IntegerLiteral 0x8ac0110 'int' 0
+| `-ImplicitCastExpr 0x8ac0698 'MinHeapNode *' <LValueToRValue>
+|   `-DeclRefExpr 0x8ac0678 'MinHeapNode *' lvalue Var 0x8abfe90 'last' 'MinHeapNode *'
+|-BinaryOperator 0x8ac08b0 'int' '='
+| |-ArraySubscriptExpr 0x8ac07d0 'int' lvalue
+| | |-ImplicitCastExpr 0x8ac07a0 'int *' <LValueToRValue>
+| | | `-MemberExpr 0x8ac0708 'int *' lvalue ->pos 0x8abc728
+| | |   `-ImplicitCastExpr 0x8ac06f0 'MinHeap *' <LValueToRValue>
+| | |     `-DeclRefExpr 0x8ac06d0 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+| | `-ImplicitCastExpr 0x8ac07b8 'int' <LValueToRValue>
+| |   `-MemberExpr 0x8ac0770 'int' lvalue ->v 0x8abc320
+| |     `-ImplicitCastExpr 0x8ac0758 'MinHeapNode *' <LValueToRValue>
+| |       `-DeclRefExpr 0x8ac0738 'MinHeapNode *' lvalue Var 0x8abfd20 'root' 'MinHeapNode *'
+| `-BinaryOperator 0x8ac0890 'int' '-'
+|   |-ImplicitCastExpr 0x8ac0878 'int' <LValueToRValue>
+|   | `-MemberExpr 0x8ac0828 'int' lvalue ->size 0x8abc658
+|   |   `-ImplicitCastExpr 0x8ac0810 'MinHeap *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x8ac07f0 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+|   `-IntegerLiteral 0x8ac0858 'int' 1
+|-BinaryOperator 0x8ac0a10 'int' '='
+| |-ArraySubscriptExpr 0x8ac09d0 'int' lvalue
+| | |-ImplicitCastExpr 0x8ac09a0 'int *' <LValueToRValue>
+| | | `-MemberExpr 0x8ac0908 'int *' lvalue ->pos 0x8abc728
+| | |   `-ImplicitCastExpr 0x8ac08f0 'MinHeap *' <LValueToRValue>
+| | |     `-DeclRefExpr 0x8ac08d0 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+| | `-ImplicitCastExpr 0x8ac09b8 'int' <LValueToRValue>
+| |   `-MemberExpr 0x8ac0970 'int' lvalue ->v 0x8abc320
+| |     `-ImplicitCastExpr 0x8ac0958 'MinHeapNode *' <LValueToRValue>
+| |       `-DeclRefExpr 0x8ac0938 'MinHeapNode *' lvalue Var 0x8abfe90 'last' 'MinHeapNode *'
+| `-IntegerLiteral 0x8ac09f0 'int' 0
+|-UnaryOperator 0x8ac0a98 'int' postfix '--'
+| `-MemberExpr 0x8ac0a68 'int' lvalue ->size 0x8abc658
+|   `-ImplicitCastExpr 0x8ac0a50 'MinHeap *' <LValueToRValue>
+|     `-DeclRefExpr 0x8ac0a30 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+|-CallExpr 0x8ac0b28 'void'
+| |-ImplicitCastExpr 0x8ac0b10 'void (*)(MinHeap *, int)' <FunctionToPointerDecay>
+| | `-DeclRefExpr 0x8ac0ab0 'void (MinHeap *, int)' Function 0x8abe018 'heapify' 'void (MinHeap *, int)'
+| |-ImplicitCastExpr 0x8ac0b58 'MinHeap *' <LValueToRValue>
+| | `-DeclRefExpr 0x8ac0ad0 'MinHeap *' lvalue ParmVar 0x8abf990 'heap' 'MinHeap *'
+| `-IntegerLiteral 0x8ac0af0 'int' 0
+`-ReturnStmt 0x8ac0ba8
+  `-ImplicitCastExpr 0x8ac0b90 'MinHeapNode *' <LValueToRValue>
+    `-DeclRefExpr 0x8ac0b70 'MinHeapNode *' lvalue Var 0x8abfd20 'root' 'MinHeapNode *'
+Emitting fn: swap_heap_node
+FunctionDecl 0x8abdb08 <./util.h:140:1, line:145:1> line:140:6 used swap_heap_node 'void (MinHeapNode **, MinHeapNode **)'
+|-ParmVarDecl 0x8abd970 <col:21, col:35> col:35 used a 'MinHeapNode **'
+|-ParmVarDecl 0x8abd9f0 <col:38, col:52> col:52 used b 'MinHeapNode **'
+`-CompoundStmt 0x8abde40 <line:141:1, line:145:1>
+  |-DeclStmt 0x8abdca8 <line:142:3, col:22>
+  | `-VarDecl 0x8abdbd8 <col:3, col:21> col:16 used t 'MinHeapNode *' cinit
+  |   `-ImplicitCastExpr 0x8abdc90 <col:20, col:21> 'MinHeapNode *' <LValueToRValue>
+  |     `-UnaryOperator 0x8abdc78 <col:20, col:21> 'MinHeapNode *' lvalue prefix '*' cannot overflow
+  |       `-ImplicitCastExpr 0x8abdc60 <col:21> 'MinHeapNode **' <LValueToRValue>
+  |         `-DeclRefExpr 0x8abdc40 <col:21> 'MinHeapNode **' lvalue ParmVar 0x8abd970 'a' 'MinHeapNode **'
+  |-BinaryOperator 0x8abdd78 <line:143:3, col:9> 'MinHeapNode *' '='
+  | |-UnaryOperator 0x8abdcf8 <col:3, col:4> 'MinHeapNode *' lvalue prefix '*' cannot overflow
+  | | `-ImplicitCastExpr 0x8abdce0 <col:4> 'MinHeapNode **' <LValueToRValue>
+  | |   `-DeclRefExpr 0x8abdcc0 <col:4> 'MinHeapNode **' lvalue ParmVar 0x8abd970 'a' 'MinHeapNode **'
+  | `-ImplicitCastExpr 0x8abdd60 <col:8, col:9> 'MinHeapNode *' <LValueToRValue>
+  |   `-UnaryOperator 0x8abdd48 <col:8, col:9> 'MinHeapNode *' lvalue prefix '*' cannot overflow
+  |     `-ImplicitCastExpr 0x8abdd30 <col:9> 'MinHeapNode **' <LValueToRValue>
+  |       `-DeclRefExpr 0x8abdd10 <col:9> 'MinHeapNode **' lvalue ParmVar 0x8abd9f0 'b' 'MinHeapNode **'
+  `-BinaryOperator 0x8abde20 <line:144:3, col:8> 'MinHeapNode *' '='
+    |-UnaryOperator 0x8abddd0 <col:3, col:4> 'MinHeapNode *' lvalue prefix '*' cannot overflow
+    | `-ImplicitCastExpr 0x8abddb8 <col:4> 'MinHeapNode **' <LValueToRValue>
+    |   `-DeclRefExpr 0x8abdd98 <col:4> 'MinHeapNode **' lvalue ParmVar 0x8abd9f0 'b' 'MinHeapNode **'
+    `-ImplicitCastExpr 0x8abde08 <col:8> 'MinHeapNode *' <LValueToRValue>
+      `-DeclRefExpr 0x8abdde8 <col:8> 'MinHeapNode *' lvalue Var 0x8abdbd8 't' 'MinHeapNode *'
+CompoundStmt 0x8abde40
+|-DeclStmt 0x8abdca8
+| `-VarDecl 0x8abdbd8  used t 'MinHeapNode *' cinit
+|   `-ImplicitCastExpr 0x8abdc90 'MinHeapNode *' <LValueToRValue>
+|     `-UnaryOperator 0x8abdc78 'MinHeapNode *' lvalue prefix '*' cannot overflow
+|       `-ImplicitCastExpr 0x8abdc60 'MinHeapNode **' <LValueToRValue>
+|         `-DeclRefExpr 0x8abdc40 'MinHeapNode **' lvalue ParmVar 0x8abd970 'a' 'MinHeapNode **'
+|-BinaryOperator 0x8abdd78 'MinHeapNode *' '='
+| |-UnaryOperator 0x8abdcf8 'MinHeapNode *' lvalue prefix '*' cannot overflow
+| | `-ImplicitCastExpr 0x8abdce0 'MinHeapNode **' <LValueToRValue>
+| |   `-DeclRefExpr 0x8abdcc0 'MinHeapNode **' lvalue ParmVar 0x8abd970 'a' 'MinHeapNode **'
+| `-ImplicitCastExpr 0x8abdd60 'MinHeapNode *' <LValueToRValue>
+|   `-UnaryOperator 0x8abdd48 'MinHeapNode *' lvalue prefix '*' cannot overflow
+|     `-ImplicitCastExpr 0x8abdd30 'MinHeapNode **' <LValueToRValue>
+|       `-DeclRefExpr 0x8abdd10 'MinHeapNode **' lvalue ParmVar 0x8abd9f0 'b' 'MinHeapNode **'
+`-BinaryOperator 0x8abde20 'MinHeapNode *' '='
+  |-UnaryOperator 0x8abddd0 'MinHeapNode *' lvalue prefix '*' cannot overflow
+  | `-ImplicitCastExpr 0x8abddb8 'MinHeapNode **' <LValueToRValue>
+  |   `-DeclRefExpr 0x8abdd98 'MinHeapNode **' lvalue ParmVar 0x8abd9f0 'b' 'MinHeapNode **'
+  `-ImplicitCastExpr 0x8abde08 'MinHeapNode *' <LValueToRValue>
+    `-DeclRefExpr 0x8abdde8 'MinHeapNode *' lvalue Var 0x8abdbd8 't' 'MinHeapNode *'

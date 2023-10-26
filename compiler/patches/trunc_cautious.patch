@@ -1,0 +1,37 @@
+diff --git a/mlir/lib/Dialect/Arith/IR/ArithOps.cpp b/mlir/lib/Dialect/Arith/IR/ArithOps.cpp
+index d1d03a549092..a8db3ed96ef0 100644
+--- a/mlir/lib/Dialect/Arith/IR/ArithOps.cpp
++++ b/mlir/lib/Dialect/Arith/IR/ArithOps.cpp
+@@ -1101,6 +1101,8 @@ OpFoldResult arith::TruncFOp::fold(ArrayRef<Attribute> operands) {
+   if (!constOperand || !constOperand.isa<FloatAttr>())
+     return {};
+ 
++  if (constOperand.cast<FloatAttr>().getType().getIntOrFloatBitWidth() > 64) 
++    return {};
+   // Convert to target type via 'double'.
+   double sourceValue =
+       constOperand.dyn_cast<FloatAttr>().getValue().convertToDouble();
+diff --git a/mlir/lib/Dialect/LLVMIR/IR/LLVMDialect.cpp b/mlir/lib/Dialect/LLVMIR/IR/LLVMDialect.cpp
+index 375ec6ff0e78..c9b1fb4e635a 100644
+--- a/mlir/lib/Dialect/LLVMIR/IR/LLVMDialect.cpp
++++ b/mlir/lib/Dialect/LLVMIR/IR/LLVMDialect.cpp
+@@ -2162,12 +2162,13 @@ LogicalResult LLVMFuncOp::verify() {
+ 
+   if (isExternal()) {
+     if (getLinkage() != LLVM::Linkage::External &&
+-        getLinkage() != LLVM::Linkage::ExternWeak)
+-      return emitOpError() << "external functions must have '"
+-                           << stringifyLinkage(LLVM::Linkage::External)
+-                           << "' or '"
+-                           << stringifyLinkage(LLVM::Linkage::ExternWeak)
+-                           << "' linkage";
++        getLinkage() != LLVM::Linkage::ExternWeak) {
++          return emitOpError() << "external function " << getName() << " must have '" 
++                              << stringifyLinkage(LLVM::Linkage::External)
++                              << "' or '"
++                              << stringifyLinkage(LLVM::Linkage::ExternWeak)
++                              << "' linkage";
++        }
+     return success();
+   }
+ 

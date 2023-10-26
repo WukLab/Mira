@@ -1,0 +1,28 @@
+diff --git a/mlir/lib/Conversion/MemRefToLLVM/MemRefToLLVM.cpp b/mlir/lib/Conversion/MemRefToLLVM/MemRefToLLVM.cpp
+index 141b250ada18..728d8340d201 100644
+--- a/mlir/lib/Conversion/MemRefToLLVM/MemRefToLLVM.cpp
++++ b/mlir/lib/Conversion/MemRefToLLVM/MemRefToLLVM.cpp
+@@ -52,9 +52,14 @@ struct AllocOpLowering : public AllocLikeOpLLVMLowering {
+   std::tuple<Value, Value> allocateBuffer(ConversionPatternRewriter &rewriter,
+                                           Location loc, Value sizeBytes,
+                                           Operation *op) const override {
+-    return allocateBufferManuallyAlign(
++    auto t = allocateBufferManuallyAlign(
+         rewriter, loc, sizeBytes, op,
+         getAlignment(rewriter, loc, cast<memref::AllocOp>(op)));
++
++    if (op->hasAttr("allocation_id")) {
++        std::get<0>(t).getDefiningOp()->getOperand(0).getDefiningOp()->setAttr("allocation_id", op->getAttr("allocation_id"));
++    }
++    return t;
+   }
+ };
+
+@@ -69,6 +74,7 @@ struct AlignedAllocOpLowering : public AllocLikeOpLLVMLowering {
+         rewriter, loc, sizeBytes, op, &defaultLayout,
+         alignedAllocationGetAlignment(rewriter, loc, cast<memref::AllocOp>(op),
+                                       &defaultLayout));
++    ptr.getDefiningOp()->setAttr("annotation_x", rewriter.getBoolAttr(true));
+     return std::make_tuple(ptr, ptr);
+   }
+

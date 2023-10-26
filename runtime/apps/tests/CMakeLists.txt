@@ -1,0 +1,4 @@
+link_libraries(common)
+add_executable(test_r_cache_ary_ref ring_cache_ary_ref.c)
+add_executable(test_r_cache_ary ring_cache_ary.c)
+add_executable(test_r_cache_ary_rt ring_cache_rt.c)

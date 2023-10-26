@@ -1,0 +1,82 @@
+heap profile: 2000006: 309819456 [2000010: 309828592] @ heapprofile
+2000000: 256000000 [2000000: 256000000] @ 0x0040129a 0x00401cbd 0x7fdd11dd8083 0x004010de
+     1: 32000008 [     1: 32000008] @ 0x00401262 0x00401cbd 0x7fdd11dd8083 0x004010de
+     1:  8727360 [     1:  8727360] @ 0x00401cd8 0x7fdd11dd8083 0x004010de
+     1:  8727360 [     1:  8727360] @ 0x004015d6 0x004019d2 0x00401ceb 0x7fdd11dd8083 0x004010de
+     1:  4363680 [     1:  4363680] @ 0x004015a9 0x004019d2 0x00401ceb 0x7fdd11dd8083 0x004010de
+     1:     1024 [     1:     1024] @ 0x7fdd11e35d04 0x7fdd11e45ed0 0x7fdd11e44f30 0x7fdd11e436b5 0x7fdd11e2a972 0x7fdd11e15d3f 0x00401a76 0x00401ceb 0x7fdd11dd8083 0x004010de
+     1:       24 [     1:       24] @ 0x00401595 0x004019d2 0x00401ceb 0x7fdd11dd8083 0x004010de
+     0:        0 [     1:      472] @ 0x7fdd11e3692e 0x004012cd 0x00401cbd 0x7fdd11dd8083 0x004010de
+     0:        0 [     1:      472] @ 0x7fdd11e3692e 0x00401d04 0x7fdd11dd8083 0x004010de
+     0:        0 [     1:     4096] @ 0x7fdd11e35d04 0x7fdd11e45ed0 0x7fdd11e44ca4 0x7fdd11e45f86 0x7fdd11e18280 0x7fdd11e1723d 0x00401387 0x00401cbd 0x7fdd11dd8083 0x004010de
+     0:        0 [     1:     4096] @ 0x7fdd11e35d04 0x7fdd11e45ed0 0x7fdd11e44f30 0x7fdd11e11c30 0x7fdd11e2b4ba 0x7fdd11e15c6a 0x00401d3d 0x7fdd11dd8083 0x004010de
+
+MAPPED_LIBRARIES:
+00400000-00401000 r--p 00000000 00:00 1614050     /users/Zijian/Disagg-mlir/tools/disagg/origin/mod-SSSP/sssp
+00401000-00402000 r-xp 00001000 00:00 1614050     /users/Zijian/Disagg-mlir/tools/disagg/origin/mod-SSSP/sssp
+00402000-00403000 r--p 00002000 00:00 1614050     /users/Zijian/Disagg-mlir/tools/disagg/origin/mod-SSSP/sssp
+00403000-00404000 r--p 00002000 00:00 1614050     /users/Zijian/Disagg-mlir/tools/disagg/origin/mod-SSSP/sssp
+00404000-00405000 rw-p 00003000 00:00 1614050     /users/Zijian/Disagg-mlir/tools/disagg/origin/mod-SSSP/sssp
+0177a000-147d2000 rw-p 00000000 00:00 0           [heap]
+7fdd0c8d4000-7fdd11a18000 rw-p 00000000 00:00 0           
+7fdd11a18000-7fdd11a1b000 r--p 00000000 00:00 39137       /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7fdd11a1b000-7fdd11a33000 r-xp 00003000 00:00 39137       /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7fdd11a33000-7fdd11a3e000 r--p 0001b000 00:00 39137       /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7fdd11a3e000-7fdd11a3f000 ---p 00026000 00:00 39137       /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7fdd11a3f000-7fdd11a40000 r--p 00026000 00:00 39137       /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7fdd11a40000-7fdd11a41000 rw-p 00027000 00:00 39137       /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4
+7fdd11a41000-7fdd11a4e000 r--p 00000000 00:00 32877       /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fdd11a4e000-7fdd11af5000 r-xp 0000d000 00:00 32877       /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fdd11af5000-7fdd11b8e000 r--p 000b4000 00:00 32877       /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fdd11b8e000-7fdd11b8f000 r--p 0014c000 00:00 32877       /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fdd11b8f000-7fdd11b90000 rw-p 0014d000 00:00 32877       /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fdd11b90000-7fdd11b92000 rw-p 00000000 00:00 0           
+7fdd11b92000-7fdd11c28000 r--p 00000000 00:00 35734       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7fdd11c28000-7fdd11d19000 r-xp 00096000 00:00 35734       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7fdd11d19000-7fdd11d62000 r--p 00187000 00:00 35734       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7fdd11d62000-7fdd11d63000 ---p 001d0000 00:00 35734       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7fdd11d63000-7fdd11d6e000 r--p 001d0000 00:00 35734       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7fdd11d6e000-7fdd11d71000 rw-p 001db000 00:00 35734       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+7fdd11d71000-7fdd11d74000 rw-p 00000000 00:00 0           
+7fdd11d74000-7fdd11d7a000 r--p 00000000 00:00 39138       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fdd11d7a000-7fdd11d8b000 r-xp 00006000 00:00 39138       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fdd11d8b000-7fdd11d91000 r--p 00017000 00:00 39138       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fdd11d91000-7fdd11d92000 r--p 0001c000 00:00 39138       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fdd11d92000-7fdd11d93000 rw-p 0001d000 00:00 39138       /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fdd11d93000-7fdd11d97000 rw-p 00000000 00:00 0           
+7fdd11d97000-7fdd11d99000 r--p 00000000 00:00 39469       /usr/lib/x86_64-linux-gnu/libunwind.so.8.0.1
+7fdd11d99000-7fdd11da1000 r-xp 00002000 00:00 39469       /usr/lib/x86_64-linux-gnu/libunwind.so.8.0.1
+7fdd11da1000-7fdd11da4000 r--p 0000a000 00:00 39469       /usr/lib/x86_64-linux-gnu/libunwind.so.8.0.1
+7fdd11da4000-7fdd11da5000 r--p 0000c000 00:00 39469       /usr/lib/x86_64-linux-gnu/libunwind.so.8.0.1
+7fdd11da5000-7fdd11da6000 rw-p 0000d000 00:00 39469       /usr/lib/x86_64-linux-gnu/libunwind.so.8.0.1
+7fdd11da6000-7fdd11db4000 rw-p 00000000 00:00 0           
+7fdd11db4000-7fdd11dd6000 r--p 00000000 00:00 32875       /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fdd11dd6000-7fdd11f4e000 r-xp 00022000 00:00 32875       /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fdd11f4e000-7fdd11f9c000 r--p 0019a000 00:00 32875       /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fdd11f9c000-7fdd11fa0000 r--p 001e7000 00:00 32875       /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fdd11fa0000-7fdd11fa2000 rw-p 001eb000 00:00 32875       /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fdd11fa2000-7fdd11fa6000 rw-p 00000000 00:00 0           
+7fdd11fa6000-7fdd11fa9000 r--p 00000000 00:00 35833       /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fdd11fa9000-7fdd11fbb000 r-xp 00003000 00:00 35833       /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fdd11fbb000-7fdd11fbf000 r--p 00015000 00:00 35833       /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fdd11fbf000-7fdd11fc0000 r--p 00018000 00:00 35833       /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fdd11fc0000-7fdd11fc1000 rw-p 00019000 00:00 35833       /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fdd11fc1000-7fdd11fd6000 r--p 00000000 00:00 42111       /usr/local/lib/libtcmalloc.so.4.5.10
+7fdd11fd6000-7fdd11fff000 r-xp 00015000 00:00 42111       /usr/local/lib/libtcmalloc.so.4.5.10
+7fdd11fff000-7fdd1200f000 r--p 0003e000 00:00 42111       /usr/local/lib/libtcmalloc.so.4.5.10
+7fdd1200f000-7fdd12010000 ---p 0004e000 00:00 42111       /usr/local/lib/libtcmalloc.so.4.5.10
+7fdd12010000-7fdd12011000 r--p 0004e000 00:00 42111       /usr/local/lib/libtcmalloc.so.4.5.10
+7fdd12011000-7fdd12013000 rw-p 0004f000 00:00 42111       /usr/local/lib/libtcmalloc.so.4.5.10
+7fdd12013000-7fdd121cb000 rw-p 00000000 00:00 0           
+7fdd121d3000-7fdd121d4000 rw-p 00000000 00:00 0           
+7fdd121d4000-7fdd121d5000 r--p 00000000 00:00 32871       /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fdd121d5000-7fdd121f8000 r-xp 00001000 00:00 32871       /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fdd121f8000-7fdd12200000 r--p 00024000 00:00 32871       /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fdd12200000-7fdd12201000 rw-p 00000000 00:00 0           
+7fdd12201000-7fdd12202000 r--p 0002c000 00:00 32871       /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fdd12202000-7fdd12203000 rw-p 0002d000 00:00 32871       /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fdd12203000-7fdd12204000 rw-p 00000000 00:00 0           
+7ffd5aaf3000-7ffd5ab14000 rw-p 00000000 00:00 0           [stack]
+7ffd5ab65000-7ffd5ab68000 r--p 00000000 00:00 0           [vvar]
+7ffd5ab68000-7ffd5ab69000 r-xp 00000000 00:00 0           [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0           [vsyscall]

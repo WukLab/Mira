@@ -1,0 +1,729 @@
+Args: ./build/bin/standalone-pg example/handy/simple_remote.mlir --lower-rmem-to-llvm -debug 
+Load new dialect in Context builtin
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::SubElementTypeInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::ShapedType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::MemRefLayoutAttrInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::SubElementAttrInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::ElementsAttr)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::SymbolOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpAsmOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::RegionKindInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::CastOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::MemoryEffectOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpAsmDialectInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::detail::AffineBinaryOpExprStorage)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::detail::AffineConstantExprStorage)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::detail::AffineDimExprStorage)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::detail::AffineMapStorage)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::detail::IntegerSetStorage)
+Load new dialect in Context builtin
+Load new dialect in Context acc
+Load new dialect in Context affine
+Load new dialect in Context arith
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::VectorUnrollOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::InferTypeOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DialectInlinerInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::bufferization::BufferizableOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::AffineDmaStartOp)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::AffineMapAccessInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::AffineDmaWaitOp)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LoopLikeOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::RegionBranchOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::AffineReadOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::AffineWriteOpInterface)
+Load new dialect in Context amdgpu
+Load new dialect in Context amx
+Load new dialect in Context arm_neon
+Load new dialect in Context arm_sve
+Load new dialect in Context async
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::RegionBranchTerminatorOpInterface)
+Load new dialect in Context bufferization
+Load new dialect in Context memref
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::CopyOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::ViewLikeOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::SymbolUserOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OffsetSizeAndStrideOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::PointerElementTypeInterface)
+Load new dialect in Context tensor
+Load new dialect in Context complex
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::ReifyRankedShapedTypeOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::TilingInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::bufferization::AllocationOpInterface)
+Load new dialect in Context cf
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::BranchOpInterface)
+Load new dialect in Context dlti
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DataLayoutEntryAttr)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DataLayoutEntryInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DataLayoutSpecAttr)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DataLayoutSpecInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DataLayoutDialectInterface)
+Load new dialect in Context emitc
+Load new dialect in Context func
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::CallOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::CallableOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::FunctionOpInterface)
+Load new dialect in Context gpu
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::gpu::AsyncTokenType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::gpu::MMAMatrixType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::gpu::AsyncOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DataLayoutOpInterface)
+Load new dialect in Context linalg
+Load new dialect in Context math
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::linalg::LinalgOp)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::linalg::ContractionOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::linalg::ConvolutionOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::linalg::FillOpInterface)
+Load new dialect in Context llvm
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMVoidType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMPPCFP128Type)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMX86MMXType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMTokenType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMLabelType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMMetadataType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMFunctionType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMPointerType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DataLayoutTypeInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMFixedVectorType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMScalableVectorType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMArrayType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::LLVMStructType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::FastmathFlagsInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::MemRefElementTypeInterface)
+Load new dialect in Context ml_program
+Load new dialect in Context nvgpu
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::nvgpu::DeviceAsyncTokenType)
+Load new dialect in Context nvvm
+Load new dialect in Context omp
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::omp::OutlineableOpenMPOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::omp::ReductionClauseInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::omp::PointerLikeType)
+Load new dialect in Context pdl
+Load new dialect in Context pdl_interp
+Load new dialect in Context quant
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::quant::AnyQuantizedType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::quant::CalibratedQuantizedType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::quant::UniformQuantizedType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::quant::UniformQuantizedPerAxisType)
+Load new dialect in Context rmem
+Load new dialect in Context rocdl
+Load new dialect in Context scf
+Load new dialect in Context shape
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::shape::ShapeType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::shape::SizeType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::shape::ValueShapeType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::shape::WitnessType)
+Load new dialect in Context sparse_tensor
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::VerifiableTensorEncoding)
+Load new dialect in Context spv
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::InterfaceVarABIAttr)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::TargetEnvAttr)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::VerCapExtAttr)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::ArrayType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::CooperativeMatrixNVType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::ImageType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::MatrixType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::PointerType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::RuntimeArrayType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::SampledImageType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::StructType)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::QueryMinVersionInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::QueryMaxVersionInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::QueryExtensionInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::spirv::QueryCapabilityInterface)
+Load new dialect in Context tosa
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::InferShapedTypeOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::tosa::TosaOp)
+Load new dialect in Context transform
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::transform::TransformOpInterface)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::IsTerminator<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::ZeroRegions<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::ZeroResults<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::ZeroSuccessors<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::VariadicOperands<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::OpInvariants<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::MemoryEffectOpInterface::Trait<Empty>)
+Load new dialect in Context vector
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::vector::CombiningKindAttr)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::VectorTransferOpInterface)
+Load new dialect in Context x86vector
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DebugActionManager::GenericHandler)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::ZeroOperands<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::OneRegion<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::NoRegionArguments<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::NoTerminator<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::SingleBlock<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::AffineScope<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::IsIsolatedFromAbove<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::SymbolTable<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::SymbolOpInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpAsmOpInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::RegionKindInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::HasOnlyGraphRegion<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::AutomaticAllocationScope<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::FunctionOpInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::SingleBlockImplicitTerminator<mlir::LLVM::ReturnOp>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::OneResult<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::OneTypedResult<mlir::rmem::RemoteMemRefType>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::HasParent<mlir::rmem::LLVMGlobalOp>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::CallableOpInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::OneTypedResult<mlir::Type>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::ConstantLike<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::InferTypeOpInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::AtLeastNOperands<1>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::OneOperand<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::VariadicResults<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LLVM::FastmathFlagsInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::OneTypedResult<mlir::LLVM::LLVMPointerType>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::SameOperandsAndResultShape<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::CastOpInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::VectorUnrollOpInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::Elementwise<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::Scalarizable<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::Vectorizable<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::Tensorizable<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::NOperands<2>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::IsCommutative<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::SameOperandsAndResultType<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::AtLeastNOperands<3>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::SingleBlockImplicitTerminator<mlir::scf::YieldOp>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::LoopLikeOpInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::RegionBranchOpInterface::Trait<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::HasRecursiveSideEffects<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::HasParent<mlir::scf::ExecuteRegionOp, mlir::scf::ForOp, mlir::scf::IfOp, mlir::scf::ParallelOp, mlir::scf::WhileOp>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::ReturnLike<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::HasParent<mlir::func::FuncOp>::Impl<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::OpTrait::MemRefsNormalizable<Empty>)
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::detail::OpToOpPassAdaptor)
+
+//===-------------------------------------------===//
+Legalizing operation : 'builtin.module'(0x7f8d4d79e510) {
+  * Fold {
+ImplicitTypeIDRegistry::lookupOrInsert(mlir::DialectFoldInterface)
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.func'(0x7f8d4d79b0a0) {
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.mlir.global'(0x7f8d4d79be00) {
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.func'(0x7f8d4d79b100) {
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.llvm.global'(0x7f8d4d79dca0) {
+  * Fold {
+  } -> FAILURE : unable to fold
+
+  * Pattern : 'rmem.llvm.global -> ()' {
+Trying to match "mlir::(anonymous namespace)::RemoteMemLLVMGlobalLowering"
+    ** Insert  : 'llvm.mlir.global'(0x7f8d4d79ac40)
+    ** Erase   : 'rmem.llvm.global'(0x7f8d4d79dca0)
+"mlir::(anonymous namespace)::RemoteMemLLVMGlobalLowering" result 1
+
+    //===-------------------------------------------===//
+    Legalizing operation : 'llvm.mlir.global'(0x7f8d4d79ac40) {
+    } -> SUCCESS : operation marked legal by the target
+    //===-------------------------------------------===//
+  } -> SUCCESS : pattern applied successfully
+// *** IR Dump After Pattern Application ***
+mlir-asm-printer: Verifying operation: builtin.module
+'rmem.global.return' op expects parent op 'rmem.llvm.global'
+mlir-asm-printer: 'builtin.module' failed to verify and will be printed in generic form
+"builtin.module"() ({
+  "llvm.func"() ({
+  }) {function_type = !llvm.func<i32 (ptr<i8>, ...)>, linkage = #llvm.linkage<external>, sym_name = "printf"} : () -> ()
+  "llvm.mlir.global"() ({
+  }) {constant, global_type = !llvm.array<14 x i8>, linkage = #llvm.linkage<internal>, sym_name = "str0", unnamed_addr = 0 : i64, value = "%d = %d * %d\0A\00"} : () -> ()
+  "llvm.func"() ({
+  }) {function_type = !llvm.func<ptr<i8> (i64)>, linkage = #llvm.linkage<external>, sym_name = "malloc"} : () -> ()
+  "llvm.mlir.global"() ({
+    %0 = "rmem.ptr.undef"() : () -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+    "rmem.global.return"(%0) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>) -> ()
+  }) {addr_space = 0 : i32, global_type = !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, linkage = #llvm.linkage<external>, sym_name = "as", unnamed_addr = 0 : i64} : () -> ()
+  "rmem.llvm.global"() ({
+  }) {addr_space = 0 : i32, global_type = !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, linkage = 10 : i64, sym_name = "as", unnamed_addr = 0 : i64} : () -> ()
+  "llvm.func"() ({
+  }) {function_type = !llvm.func<i32 (ptr<i8>)>, linkage = #llvm.linkage<external>, sym_name = "atoi"} : () -> ()
+  "func.func"() ({
+  ^bb0(%arg0: i32, %arg1: !llvm.ptr<ptr<i8>>):
+    %0 = "arith.constant"() {value = 0 : index} : () -> index
+    %1 = "arith.constant"() {value = 1 : index} : () -> index
+    %2 = "arith.constant"() {value = 8 : i64} : () -> i64
+    %3 = "arith.constant"() {value = 0 : i32} : () -> i32
+    %4 = "arith.constant"() {value = 1 : i64} : () -> i64
+    %5 = "llvm.getelementptr"(%arg1, %4) {structIndices = dense<-2147483648> : tensor<1xi32>} : (!llvm.ptr<ptr<i8>>, i64) -> !llvm.ptr<ptr<i8>>
+    %6 = "llvm.load"(%5) : (!llvm.ptr<ptr<i8>>) -> !llvm.ptr<i8>
+    %7 = "llvm.call"(%6) {callee = @atoi} : (!llvm.ptr<i8>) -> i32
+    %8 = "rmem.llvm.addressof"() {global_name = @as} : () -> !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>
+    %9 = "arith.extsi"(%7) : (i32) -> i64
+    %10 = "arith.muli"(%9, %2) : (i64, i64) -> i64
+    %11 = "rmem.malloc_ptr"(%10) : (i64) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+    "llvm.store"(%11, %8) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>) -> ()
+    %12 = "arith.index_cast"(%7) : (i32) -> index
+    "scf.for"(%0, %12, %1) ({
+    ^bb0(%arg2: index):
+      %14 = "arith.index_cast"(%arg2) : (index) -> i32
+      %15 = "rmem.llvm.addressof"() {global_name = @as} : () -> !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>
+      %16 = "llvm.load"(%15) : (!llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+      %17 = "arith.index_cast"(%arg2) : (index) -> i64
+      %18 = "rmem.ptrindex"(%16, %17) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, i64) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+      %19 = "rmem.materialize"(%18) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>) -> !llvm.ptr<struct<(i32, i32)>>
+      %20 = "llvm.getelementptr"(%19, %3) {structIndices = dense<[-2147483648, 0]> : tensor<2xi32>} : (!llvm.ptr<struct<(i32, i32)>>, i32) -> !llvm.ptr<i32>
+      %21 = "rmem.llvm.addressof"() {global_name = @as} : () -> !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>
+      %22 = "llvm.load"(%21) : (!llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+      %23 = "arith.index_cast"(%arg2) : (index) -> i64
+      %24 = "rmem.ptrindex"(%22, %23) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, i64) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+      %25 = "rmem.materialize"(%24) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>) -> !llvm.ptr<struct<(i32, i32)>>
+      %26 = "llvm.getelementptr"(%25, %3) {structIndices = dense<[-2147483648, 1]> : tensor<2xi32>} : (!llvm.ptr<struct<(i32, i32)>>, i32) -> !llvm.ptr<i32>
+      %27 = "arith.muli"(%14, %14) : (i32, i32) -> i32
+      "llvm.store"(%27, %26) : (i32, !llvm.ptr<i32>) -> ()
+      "scf.yield"() : () -> ()
+    }) : (index, index, index) -> ()
+    %13 = "arith.index_cast"(%7) : (i32) -> index
+    "scf.for"(%0, %13, %1) ({
+    ^bb0(%arg2: index):
+      %14 = "llvm.mlir.addressof"() {global_name = @str0} : () -> !llvm.ptr<array<14 x i8>>
+      %15 = "llvm.getelementptr"(%14, %3, %3) {structIndices = dense<-2147483648> : tensor<2xi32>} : (!llvm.ptr<array<14 x i8>>, i32, i32) -> !llvm.ptr<i8>
+      %16 = "rmem.llvm.addressof"() {global_name = @as} : () -> !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>
+      %17 = "llvm.load"(%16) : (!llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+      %18 = "arith.index_cast"(%arg2) : (index) -> i64
+      %19 = "rmem.ptrindex"(%17, %18) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, i64) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+      %20 = "rmem.materialize"(%19) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>) -> !llvm.ptr<struct<(i32, i32)>>
+      %21 = "llvm.getelementptr"(%20, %3) {structIndices = dense<[-2147483648, 1]> : tensor<2xi32>} : (!llvm.ptr<struct<(i32, i32)>>, i32) -> !llvm.ptr<i32>
+      %22 = "llvm.load"(%21) : (!llvm.ptr<i32>) -> i32
+      %23 = "llvm.getelementptr"(%20, %3) {structIndices = dense<[-2147483648, 0]> : tensor<2xi32>} : (!llvm.ptr<struct<(i32, i32)>>, i32) -> !llvm.ptr<i32>
+      %24 = "llvm.load"(%23) : (!llvm.ptr<i32>) -> i32
+      %25 = "llvm.call"(%15, %22, %24, %24) {callee = @printf} : (!llvm.ptr<i8>, i32, i32, i32) -> i32
+      "scf.yield"() : () -> ()
+    }) : (index, index, index) -> ()
+    "func.return"(%3) : (i32) -> ()
+  }) {function_type = (i32, !llvm.ptr<ptr<i8>>) -> i32, llvm.linkage = #llvm.linkage<external>, sym_name = "main"} : () -> ()
+}) {dlti.dl_spec = #dlti.dl_spec<#dlti.dl_entry<"dlti.endianness", "little">, #dlti.dl_entry<i64, dense<64> : vector<2xi32>>, #dlti.dl_entry<f80, dense<128> : vector<2xi32>>, #dlti.dl_entry<i1, dense<8> : vector<2xi32>>, #dlti.dl_entry<i8, dense<8> : vector<2xi32>>, #dlti.dl_entry<i16, dense<16> : vector<2xi32>>, #dlti.dl_entry<i32, dense<32> : vector<2xi32>>, #dlti.dl_entry<f16, dense<16> : vector<2xi32>>, #dlti.dl_entry<f64, dense<64> : vector<2xi32>>, #dlti.dl_entry<f128, dense<128> : vector<2xi32>>>, llvm.data_layout = "e-m:o-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128", llvm.target_triple = "x86_64-apple-macosx12.0.0", "polygeist.target-cpu" = "penryn", "polygeist.target-features" = "+cx16,+cx8,+fxsr,+mmx,+sahf,+sse,+sse2,+sse3,+sse4.1,+ssse3,+x87", "polygeist.tune-cpu" = "generic"} : () -> ()
+
+
+} -> SUCCESS
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.ptr.undef'(0x7f8d4d79d670) {
+  %0 = "rmem.ptr.undef"() : () -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.global.return'(0x7f8d4d79d6e0) {
+  "rmem.global.return"(%0) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>) -> ()
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.func'(0x7f8d4d79be60) {
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'func.func'(0x7f8d4d7a17b0) {
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.constant'(0x7f8d4d79e6d0) {
+  %0 = "arith.constant"() {value = 0 : index} : () -> index
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.constant'(0x7f8d4d79e880) {
+  %1 = "arith.constant"() {value = 1 : index} : () -> index
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.constant'(0x7f8d4d79eb60) {
+  %2 = "arith.constant"() {value = 8 : i64} : () -> i64
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.constant'(0x7f8d4d79ebe0) {
+  %3 = "arith.constant"() {value = 0 : i32} : () -> i32
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.constant'(0x7f8d4d79ec60) {
+  %4 = "arith.constant"() {value = 1 : i64} : () -> i64
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.getelementptr'(0x7f8d4d79f0a0) {
+  %5 = "llvm.getelementptr"(%arg1, %4) {structIndices = dense<-2147483648> : tensor<1xi32>} : (!llvm.ptr<ptr<i8>>, i64) -> !llvm.ptr<ptr<i8>>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.load'(0x7f8d4d79f190) {
+  %6 = "llvm.load"(%5) : (!llvm.ptr<ptr<i8>>) -> !llvm.ptr<i8>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.call'(0x7f8d4d79f4a0) {
+  %7 = "llvm.call"(%6) {callee = @atoi} : (!llvm.ptr<i8>) -> i32
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.llvm.addressof'(0x7f8d4d79f900) {
+  %8 = "rmem.llvm.addressof"() {global_name = @as} : () -> !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.extsi'(0x7f8d4d79f950) {
+  %9 = "arith.extsi"(%7) : (i32) -> i64
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.muli'(0x7f8d4d79fa00) {
+  %10 = "arith.muli"(%9, %2) : (i64, i64) -> i64
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.malloc_ptr'(0x7f8d4d79da10) {
+  %11 = "rmem.malloc_ptr"(%10) : (i64) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.store'(0x7f8d4d79e0d0) {
+  "llvm.store"(%11, %8) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>) -> ()
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.index_cast'(0x7f8d4d79ff40) {
+  %12 = "arith.index_cast"(%7) : (i32) -> index
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'scf.for'(0x7f8d4d7a11c0) {
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.index_cast'(0x7f8d4d7a01a0) {
+  %14 = "arith.index_cast"(%arg2) : (index) -> i32
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.llvm.addressof'(0x7f8d4d7a02a0) {
+  %15 = "rmem.llvm.addressof"() {global_name = @as} : () -> !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.load'(0x7f8d4d7a0330) {
+  %16 = "llvm.load"(%15) : (!llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.index_cast'(0x7f8d4d7a03b0) {
+  %17 = "arith.index_cast"(%arg2) : (index) -> i64
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.ptrindex'(0x7f8d4d7a04a0) {
+  %18 = "rmem.ptrindex"(%16, %17) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, i64) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.materialize'(0x7f8d4d7a06f0) {
+  %19 = "rmem.materialize"(%18) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>) -> !llvm.ptr<struct<(i32, i32)>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.getelementptr'(0x7f8d4d7a0b70) {
+  %20 = "llvm.getelementptr"(%19, %3) {structIndices = dense<[-2147483648, 0]> : tensor<2xi32>} : (!llvm.ptr<struct<(i32, i32)>>, i32) -> !llvm.ptr<i32>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.llvm.addressof'(0x7f8d4d7a0c50) {
+  %21 = "rmem.llvm.addressof"() {global_name = @as} : () -> !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.load'(0x7f8d4d7a0ce0) {
+  %22 = "llvm.load"(%21) : (!llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.index_cast'(0x7f8d4d7a0d60) {
+  %23 = "arith.index_cast"(%arg2) : (index) -> i64
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.ptrindex'(0x7f8d4d79fb30) {
+  %24 = "rmem.ptrindex"(%22, %23) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, i64) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.materialize'(0x7f8d4d7a1150) {
+  %25 = "rmem.materialize"(%24) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>) -> !llvm.ptr<struct<(i32, i32)>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.getelementptr'(0x7f8d4d7a0080) {
+  %26 = "llvm.getelementptr"(%25, %3) {structIndices = dense<[-2147483648, 1]> : tensor<2xi32>} : (!llvm.ptr<struct<(i32, i32)>>, i32) -> !llvm.ptr<i32>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.muli'(0x7f8d4d7a1360) {
+  %27 = "arith.muli"(%14, %14) : (i32, i32) -> i32
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.store'(0x7f8d4d7a13f0) {
+  "llvm.store"(%27, %26) : (i32, !llvm.ptr<i32>) -> ()
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'scf.yield'(0x7f8d4d7a09e0) {
+  "scf.yield"() : () -> ()
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.index_cast'(0x7f8d4d7a0220) {
+  %13 = "arith.index_cast"(%7) : (i32) -> index
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'scf.for'(0x7f8d4d7a1480) {
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.mlir.addressof'(0x7f8d4d79fad0) {
+  %14 = "llvm.mlir.addressof"() {global_name = @str0} : () -> !llvm.ptr<array<14 x i8>>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.getelementptr'(0x7f8d4d7a12a0) {
+  %15 = "llvm.getelementptr"(%14, %3, %3) {structIndices = dense<-2147483648> : tensor<2xi32>} : (!llvm.ptr<array<14 x i8>>, i32, i32) -> !llvm.ptr<i8>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.llvm.addressof'(0x7f8d4d7a0120) {
+  %16 = "rmem.llvm.addressof"() {global_name = @as} : () -> !llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.load'(0x7f8d4d79fbd0) {
+  %17 = "llvm.load"(%16) : (!llvm.ptr<!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>>) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'arith.index_cast'(0x7f8d4d7a1830) {
+  %18 = "arith.index_cast"(%arg2) : (index) -> i64
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.ptrindex'(0x7f8d4d7a1930) {
+  %19 = "rmem.ptrindex"(%17, %18) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>, i64) -> !rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'rmem.materialize'(0x7f8d4d7a18b0) {
+  %20 = "rmem.materialize"(%19) : (!rmem.rmref<1, !llvm.ptr<struct<(i32, i32)>>>) -> !llvm.ptr<struct<(i32, i32)>>
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.getelementptr'(0x7f8d4d7a1a50) {
+  %21 = "llvm.getelementptr"(%20, %3) {structIndices = dense<[-2147483648, 1]> : tensor<2xi32>} : (!llvm.ptr<struct<(i32, i32)>>, i32) -> !llvm.ptr<i32>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.load'(0x7f8d4d7a1b20) {
+  %22 = "llvm.load"(%21) : (!llvm.ptr<i32>) -> i32
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.getelementptr'(0x7f8d4d7a1bf0) {
+  %23 = "llvm.getelementptr"(%20, %3) {structIndices = dense<[-2147483648, 0]> : tensor<2xi32>} : (!llvm.ptr<struct<(i32, i32)>>, i32) -> !llvm.ptr<i32>
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.load'(0x7f8d4d7a1cc0) {
+  %24 = "llvm.load"(%23) : (!llvm.ptr<i32>) -> i32
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'llvm.call'(0x7f8d4d7a1ea0) {
+  %25 = "llvm.call"(%15, %22, %24, %24) {callee = @printf} : (!llvm.ptr<i8>, i32, i32, i32) -> i32
+
+} -> SUCCESS : operation marked legal by the target
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'scf.yield'(0x7f8d4d7a0680) {
+  "scf.yield"() : () -> ()
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//
+
+//===-------------------------------------------===//
+Legalizing operation : 'func.return'(0x7f8d4d7a0420) {
+  "func.return"(%3) : (i32) -> ()
+
+  * Fold {
+  } -> FAILURE : unable to fold
+} -> FAILURE : no matched legalization pattern
+//===-------------------------------------------===//

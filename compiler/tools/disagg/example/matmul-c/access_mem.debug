@@ -1,0 +1,95 @@
+--- Details of access mem --- 
+-- access --
+%3 = rmem.vec.load %0[%2, %arg3] : !rmem.rmref<1, memref<64512x1024xf32>>, vector<8xf32>
+type: 1
+access range: 
+(d0, d1, d2) -> ((d0 + 1) * 1024 + d1)
+ + 8
+ind ranges: 
+0[0 : index, 64508 : index]
+1[0 : index, 1016 : index]
+2[0 : index, 504 : index]
+-- access --
+%14 = rmem.memref.load %arg0[%arg2, %13] : (!rmem.rmref<1, memref<64512x512xf32>>, index, index) -> f32
+type: 1
+access range: 
+(d0, d1, d2, d3) -> (d0 * 512 + d3 + d2 + 1)
+ + 1
+ind ranges: 
+0[0 : index, 64508 : index]
+1[0 : index, 1016 : index]
+2[0 : index, 504 : index]
+3[0 : index, 4 : index]
+-- access --
+%7 = rmem.memref.load %arg0[%arg2, %6] : (!rmem.rmref<1, memref<64512x512xf32>>, index, index) -> f32
+type: 1
+access range: 
+(d0, d1, d2, d3) -> (d0 * 512 + d3 + d2)
+ + 1
+ind ranges: 
+0[0 : index, 64508 : index]
+1[0 : index, 1016 : index]
+2[0 : index, 504 : index]
+3[0 : index, 4 : index]
+-- access --
+%1 = rmem.vec.load %0[%arg2, %arg3] : !rmem.rmref<1, memref<64512x1024xf32>>, vector<8xf32>
+type: 1
+access range: 
+(d0, d1, d2) -> (d0 * 1024 + d1)
+ + 8
+ind ranges: 
+0[0 : index, 64508 : index]
+1[0 : index, 1016 : index]
+2[0 : index, 504 : index]
+-- access --
+rmem.vec.store %5, %0[%2, %arg3] : !rmem.rmref<1, memref<64512x1024xf32>>, vector<8xf32>
+type: 2
+access range: 
+(d0, d1, d2) -> ((d0 + 1) * 1024 + d1)
+ + 8
+ind ranges: 
+0[0 : index, 64508 : index]
+1[0 : index, 1016 : index]
+2[0 : index, 504 : index]
+-- access --
+%16 = rmem.vec.load %arg1[%13, %arg3] : !rmem.rmref<1, memref<512x1024xf32>>, vector<8xf32>
+type: 1
+access range: 
+(d0, d1, d2, d3) -> ((d3 + d2 + 1) * 1024 + d1)
+ + 8
+ind ranges: 
+0[0 : index, 64508 : index]
+1[0 : index, 1016 : index]
+2[0 : index, 504 : index]
+3[0 : index, 4 : index]
+-- access --
+rmem.affine.store %cst -> %0[%arg2, %arg3] {map = affine_map<(d0, d1) -> (d0, d1)>} : f32, !rmem.rmref<1, memref<64512x1024xf32>>, index, index
+type: 2
+access range: 
+(d0, d1) -> (d0 * 1024 + d1)
+ + 1
+ind ranges: 
+0[0 : index, 64511 : index]
+1[0 : index, 1023 : index]
+-- access --
+rmem.vec.store %4, %0[%arg2, %arg3] : !rmem.rmref<1, memref<64512x1024xf32>>, vector<8xf32>
+type: 2
+access range: 
+(d0, d1, d2) -> (d0 * 1024 + d1)
+ + 8
+ind ranges: 
+0[0 : index, 64508 : index]
+1[0 : index, 1016 : index]
+2[0 : index, 504 : index]
+-- access --
+%9 = rmem.vec.load %arg1[%6, %arg3] : !rmem.rmref<1, memref<512x1024xf32>>, vector<8xf32>
+type: 1
+access range: 
+(d0, d1, d2, d3) -> ((d3 + d2) * 1024 + d1)
+ + 8
+ind ranges: 
+0[0 : index, 64508 : index]
+1[0 : index, 1016 : index]
+2[0 : index, 504 : index]
+3[0 : index, 4 : index]
+--- end ---

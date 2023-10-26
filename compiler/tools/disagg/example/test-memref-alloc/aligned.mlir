@@ -1,0 +1,1 @@
+%alloc = memref.alloc() {alignment = 16 : i64, "remote_target" = 1} : memref<64512x1024xf32>

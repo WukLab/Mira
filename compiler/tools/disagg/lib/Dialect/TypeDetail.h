@@ -1,0 +1,6 @@
+#ifndef REMOTE_TYPEDETAIL_H
+#define REMOTE_TYPEDETAIL_H
+
+
+
+#endif
